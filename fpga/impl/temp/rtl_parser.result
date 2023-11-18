@@ -1,0 +1,1106 @@
+[
+ {
+  "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vram.v",
+  "InstLine" : 1,
+  "InstName" : "ram64k",
+  "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vram.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "ram64k"
+ },
+ {
+  "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+  "InstLine" : 3,
+  "InstName" : "top",
+  "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+  "ModuleLine" : 3,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 63,
+    "InstName" : "clk_sdramp",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/gowin/clk_108p.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "CLK_108P"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 81,
+    "InstName" : "clkdiv2",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/gowin_clkdiv2/gowin_clkdiv2.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_CLKDIV2"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 93,
+    "InstName" : "dn1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 102,
+    "InstName" : "dn2",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 111,
+    "InstName" : "dn3",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 120,
+    "InstName" : "dn4",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[0].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[1].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[2].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[3].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[4].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[5].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[6].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 133,
+    "InstName" : "bus_din[7].dn",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/pinfilter.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "PINFILTER"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 261,
+    "InstName" : "cpu1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80a.vhd",
+    "ModuleLine" : 69,
+    "ModuleName" : "T80a",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80a.vhd",
+      "InstLine" : 149,
+      "InstName" : "u0",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80.vhd",
+      "ModuleLine" : 73,
+      "ModuleName" : "T80",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80.vhd",
+        "InstLine" : 245,
+        "InstName" : "mcode",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80_mcode.vhd",
+        "ModuleLine" : 71,
+        "ModuleName" : "T80_MCode"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80.vhd",
+        "InstLine" : 313,
+        "InstName" : "alu",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80_alu.vhd",
+        "ModuleLine" : 65,
+        "ModuleName" : "T80_ALU"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80.vhd",
+        "InstLine" : 830,
+        "InstName" : "Regs",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/cpu/t80_reg.vhd",
+        "ModuleLine" : 61,
+        "ModuleName" : "T80_Reg"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 295,
+    "InstName" : "vdp4",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "v9958_top",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 138,
+      "InstName" : "clk_135_inst",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/gowin/clk_135.v",
+      "ModuleLine" : 10,
+      "ModuleName" : "CLK_135"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 295,
+      "InstName" : "u_v9958",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+      "ModuleLine" : 254,
+      "ModuleName" : "VDP",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1051,
+        "InstName" : "U_VDP_NTSC_PAL",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_ntsc_pal.vhd",
+        "ModuleLine" : 96,
+        "ModuleName" : "VDP_NTSC_PAL"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1070,
+        "InstName" : "U_VDP_VGA",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_vga.vhd",
+        "ModuleLine" : 102,
+        "ModuleName" : "VDP_VGA",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_vga.vhd",
+          "InstLine" : 173,
+          "InstName" : "DBUF",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+          "ModuleLine" : 80,
+          "ModuleName" : "VDP_DOUBLEBUF",
+          "SubInsts" : [
+           {
+            "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+            "InstLine" : 119,
+            "InstName" : "U_BUF_RE",
+            "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_linebuf.vhd",
+            "ModuleLine" : 89,
+            "ModuleName" : "VDP_LINEBUF"
+           },
+           {
+            "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+            "InstLine" : 128,
+            "InstName" : "U_BUF_GE",
+            "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_linebuf.vhd",
+            "ModuleLine" : 89,
+            "ModuleName" : "VDP_LINEBUF"
+           },
+           {
+            "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+            "InstLine" : 137,
+            "InstName" : "U_BUF_BE",
+            "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_linebuf.vhd",
+            "ModuleLine" : 89,
+            "ModuleName" : "VDP_LINEBUF"
+           },
+           {
+            "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+            "InstLine" : 146,
+            "InstName" : "U_BUF_RO",
+            "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_linebuf.vhd",
+            "ModuleLine" : 89,
+            "ModuleName" : "VDP_LINEBUF"
+           },
+           {
+            "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+            "InstLine" : 155,
+            "InstName" : "U_BUF_GO",
+            "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_linebuf.vhd",
+            "ModuleLine" : 89,
+            "ModuleName" : "VDP_LINEBUF"
+           },
+           {
+            "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_doublebuf.vhd",
+            "InstLine" : 164,
+            "InstName" : "U_BUF_BO",
+            "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_linebuf.vhd",
+            "ModuleLine" : 89,
+            "ModuleName" : "VDP_LINEBUF"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1126,
+        "InstName" : "U_INTERRUPT",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_interrupt.vhd",
+        "ModuleLine" : 65,
+        "ModuleName" : "VDP_INTERRUPT"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1156,
+        "InstName" : "U_SSG",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_ssg.vhd",
+        "ModuleLine" : 69,
+        "ModuleName" : "VDP_SSG",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_ssg.vhd",
+          "InstLine" : 193,
+          "InstName" : "U_HVCOUNTER",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_hvcounter.vhd",
+          "ModuleLine" : 67,
+          "ModuleName" : "VDP_HVCOUNTER"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1527,
+        "InstName" : "U_VDP_COLORDEC",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_colordec.vhd",
+        "ModuleLine" : 68,
+        "ModuleName" : "VDP_COLORDEC"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1575,
+        "InstName" : "U_VDP_TEXT12",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_text12.vhd",
+        "ModuleLine" : 104,
+        "ModuleName" : "VDP_TEXT12"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1599,
+        "InstName" : "U_VDP_GRAPHIC123M",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_graphic123m.vhd",
+        "ModuleLine" : 86,
+        "ModuleName" : "VDP_GRAPHIC123M"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1622,
+        "InstName" : "U_VDP_GRAPHIC4567",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_graphic4567.vhd",
+        "ModuleLine" : 97,
+        "ModuleName" : "VDP_GRAPHIC4567",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_graphic4567.vhd",
+          "InstLine" : 204,
+          "InstName" : "U_FIFOMEM",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+          "ModuleLine" : 37,
+          "ModuleName" : "ram"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1655,
+        "InstName" : "U_SPRITE",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_sprite.vhd",
+        "ModuleLine" : 183,
+        "ModuleName" : "VDP_SPRITE",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_sprite.vhd",
+          "InstLine" : 377,
+          "InstName" : "ISPINFORAM",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_spinforam.vhd",
+          "ModuleLine" : 88,
+          "ModuleName" : "VDP_SPINFORAM"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_sprite.vhd",
+          "InstLine" : 406,
+          "InstName" : "U_EVEN_LINE_BUF",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+          "ModuleLine" : 37,
+          "ModuleName" : "ram"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_sprite.vhd",
+          "InstLine" : 420,
+          "InstName" : "U_ODD_LINE_BUF",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+          "ModuleLine" : 37,
+          "ModuleName" : "ram"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1695,
+        "InstName" : "U_VDP_REGISTER",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_register.vhd",
+        "ModuleLine" : 89,
+        "ModuleName" : "VDP_REGISTER",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_register.vhd",
+          "InstLine" : 385,
+          "InstName" : "U_PALETTEMEMRB",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+          "ModuleLine" : 73,
+          "ModuleName" : "palette_rb"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_register.vhd",
+          "InstLine" : 394,
+          "InstName" : "U_PALETTEMEMG",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+          "ModuleLine" : 128,
+          "ModuleName" : "palette_g"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1812,
+        "InstName" : "U_VDP_COMMAND",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_command.vhd",
+        "ModuleLine" : 67,
+        "ModuleName" : "VDP_COMMAND"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp.vhd",
+        "InstLine" : 1845,
+        "InstName" : "U_VDP_WAIT_CONTROL",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vdp_wait_control.vhd",
+        "ModuleLine" : 59,
+        "ModuleName" : "VDP_WAIT_CONTROL"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 357,
+      "InstName" : "cpuclkd",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/clockdiv.v",
+      "ModuleLine" : 24,
+      "ModuleName" : "CLOCK_DIV"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 424,
+      "InstName" : "audioclkd",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/clockdiv.v",
+      "ModuleLine" : 24,
+      "ModuleName" : "CLOCK_DIV"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 462,
+      "InstName" : "hdmi_ntsc",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+      "ModuleLine" : 4,
+      "ModuleName" : "hdmi",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 316,
+        "InstName" : "true_hdmi_output.packet_picker",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "packet_picker",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 51,
+          "InstName" : "audio_clock_regeneration_packet",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/audio_clock_regeneration_packet.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "audio_clock_regeneration_packet"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 131,
+          "InstName" : "audio_sample_packet",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/audio_sample_packet.sv",
+          "ModuleLine" : 8,
+          "ModuleName" : "audio_sample_packet"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 137,
+          "InstName" : "auxiliary_video_information_info_frame",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/auxiliary_video_information_info_frame.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "auxiliary_video_information_info_frame"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 140,
+          "InstName" : "source_product_description_info_frame",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/source_product_description_info_frame.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "source_product_description_info_frame"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 143,
+          "InstName" : "audio_info_frame",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/audio_info_frame.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "audio_info_frame"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 318,
+        "InstName" : "true_hdmi_output.packet_assembler",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_assembler.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "packet_assembler"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 369,
+        "InstName" : "tmds_gen[0].tmds_channel",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/tmds_channel.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "tmds_channel"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 369,
+        "InstName" : "tmds_gen[1].tmds_channel",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/tmds_channel.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "tmds_channel"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 369,
+        "InstName" : "tmds_gen[2].tmds_channel",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/tmds_channel.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "tmds_channel"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 488,
+      "InstName" : "hdmi_pal",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+      "ModuleLine" : 4,
+      "ModuleName" : "hdmi",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 316,
+        "InstName" : "true_hdmi_output.packet_picker",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "packet_picker",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 51,
+          "InstName" : "audio_clock_regeneration_packet",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/audio_clock_regeneration_packet.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "audio_clock_regeneration_packet"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 131,
+          "InstName" : "audio_sample_packet",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/audio_sample_packet.sv",
+          "ModuleLine" : 8,
+          "ModuleName" : "audio_sample_packet"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 137,
+          "InstName" : "auxiliary_video_information_info_frame",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/auxiliary_video_information_info_frame.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "auxiliary_video_information_info_frame"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 140,
+          "InstName" : "source_product_description_info_frame",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/source_product_description_info_frame.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "source_product_description_info_frame"
+         },
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_picker.sv",
+          "InstLine" : 143,
+          "InstName" : "audio_info_frame",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/audio_info_frame.sv",
+          "ModuleLine" : 5,
+          "ModuleName" : "audio_info_frame"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 318,
+        "InstName" : "true_hdmi_output.packet_assembler",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/packet_assembler.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "packet_assembler"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 369,
+        "InstName" : "tmds_gen[0].tmds_channel",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/tmds_channel.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "tmds_channel"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 369,
+        "InstName" : "tmds_gen[1].tmds_channel",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/tmds_channel.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "tmds_channel"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/hdmi.sv",
+        "InstLine" : 369,
+        "InstName" : "tmds_gen[2].tmds_channel",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/tmds_channel.sv",
+        "ModuleLine" : 4,
+        "ModuleName" : "tmds_channel"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/v9958_top.v",
+      "InstLine" : 507,
+      "InstName" : "serializer",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/hdmi/serializer.sv",
+      "ModuleLine" : 3,
+      "ModuleName" : "serializer"
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 461,
+    "InstName" : "memory_ctrl",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/memory.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "memory",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/memory.v",
+      "InstLine" : 66,
+      "InstName" : "start_vdp",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/impulse.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "impulse"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/memory.v",
+      "InstLine" : 72,
+      "InstName" : "start_mapper",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/impulse.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "impulse"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/memory.v",
+      "InstLine" : 242,
+      "InstName" : "vram",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/memory_controller.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "memory_controller",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/memory_controller.v",
+        "InstLine" : 49,
+        "InstName" : "u_sdram",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/sdram.v",
+        "ModuleLine" : 27,
+        "ModuleName" : "sdram"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 494,
+    "InstName" : "bios1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/bios_msx2p.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "bios_msx2p"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 508,
+    "InstName" : "subrom1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/subrom_msx2p.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "subrom_msx2p"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 529,
+    "InstName" : "logo1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/logo.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "logo"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 546,
+    "InstName" : "rtc1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/rtc.v",
+    "ModuleLine" : 53,
+    "ModuleName" : "rtc",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/rtc.v",
+      "InstLine" : 281,
+      "InstName" : "u_mem",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+      "ModuleLine" : 37,
+      "ModuleName" : "ram"
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 576,
+    "InstName" : "clkdiv2_2",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/src/gowin_clkdiv2/gowin_clkdiv2.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_CLKDIV2"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 582,
+    "InstName" : "psg1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/PSG_YM2149/YM2149.vhdl",
+    "ModuleLine" : 62,
+    "ModuleName" : "YM2149"
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 619,
+    "InstName" : "opll1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+    "ModuleLine" : 41,
+    "ModuleName" : "opll",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 281,
+      "InstName" : "s0",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/slotcounter.vhd",
+      "ModuleLine" : 40,
+      "ModuleName" : "SlotCounter"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 293,
+      "InstName" : "s2",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/slotcounter.vhd",
+      "ModuleLine" : 40,
+      "ModuleName" : "SlotCounter"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 305,
+      "InstName" : "s5",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/slotcounter.vhd",
+      "ModuleLine" : 40,
+      "ModuleName" : "SlotCounter"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 317,
+      "InstName" : "s8",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/slotcounter.vhd",
+      "ModuleLine" : 40,
+      "ModuleName" : "SlotCounter"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 330,
+      "InstName" : "ct",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/controller.vhd",
+      "ModuleLine" : 70,
+      "ModuleName" : "controller",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/controller.vhd",
+        "InstLine" : 165,
+        "InstName" : "u_register_memory",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/registermemory.vhd",
+        "ModuleLine" : 40,
+        "ModuleName" : "RegisterMemory"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/controller.vhd",
+        "InstLine" : 175,
+        "InstName" : "vmem",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/voicememory.vhd",
+        "ModuleLine" : 36,
+        "ModuleName" : "VoiceMemory",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/voicememory.vhd",
+          "InstLine" : 70,
+          "InstName" : "ROM2413",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/voicerom.vhd",
+          "ModuleLine" : 36,
+          "ModuleName" : "VoiceRom"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 335,
+      "InstName" : "eg",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/envelopegenerator.vhd",
+      "ModuleLine" : 42,
+      "ModuleName" : "envelopegenerator",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/envelopegenerator.vhd",
+        "InstLine" : 99,
+        "InstName" : "u_attack_table",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/attacktable.vhd",
+        "ModuleLine" : 64,
+        "ModuleName" : "AttackTable",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/attacktable.vhd",
+          "InstLine" : 141,
+          "InstName" : "u_attack_table_mul",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/attacktable.vhd",
+          "ModuleLine" : 42,
+          "ModuleName" : "attack_table_mul"
+         }
+        ]
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/envelopegenerator.vhd",
+        "InstLine" : 107,
+        "InstName" : "u_envelope_memory",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/envelopememory.vhd",
+        "ModuleLine" : 36,
+        "ModuleName" : "EnvelopeMemory"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 342,
+      "InstName" : "pg",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/phasegenerator.vhd",
+      "ModuleLine" : 41,
+      "ModuleName" : "PhaseGenerator",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/phasegenerator.vhd",
+        "InstLine" : 174,
+        "InstName" : "MEM",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/phasememory.vhd",
+        "ModuleLine" : 36,
+        "ModuleName" : "PhaseMemory"
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 350,
+      "InstName" : "op",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/operator.vhd",
+      "ModuleLine" : 41,
+      "ModuleName" : "Operator",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/operator.vhd",
+        "InstLine" : 94,
+        "InstName" : "u_sine_table",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/sinetable.vhd",
+        "ModuleLine" : 63,
+        "ModuleName" : "SineTable",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/sinetable.vhd",
+          "InstLine" : 168,
+          "InstName" : "u_interpolate_mul",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/sinetable.vhd",
+          "ModuleLine" : 41,
+          "ModuleName" : "interpolate_mul"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 357,
+      "InstName" : "og",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/outputgenerator.vhd",
+      "ModuleLine" : 36,
+      "ModuleName" : "OutputGenerator",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/outputgenerator.vhd",
+        "InstLine" : 125,
+        "InstName" : "Fmem",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/feedbackmemory.vhd",
+        "ModuleLine" : 41,
+        "ModuleName" : "FeedbackMemory"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/outputgenerator.vhd",
+        "InstLine" : 135,
+        "InstName" : "Mmem",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/outputmemory.vhd",
+        "ModuleLine" : 36,
+        "ModuleName" : "OutputMemory"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/outputgenerator.vhd",
+        "InstLine" : 146,
+        "InstName" : "Ltbl",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/lineartable.vhd",
+        "ModuleLine" : 63,
+        "ModuleName" : "LinearTable",
+        "SubInsts" : [
+         {
+          "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/lineartable.vhd",
+          "InstLine" : 153,
+          "InstName" : "u_linear_table_mul",
+          "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/lineartable.vhd",
+          "ModuleLine" : 41,
+          "ModuleName" : "linear_table_mul"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/opll.vhd",
+      "InstLine" : 363,
+      "InstName" : "tm",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/opll/vm2413/temporalmixer.vhd",
+      "ModuleLine" : 37,
+      "ModuleName" : "TemporalMixer"
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 641,
+    "InstName" : "scc1",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/megaram.vhd",
+    "ModuleLine" : 41,
+    "ModuleName" : "megaram",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/megaram.vhd",
+      "InstLine" : 307,
+      "InstName" : "SccCh",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/scc_wave.vhd",
+      "ModuleLine" : 79,
+      "ModuleName" : "scc_wave",
+      "SubInsts" : [
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/scc_wave.vhd",
+        "InstLine" : 325,
+        "InstName" : "wavemem",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/ram.vhd",
+        "ModuleLine" : 37,
+        "ModuleName" : "ram"
+       },
+       {
+        "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/scc_wave.vhd",
+        "InstLine" : 394,
+        "InstName" : "u_mul",
+        "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/scc_wave.vhd",
+        "ModuleLine" : 39,
+        "ModuleName" : "scc_wave_mul"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/top.v",
+    "InstLine" : 697,
+    "InstName" : "filtro_fm",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "fm_filter",
+    "SubInsts" : [
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 60,
+      "InstName" : "filter1",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 102,
+      "ModuleName" : "LPF2"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 70,
+      "InstName" : "filter1b",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 102,
+      "ModuleName" : "LPF2"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 80,
+      "InstName" : "interclock1",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/inter_clock.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "inter_clock"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 90,
+      "InstName" : "filter2",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 102,
+      "ModuleName" : "LPF2"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 100,
+      "InstName" : "filter2b",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 102,
+      "ModuleName" : "LPF2"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 110,
+      "InstName" : "interclock2",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/inter_clock.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "inter_clock"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 120,
+      "InstName" : "filter3",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 102,
+      "ModuleName" : "LPF2"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 130,
+      "InstName" : "filter4",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 102,
+      "ModuleName" : "LPF2"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 168,
+      "InstName" : "interclock3",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/inter_clock.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "inter_clock"
+     },
+     {
+      "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/fm_filter/fm_filter.v",
+      "InstLine" : 178,
+      "InstName" : "filter5",
+      "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+      "ModuleLine" : 39,
+      "ModuleName" : "LPF1"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+  "InstLine" : 206,
+  "InstName" : "INTERPO",
+  "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+  "ModuleLine" : 206,
+  "ModuleName" : "INTERPO",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+    "InstLine" : 273,
+    "InstName" : "U_INTERPO_MUL",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/lpf/lpf.vhd",
+    "ModuleLine" : 183,
+    "ModuleName" : "INTERPO_MUL"
+   }
+  ]
+ },
+ {
+  "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/scc_wave.vhd",
+  "InstLine" : 59,
+  "InstName" : "scc_mix_mul",
+  "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/OCM_3.9/sound/scc/scc_wave.vhd",
+  "ModuleLine" : 59,
+  "ModuleName" : "scc_mix_mul"
+ },
+ {
+  "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vencode.vhd",
+  "InstLine" : 37,
+  "InstName" : "VENCODE",
+  "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld/tn_vdp_v3_v9958/src/vdp/vencode.vhd",
+  "ModuleLine" : 37,
+  "ModuleName" : "VENCODE"
+ }
+]

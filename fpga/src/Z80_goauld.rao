@@ -1,0 +1,239 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Standard</Mode>
+    <AoCore index="0" sample_clock="clk_108m" trig_type="0" storage_depth="2048" window_num="1" capture_amount="2048" implementation="0" trigger_pos="1000" module_name="top" force_trigger_by_falling_edge="false">
+        <SignalList>
+            <Signal>ex_clk_27m</Signal>
+            <Signal>VideoDHClk</Signal>
+            <Signal>VideoDLClk</Signal>
+            <Signal>memory_ctrl/sdram_read</Signal>
+            <Signal>memory_ctrl/sdram_write</Signal>
+            <Signal>memory_ctrl/sdram_refresh</Signal>
+            <Signal>memory_ctrl/sdram_busy</Signal>
+            <Signal>mapper_write</Signal>
+            <Signal>mapper_read</Signal>
+            <Signal>bus_mreq_n</Signal>
+            <Signal>bus_rd_n</Signal>
+            <Signal>bus_wr_n</Signal>
+            <Bus name="ex_bus_data[7:0]">
+                <Signal>ex_bus_data[7]</Signal>
+                <Signal>ex_bus_data[6]</Signal>
+                <Signal>ex_bus_data[5]</Signal>
+                <Signal>ex_bus_data[4]</Signal>
+                <Signal>ex_bus_data[3]</Signal>
+                <Signal>ex_bus_data[2]</Signal>
+                <Signal>ex_bus_data[1]</Signal>
+                <Signal>ex_bus_data[0]</Signal>
+            </Bus>
+            <Bus name="bus_addr[15:0]">
+                <Signal>bus_addr[15]</Signal>
+                <Signal>bus_addr[14]</Signal>
+                <Signal>bus_addr[13]</Signal>
+                <Signal>bus_addr[12]</Signal>
+                <Signal>bus_addr[11]</Signal>
+                <Signal>bus_addr[10]</Signal>
+                <Signal>bus_addr[9]</Signal>
+                <Signal>bus_addr[8]</Signal>
+                <Signal>bus_addr[7]</Signal>
+                <Signal>bus_addr[6]</Signal>
+                <Signal>bus_addr[5]</Signal>
+                <Signal>bus_addr[4]</Signal>
+                <Signal>bus_addr[3]</Signal>
+                <Signal>bus_addr[2]</Signal>
+                <Signal>bus_addr[1]</Signal>
+                <Signal>bus_addr[0]</Signal>
+            </Bus>
+            <Bus name="ppi_port_a[7:0]">
+                <Signal>ppi_port_a[7]</Signal>
+                <Signal>ppi_port_a[6]</Signal>
+                <Signal>ppi_port_a[5]</Signal>
+                <Signal>ppi_port_a[4]</Signal>
+                <Signal>ppi_port_a[3]</Signal>
+                <Signal>ppi_port_a[2]</Signal>
+                <Signal>ppi_port_a[1]</Signal>
+                <Signal>ppi_port_a[0]</Signal>
+            </Bus>
+            <Bus name="memory_ctrl/sdram_address[21:0]">
+                <Signal>memory_ctrl/sdram_address[21]</Signal>
+                <Signal>memory_ctrl/sdram_address[20]</Signal>
+                <Signal>memory_ctrl/sdram_address[19]</Signal>
+                <Signal>memory_ctrl/sdram_address[18]</Signal>
+                <Signal>memory_ctrl/sdram_address[17]</Signal>
+                <Signal>memory_ctrl/sdram_address[16]</Signal>
+                <Signal>memory_ctrl/sdram_address[15]</Signal>
+                <Signal>memory_ctrl/sdram_address[14]</Signal>
+                <Signal>memory_ctrl/sdram_address[13]</Signal>
+                <Signal>memory_ctrl/sdram_address[12]</Signal>
+                <Signal>memory_ctrl/sdram_address[11]</Signal>
+                <Signal>memory_ctrl/sdram_address[10]</Signal>
+                <Signal>memory_ctrl/sdram_address[9]</Signal>
+                <Signal>memory_ctrl/sdram_address[8]</Signal>
+                <Signal>memory_ctrl/sdram_address[7]</Signal>
+                <Signal>memory_ctrl/sdram_address[6]</Signal>
+                <Signal>memory_ctrl/sdram_address[5]</Signal>
+                <Signal>memory_ctrl/sdram_address[4]</Signal>
+                <Signal>memory_ctrl/sdram_address[3]</Signal>
+                <Signal>memory_ctrl/sdram_address[2]</Signal>
+                <Signal>memory_ctrl/sdram_address[1]</Signal>
+                <Signal>memory_ctrl/sdram_address[0]</Signal>
+            </Bus>
+            <Bus name="memory_ctrl/sdram_din[15:0]">
+                <Signal>memory_ctrl/sdram_din[15]</Signal>
+                <Signal>memory_ctrl/sdram_din[14]</Signal>
+                <Signal>memory_ctrl/sdram_din[13]</Signal>
+                <Signal>memory_ctrl/sdram_din[12]</Signal>
+                <Signal>memory_ctrl/sdram_din[11]</Signal>
+                <Signal>memory_ctrl/sdram_din[10]</Signal>
+                <Signal>memory_ctrl/sdram_din[9]</Signal>
+                <Signal>memory_ctrl/sdram_din[8]</Signal>
+                <Signal>memory_ctrl/sdram_din[7]</Signal>
+                <Signal>memory_ctrl/sdram_din[6]</Signal>
+                <Signal>memory_ctrl/sdram_din[5]</Signal>
+                <Signal>memory_ctrl/sdram_din[4]</Signal>
+                <Signal>memory_ctrl/sdram_din[3]</Signal>
+                <Signal>memory_ctrl/sdram_din[2]</Signal>
+                <Signal>memory_ctrl/sdram_din[1]</Signal>
+                <Signal>memory_ctrl/sdram_din[0]</Signal>
+            </Bus>
+            <Bus name="memory_ctrl/sdram_dout16[15:0]">
+                <Signal>memory_ctrl/sdram_dout16[15]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[14]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[13]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[12]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[11]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[10]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[9]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[8]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[7]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[6]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[5]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[4]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[3]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[2]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[1]</Signal>
+                <Signal>memory_ctrl/sdram_dout16[0]</Signal>
+            </Bus>
+            <Bus name="memory_ctrl/mapper_dout[7:0]">
+                <Signal>memory_ctrl/mapper_dout[7]</Signal>
+                <Signal>memory_ctrl/mapper_dout[6]</Signal>
+                <Signal>memory_ctrl/mapper_dout[5]</Signal>
+                <Signal>memory_ctrl/mapper_dout[4]</Signal>
+                <Signal>memory_ctrl/mapper_dout[3]</Signal>
+                <Signal>memory_ctrl/mapper_dout[2]</Signal>
+                <Signal>memory_ctrl/mapper_dout[1]</Signal>
+                <Signal>memory_ctrl/mapper_dout[0]</Signal>
+            </Bus>
+        </SignalList>
+        <Triggers>
+            <Trigger index="0">
+                <SignalList>
+                    <Signal>mapper_read</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="1">
+                <SignalList>
+                    <Signal>mapper_write</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="2">
+                <SignalList>
+                    <Signal>ex_bus_m1_n</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="3">
+                <SignalList>
+                    <Bus restorename="bus_addr[15:0]">
+                        <Signal>bus_addr[15]</Signal>
+                        <Signal>bus_addr[14]</Signal>
+                        <Signal>bus_addr[13]</Signal>
+                        <Signal>bus_addr[12]</Signal>
+                        <Signal>bus_addr[11]</Signal>
+                        <Signal>bus_addr[10]</Signal>
+                        <Signal>bus_addr[9]</Signal>
+                        <Signal>bus_addr[8]</Signal>
+                        <Signal>bus_addr[7]</Signal>
+                        <Signal>bus_addr[6]</Signal>
+                        <Signal>bus_addr[5]</Signal>
+                        <Signal>bus_addr[4]</Signal>
+                        <Signal>bus_addr[3]</Signal>
+                        <Signal>bus_addr[2]</Signal>
+                        <Signal>bus_addr[1]</Signal>
+                        <Signal>bus_addr[0]</Signal>
+                    </Bus>
+                </SignalList>
+            </Trigger>
+            <Trigger index="4">
+                <SignalList>
+                    <Signal>bus_mreq_n</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="5">
+                <SignalList>
+                    <Signal>s1</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="6">
+                <SignalList>
+                    <Signal>memory_ctrl/sdram_refresh</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="7">
+                <SignalList>
+                    <Bus restorename="bus_addr[15:0]">
+                        <Signal>bus_addr[15]</Signal>
+                        <Signal>bus_addr[14]</Signal>
+                        <Signal>bus_addr[13]</Signal>
+                        <Signal>bus_addr[12]</Signal>
+                        <Signal>bus_addr[11]</Signal>
+                        <Signal>bus_addr[10]</Signal>
+                        <Signal>bus_addr[9]</Signal>
+                        <Signal>bus_addr[8]</Signal>
+                        <Signal>bus_addr[7]</Signal>
+                        <Signal>bus_addr[6]</Signal>
+                        <Signal>bus_addr[5]</Signal>
+                        <Signal>bus_addr[4]</Signal>
+                        <Signal>bus_addr[3]</Signal>
+                        <Signal>bus_addr[2]</Signal>
+                        <Signal>bus_addr[1]</Signal>
+                        <Signal>bus_addr[0]</Signal>
+                    </Bus>
+                </SignalList>
+            </Trigger>
+            <Trigger index="8">
+                <SignalList>
+                    <Signal>bus_mreq_n</Signal>
+                </SignalList>
+            </Trigger>
+            <Trigger index="9"/>
+            <Trigger index="10"/>
+            <Trigger index="11"/>
+            <Trigger index="12"/>
+            <Trigger index="13"/>
+            <Trigger index="14"/>
+            <Trigger index="15"/>
+        </Triggers>
+        <MatchUnits>
+            <MatchUnit index="0" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="0"/>
+            <MatchUnit index="1" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="1"/>
+            <MatchUnit index="2" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="2"/>
+            <MatchUnit index="3" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1001000000001111" value1="0000000000000000" trigger="3"/>
+            <MatchUnit index="4" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="4"/>
+            <MatchUnit index="5" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="5"/>
+            <MatchUnit index="6" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="6"/>
+            <MatchUnit index="7" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1001000000001111" value1="0000000000000000" trigger="7"/>
+            <MatchUnit index="8" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="8"/>
+            <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="12" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="13" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="14" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+            <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
+        </MatchUnits>
+        <Expressions type="Static">
+            <Expression>M1</Expression>
+        </Expressions>
+    </AoCore>
+    <GAO_ID>1010100100010001</GAO_ID>
+</GAO_CONFIG>

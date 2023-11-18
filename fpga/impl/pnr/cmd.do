@@ -1,0 +1,13 @@
+-d D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\gwsynthesis\Z80_goauld.vg
+-p GW2AR-18C-QFN88-8
+-pn GW2AR-LV18QN88C8/I7
+-cst D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tang9k.cst
+-cfg D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\pnr\device.cfg
+-sdc D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\Z80_goauld.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-correct_hold 1
+-route_maxfan 23

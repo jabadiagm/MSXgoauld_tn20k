@@ -1,0 +1,488 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\inter_clock.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\bios_msx2p.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\gowin_clkdiv2\gowin_clkdiv2.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\impulse.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\logo.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\memory.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\pinfilter.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\rtc.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\subrom_msx2p.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\gowin\clk_108p.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\gowin\clk_135.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_clock_regeneration_packet.sv'
+WARN  (EX2478) : Non-net output port 'clk_audio_counter_wrap' cannot be initialized at declaration in SystemVerilog mode("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_clock_regeneration_packet.sv":13)
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_info_frame.sv'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_sample_packet.sv'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\auxiliary_video_information_info_frame.sv'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\hdmi.sv'
+WARN  (EX3628) : Redeclaration of ANSI port 'tmds_internal' is not allowed("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\hdmi.sv":363)
+WARN  (EX2478) : Non-net output port 'cx' cannot be initialized at declaration in SystemVerilog mode("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\hdmi.sv":82)
+WARN  (EX2478) : Non-net output port 'cy' cannot be initialized at declaration in SystemVerilog mode("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\hdmi.sv":83)
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_assembler.sv'
+WARN  (EX2478) : Non-net output port 'counter' cannot be initialized at declaration in SystemVerilog mode("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_assembler.sv":11)
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\serializer.sv'
+WARN  (EX3182) : Initial value of parameter 'VIDEO_RATE' is omitted("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\serializer.sv":6)
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\source_product_description_info_frame.sv'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\tmds_channel.sv'
+WARN  (EX2478) : Non-net output port 'tmds' cannot be initialized at declaration in SystemVerilog mode("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\tmds_channel.sv":16)
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\memory_controller.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\sdram.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v'
+Undeclared symbol 'clk_108m', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":67)
+Undeclared symbol 'clk_108m_n', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":68)
+Undeclared symbol 'rst_n', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":134)
+Undeclared symbol 'clk_135', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":139)
+Undeclared symbol 'cpuclk_w', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":362)
+Undeclared symbol 'clk_audio_w', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":429)
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vram.v'
+Analyzing Verilog file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v'
+Undeclared symbol 'vdp_int', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":265)
+Undeclared symbol 'bus_wr_n', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":272)
+WARN  (EX3638) : 'vdp_int' is already implicitly declared on line 265("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":285)
+Undeclared symbol 'audio_sample', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":312)
+Undeclared symbol 'sdram_fail', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":476)
+Undeclared symbol 'fm_logo_req', assumed default net type 'wire'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":518)
+WARN  (EX2830) : Data object 'psgPB' is already declared("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":574)
+Previous declaration of 'psgPB' is from here("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":566)
+WARN  (EX3671) : Second declaration of 'psgPB' is ignored("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":574)
+WARN  (EX3796) : 'psgPB' was previously declared with a range("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":574)
+WARN  (EX3638) : 'audio_sample' is already implicitly declared on line 312("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":668)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd'
+Analyzing entity 'lpf1'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":39)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":52)
+Analyzing entity 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":102)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":115)
+Analyzing entity 'interpo_mul'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":183)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":194)
+Analyzing entity 'interpo'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":206)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":219)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd'
+Analyzing entity 'attack_table_mul'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":42)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":50)
+Analyzing entity 'attacktable'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":64)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":73)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\vm2413.vhd'
+Analyzing package 'vm2413'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\vm2413.vhd":36)
+Analyzing package body 'vm2413'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\vm2413.vhd":153)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd'
+Analyzing entity 'controller'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd":70)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd":106)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopegenerator.vhd'
+Analyzing entity 'envelopegenerator'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopegenerator.vhd":42)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopegenerator.vhd":65)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopememory.vhd'
+Analyzing entity 'envelopememory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopememory.vhd":36)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopememory.vhd":48)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\feedbackmemory.vhd'
+Analyzing entity 'feedbackmemory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\feedbackmemory.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\feedbackmemory.vhd":52)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd'
+Analyzing entity 'linear_table_mul'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":49)
+Analyzing entity 'lineartable'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":63)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":72)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\operator.vhd'
+Analyzing entity 'operator'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\operator.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\operator.vhd":65)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd'
+Analyzing entity 'opll'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":56)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd'
+Analyzing entity 'outputgenerator'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd":36)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd":55)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputmemory.vhd'
+Analyzing entity 'outputmemory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputmemory.vhd":36)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputmemory.vhd":48)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasegenerator.vhd'
+Analyzing entity 'phasegenerator'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasegenerator.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasegenerator.vhd":61)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasememory.vhd'
+Analyzing entity 'phasememory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasememory.vhd":36)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasememory.vhd":47)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\registermemory.vhd'
+Analyzing entity 'registermemory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\registermemory.vhd":40)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\registermemory.vhd":51)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd'
+Analyzing entity 'interpolate_mul'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":49)
+Analyzing entity 'sinetable'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":63)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":73)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd'
+Analyzing entity 'slotcounter'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd":40)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd":54)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\temporalmixer.vhd'
+Analyzing entity 'temporalmixer'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\temporalmixer.vhd":37)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\temporalmixer.vhd":56)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicememory.vhd'
+Analyzing entity 'voicememory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicememory.vhd":36)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicememory.vhd":50)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicerom.vhd'
+Analyzing entity 'voicerom'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicerom.vhd":36)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicerom.vhd":44)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\megaram.vhd'
+Analyzing entity 'megaram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\megaram.vhd":41)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\megaram.vhd":66)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd'
+Analyzing entity 'scc_wave_mul'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":39)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":47)
+Analyzing entity 'scc_mix_mul'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":59)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":67)
+Analyzing entity 'scc_wave'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":79)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":94)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl'
+Analyzing entity 'ym2149'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":62)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":94)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_pack.vhd'
+Analyzing package 't80_pack'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_pack.vhd":58)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80.vhd'
+Analyzing entity 't80'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80.vhd":73)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80.vhd":113)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_alu.vhd'
+Analyzing entity 't80_alu'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_alu.vhd":65)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_alu.vhd":92)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_mcode.vhd'
+Analyzing entity 't80_mcode'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_mcode.vhd":71)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_mcode.vhd":143)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_reg.vhd'
+Analyzing entity 't80_reg'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_reg.vhd":61)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_reg.vhd":81)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80a.vhd'
+Analyzing entity 't80a'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80a.vhd":69)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80a.vhd":95)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd'
+Analyzing entity 'ram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":37)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":47)
+Analyzing entity 'palette_rb'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":73)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":83)
+Analyzing entity 'palette_g'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":128)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":138)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_package.vhd'
+Analyzing package 'vdp_package'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_package.vhd":82)
+WARN  (EX4319) : Shared variables must be of a protected type("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_package.vhd":116)
+WARN  (EX4319) : Shared variables must be of a protected type("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_package.vhd":117)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp.vhd'
+Analyzing entity 'vdp'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp.vhd":254)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp.vhd":312)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_colordec.vhd'
+Analyzing entity 'vdp_colordec'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_colordec.vhd":68)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_colordec.vhd":114)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_command.vhd'
+Analyzing entity 'vdp_command'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_command.vhd":67)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_command.vhd":105)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd'
+Analyzing entity 'vdp_doublebuf'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":80)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":96)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic123m.vhd'
+Analyzing entity 'vdp_graphic123m'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic123m.vhd":86)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic123m.vhd":117)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd'
+Analyzing entity 'vdp_graphic4567'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd":97)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd":137)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_hvcounter.vhd'
+Analyzing entity 'vdp_hvcounter'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_hvcounter.vhd":67)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_hvcounter.vhd":90)
+WARN  (EX4967) : Cannot read from 'out' object 'hdmi_reset', use 'buffer' or 'inout' instead("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_hvcounter.vhd":160)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_interrupt.vhd'
+Analyzing entity 'vdp_interrupt'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_interrupt.vhd":65)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_interrupt.vhd":82)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_linebuf.vhd'
+Analyzing entity 'vdp_linebuf'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_linebuf.vhd":89)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_linebuf.vhd":99)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ntsc_pal.vhd'
+Analyzing entity 'vdp_ntsc_pal'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ntsc_pal.vhd":96)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ntsc_pal.vhd":119)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd'
+Analyzing entity 'vdp_register'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd":89)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd":205)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_spinforam.vhd'
+Analyzing entity 'vdp_spinforam'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_spinforam.vhd":88)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_spinforam.vhd":98)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd'
+Analyzing entity 'vdp_sprite'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd":183)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd":233)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ssg.vhd'
+Analyzing entity 'vdp_ssg'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ssg.vhd":69)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ssg.vhd":111)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_text12.vhd'
+Analyzing entity 'vdp_text12'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_text12.vhd":104)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_text12.vhd":137)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_vga.vhd'
+Analyzing entity 'vdp_vga'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_vga.vhd":102)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_vga.vhd":131)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_wait_control.vhd'
+Analyzing entity 'vdp_wait_control'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_wait_control.vhd":59)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_wait_control.vhd":78)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vencode.vhd'
+Analyzing entity 'vencode'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vencode.vhd":37)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vencode.vhd":57)
+Compiling module 'top'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":3)
+Compiling module 'CLK_108P'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\gowin\clk_108p.v":10)
+Compiling module 'Gowin_CLKDIV2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\gowin_clkdiv2\gowin_clkdiv2.v":10)
+Compiling module 'PINFILTER'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\pinfilter.v":1)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 26("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":162)
+Switching to VHDL mode to elaborate design unit 'T80a'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":279)
+Processing 'T80a(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80a.vhd":69)
+Processing 'T80(iowait=1)(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80.vhd":73)
+Processing 'T80_MCode(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_mcode.vhd":71)
+Processing 'T80_ALU(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_alu.vhd":65)
+Processing 'T80_Reg(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_reg.vhd":61)
+Extracting RAM for identifier 'RegsH'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_reg.vhd":84)
+Extracting RAM for identifier 'RegsL'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\cpu\t80_reg.vhd":85)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":279)
+WARN  (EX3073) : Port 'frame_width' remains unconnected for this instance("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":471)
+WARN  (EX3073) : Port 'frame_width' remains unconnected for this instance("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":497)
+WARN  (EX3073) : Port 'tmds_clock' remains unconnected for this instance("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":508)
+Compiling module 'v9958_top'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":3)
+Compiling module 'CLK_135'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\gowin\clk_135.v":10)
+Switching to VHDL mode to elaborate design unit 'VDP'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":334)
+Processing 'VDP(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp.vhd":254)
+Processing 'VDP_NTSC_PAL(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ntsc_pal.vhd":96)
+Processing 'VDP_VGA(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_vga.vhd":102)
+Processing 'VDP_DOUBLEBUF(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":80)
+Processing 'VDP_LINEBUF(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_linebuf.vhd":89)
+Extracting RAM for identifier 'IMEM'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_linebuf.vhd":101)
+Processing 'VDP_INTERRUPT(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_interrupt.vhd":65)
+Processing 'VDP_SSG(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ssg.vhd":69)
+Processing 'VDP_HVCOUNTER(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_hvcounter.vhd":67)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_ssg.vhd":248)
+Processing 'VDP_COLORDEC(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_colordec.vhd":68)
+Processing 'VDP_TEXT12(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_text12.vhd":104)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_text12.vhd":344)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_text12.vhd":402)
+Processing 'VDP_GRAPHIC123M(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic123m.vhd":86)
+Processing 'VDP_GRAPHIC4567(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd":97)
+Processing 'ram(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":37)
+Extracting RAM for identifier 'blkram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":49)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd":298)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd":331)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_graphic4567.vhd":373)
+Processing 'VDP_SPRITE(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd":183)
+Processing 'VDP_SPINFORAM(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_spinforam.vhd":88)
+Extracting RAM for identifier 'IMEM'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_spinforam.vhd":100)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd":462)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd":534)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_sprite.vhd":972)
+Processing 'VDP_REGISTER(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd":89)
+Processing 'palette_rb(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":73)
+Extracting RAM for identifier 'blkram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":85)
+Processing 'palette_g(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":128)
+Extracting RAM for identifier 'blkram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\ram.vhd":140)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd":617)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd":647)
+Processing 'VDP_COMMAND(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_command.vhd":67)
+WARN  (EX4160) : Latch inferred for net 'NXCOUNT[9]'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_command.vhd":783)
+Processing 'VDP_WAIT_CONTROL(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_wait_control.vhd":59)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":334)
+Compiling module 'CLOCK_DIV(CLK_SRC=125.0,CLK_DIV=3.57954545454545)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":24)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":35)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":36)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":38)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":54)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":57)
+Compiling module 'CLOCK_DIV(CLK_SRC=27,CLK_DIV=0.0441)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":24)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":35)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":36)
+WARN  (EX3791) : Expression size 64 truncated to fit in target size 32("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":38)
+WARN  (EX3791) : Expression size 18 truncated to fit in target size 17("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":54)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\clockdiv.v":57)
+Compiling module 'hdmi(VIDEO_ID_CODE=2,VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,START_Y=480)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\hdmi.sv":4)
+Compiling module 'packet_picker(VIDEO_ID_CODE=2,VIDEO_RATE=27000000.0,IT_CONTENT=1'b1,AUDIO_BIT_WIDTH=16,AUDIO_RATE=44100,VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":4)
+Extracting RAM for identifier 'audio_sample_word_buffer'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":80)
+Compiling module 'audio_clock_regeneration_packet(VIDEO_RATE=27000000.0,AUDIO_RATE=44100)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_clock_regeneration_packet.sv":5)
+Compiling module 'audio_sample_packet(WORD_LENGTH=4'b0010)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_sample_packet.sv":8)
+WARN  (EX3780) : Using initial value of 'CHANNEL_LEFT' since it is never assigned("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_sample_packet.sv":63)
+WARN  (EX3780) : Using initial value of 'CHANNEL_RIGHT' since it is never assigned("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_sample_packet.sv":64)
+Compiling module 'auxiliary_video_information_info_frame(IT_CONTENT=1'b1,VIDEO_ID_CODE=32'sb00000000000000000000000000000010)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\auxiliary_video_information_info_frame.sv":5)
+Compiling module 'source_product_description_info_frame(VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\source_product_description_info_frame.sv":5)
+Compiling module 'audio_info_frame'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\audio_info_frame.sv":5)
+WARN  (EX1998) : Net 'headers[255][23]' does not have a driver("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":29)
+WARN  (EX1998) : Net 'subs[255][3][55]' does not have a driver("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":30)
+Compiling module 'packet_assembler'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_assembler.sv":4)
+Compiling module 'tmds_channel'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\tmds_channel.sv":4)
+Compiling module 'tmds_channel(CN=1)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\tmds_channel.sv":4)
+Compiling module 'tmds_channel(CN=2)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\tmds_channel.sv":4)
+Compiling module 'hdmi(VIDEO_ID_CODE=17,IT_CONTENT=1'b0,VIDEO_REFRESH_RATE=50,VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,START_Y=565)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\hdmi.sv":4)
+Compiling module 'packet_picker(VIDEO_ID_CODE=17,VIDEO_RATE=27000000.0,AUDIO_BIT_WIDTH=16,AUDIO_RATE=44100,VENDOR_NAME=64'b0101010101101110011010110110111001101111011101110110111000000000,PRODUCT_DESCRIPTION=128'b01000110010100000100011101000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,SOURCE_DEVICE_INFORMATION=8'b00000000)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":4)
+Extracting RAM for identifier 'audio_sample_word_buffer'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":80)
+Compiling module 'auxiliary_video_information_info_frame(VIDEO_ID_CODE=32'sb00000000000000000000000000010001)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\auxiliary_video_information_info_frame.sv":5)
+WARN  (EX1998) : Net 'headers[255][23]' does not have a driver("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":29)
+WARN  (EX1998) : Net 'subs[255][3][55]' does not have a driver("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":30)
+WARN  (EX3670) : Actual bit length 10 differs from formal bit length 12 for port 'cx'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":494)
+Compiling module 'serializer(VIDEO_RATE=0)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\serializer.sv":3)
+WARN  (EX1998) : Net 'clk_sdram_w' does not have a driver("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":106)
+WARN  (EX1998) : Net 'clk_sdramp_w' does not have a driver("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":107)
+Compiling module 'memory'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\memory.v":1)
+Compiling module 'impulse'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\impulse.v":1)
+WARN  (EX3791) : Expression size 4 truncated to fit in target size 3("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\memory.v":94)
+WARN  (EX2420) : Latch inferred for net 'vdp_dout_ff[15]'; We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\memory.v":235)
+WARN  (EX3073) : Port 'dout32' remains unconnected for this instance("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\memory_controller.v":60)
+Compiling module 'memory_controller(FREQ=108000000)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\memory_controller.v":1)
+Compiling module 'sdram(FREQ=108000000)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\sdram.v":27)
+WARN  (EX3791) : Expression size 16 truncated to fit in target size 15("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\sdram.v":283)
+WARN  (EX3791) : Expression size 21 truncated to fit in target size 20("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\memory_controller.v":86)
+Compiling module 'bios_msx2p'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\bios_msx2p.v":1)
+Extracting RAM for identifier 'mem_r'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\bios_msx2p.v":9)
+Compiling module 'subrom_msx2p'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\subrom_msx2p.v":1)
+Extracting RAM for identifier 'mem_r'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\subrom_msx2p.v":9)
+Compiling module 'logo'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\logo.v":1)
+Extracting RAM for identifier 'mem_r'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\logo.v":9)
+Compiling module 'rtc'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\rtc.v":53)
+Switching to VHDL mode to elaborate design unit 'ram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\rtc.v":287)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\src\rtc.v":287)
+Switching to VHDL mode to elaborate design unit 'YM2149'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":609)
+Processing 'YM2149(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":62)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":169)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":225)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":305)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":529)
+'others' clause is never selected("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":589)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":609)
+Switching to VHDL mode to elaborate design unit 'opll'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":630)
+Processing 'opll(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":41)
+Processing 'SlotCounter(delay=0)(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd":40)
+Processing 'SlotCounter(delay=2)(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd":40)
+Processing 'SlotCounter(delay=5)(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd":40)
+Processing 'SlotCounter(delay=8)(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\slotcounter.vhd":40)
+Processing 'controller(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd":70)
+Processing 'RegisterMemory(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\registermemory.vhd":40)
+Extracting RAM for identifier 'regs_array'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\registermemory.vhd":54)
+Processing 'VoiceMemory(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicememory.vhd":36)
+Extracting RAM for identifier 'voices'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicememory.vhd":55)
+Processing 'VoiceRom(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicerom.vhd":36)
+WARN  (EX4545) : Array bounds of function return type do not match array bounds of function return value("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\vm2413.vhd":172)
+WARN  (EX4160) : Latch inferred for net 'tll[7]'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd":511)
+Processing 'envelopegenerator(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopegenerator.vhd":42)
+Processing 'AttackTable(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":64)
+Processing 'attack_table_mul(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":42)
+Processing 'EnvelopeMemory(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopememory.vhd":36)
+Extracting RAM for identifier 'egdata_set'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopememory.vhd":51)
+WARN  (EX4545) : Array bounds of function return type do not match array bounds of function return value("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\vm2413.vhd":207)
+Processing 'PhaseGenerator(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasegenerator.vhd":41)
+WARN  (EX4160) : Latch inferred for net 'dphase[17]'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasegenerator.vhd":172)
+Processing 'PhaseMemory(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasememory.vhd":36)
+Extracting RAM for identifier 'phase_array'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasememory.vhd":50)
+Processing 'Operator(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\operator.vhd":41)
+Processing 'SineTable(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":63)
+Processing 'interpolate_mul(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":41)
+Processing 'OutputGenerator(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd":36)
+Processing 'FeedbackMemory(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\feedbackmemory.vhd":41)
+Extracting RAM for identifier 'data_array'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\feedbackmemory.vhd":55)
+WARN  (EX4545) : Array bounds of function return type do not match array bounds of function return value("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\vm2413.vhd":187)
+Processing 'OutputMemory(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputmemory.vhd":36)
+Extracting RAM for identifier 'data_array'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputmemory.vhd":51)
+Processing 'LinearTable(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":63)
+Processing 'linear_table_mul(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":41)
+Processing 'TemporalMixer(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\temporalmixer.vhd":37)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":630)
+Switching to VHDL mode to elaborate design unit 'megaram'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":662)
+Processing 'megaram(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\megaram.vhd":41)
+Processing 'scc_wave(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":79)
+Processing 'scc_wave_mul(rtl)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":39)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":662)
+Compiling module 'fm_filter(DATA_WIDTH=24)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":3)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":40)
+WARN  (EX3791) : Expression size 5 truncated to fit in target size 4("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":49)
+Switching to VHDL mode to elaborate design unit 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":66)
+Processing 'LPF2(msbi=23)(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":102)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":66)
+Switching to VHDL mode to elaborate design unit 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":76)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":76)
+Compiling module 'inter_clock(DATA_WIDTH=24)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\inter_clock.v":1)
+Switching to VHDL mode to elaborate design unit 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":96)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":96)
+Switching to VHDL mode to elaborate design unit 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":106)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":106)
+Switching to VHDL mode to elaborate design unit 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":126)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":126)
+Switching to VHDL mode to elaborate design unit 'lpf2'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":136)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":136)
+Switching to VHDL mode to elaborate design unit 'lpf1'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":184)
+Processing 'LPF1(msbi=23)(RTL)'("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\lpf\lpf.vhd":39)
+Returning to Verilog mode to proceed with elaboration("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":184)
+NOTE  (EX0101) : Current top module is "top"
+WARN  (EX0211) : The output port "adc_clk" of module "v9958_top" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":28)
+WARN  (EX0211) : The output port "adc_cs" of module "v9958_top" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":29)
+WARN  (EX0211) : The output port "adc_mosi" of module "v9958_top" has no driver, assigning undriven bits to Z, simulation mismatch possible("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":30)
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input s2 is unused("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":6)
+Running device independent optimization ...
+WARN  (DI0003) : Latch inferred for net 'env_vol[4]';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":511)
+WARN  (DI0003) : Latch inferred for net 'env_vol[3]';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":511)
+WARN  (DI0003) : Latch inferred for net 'env_vol[2]';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":511)
+WARN  (DI0003) : Latch inferred for net 'env_vol[1]';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":511)
+WARN  (DI0003) : Latch inferred for net 'env_vol[0]';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":511)
+WARN  (DI0003) : Latch inferred for net 'env_inc';We do not recommend the use of latches in FPGA designs, as they may lead to timing problems("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\PSG_YM2149\YM2149.vhdl":511)
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+WARN  (NL0002) : The module "fm_filter" instantiated to "filtro_fm" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":703)
+WARN  (NL0002) : The module "LPF2" instantiated to "filter1" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":60)
+WARN  (NL0002) : The module "LPF2" instantiated to "filter1b" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":70)
+WARN  (NL0002) : The module "LPF2" instantiated to "filter2" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":90)
+WARN  (NL0002) : The module "LPF2" instantiated to "filter2b" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":100)
+WARN  (NL0002) : The module "LPF2" instantiated to "filter3" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":120)
+WARN  (NL0002) : The module "LPF2" instantiated to "filter4" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":130)
+WARN  (NL0002) : The module "LPF1" instantiated to "filter5" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":178)
+WARN  (NL0002) : The module "inter_clock" instantiated to "interclock1" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":86)
+WARN  (NL0002) : The module "inter_clock" instantiated to "interclock2" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":116)
+WARN  (NL0002) : The module "inter_clock" instantiated to "interclock3" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\fm_filter\fm_filter.v":174)
+WARN  (NL0002) : The module "opll" instantiated to "opll1" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\top.v":619)
+WARN  (NL0002) : The module "controller" instantiated to "ct" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":330)
+WARN  (NL0002) : The module "RegisterMemory" instantiated to "u_register_memory" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd":165)
+WARN  (NL0002) : The module "VoiceMemory" instantiated to "vmem" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\controller.vhd":175)
+WARN  (NL0002) : The module "VoiceRom" instantiated to "ROM2413" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\voicememory.vhd":70)
+WARN  (NL0002) : The module "envelopegenerator" instantiated to "eg" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":335)
+WARN  (NL0002) : The module "AttackTable" instantiated to "u_attack_table" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopegenerator.vhd":99)
+WARN  (NL0002) : The module "attack_table_mul" instantiated to "u_attack_table_mul" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\attacktable.vhd":141)
+WARN  (NL0002) : The module "EnvelopeMemory" instantiated to "u_envelope_memory" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\envelopegenerator.vhd":107)
+WARN  (NL0002) : The module "OutputGenerator" instantiated to "og" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":357)
+WARN  (NL0002) : The module "FeedbackMemory" instantiated to "Fmem" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd":125)
+WARN  (NL0002) : The module "LinearTable" instantiated to "Ltbl" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd":146)
+WARN  (NL0002) : The module "linear_table_mul" instantiated to "u_linear_table_mul" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\lineartable.vhd":153)
+WARN  (NL0002) : The module "OutputMemory" instantiated to "Mmem" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\outputgenerator.vhd":135)
+WARN  (NL0002) : The module "Operator" instantiated to "op" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":350)
+WARN  (NL0002) : The module "SineTable" instantiated to "u_sine_table" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\operator.vhd":94)
+WARN  (NL0002) : The module "interpolate_mul" instantiated to "u_interpolate_mul" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\sinetable.vhd":168)
+WARN  (NL0002) : The module "PhaseGenerator" instantiated to "pg" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":342)
+WARN  (NL0002) : The module "PhaseMemory" instantiated to "MEM" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\phasegenerator.vhd":174)
+WARN  (NL0002) : The module "SlotCounter" instantiated to "s0" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":281)
+WARN  (NL0002) : The module "SlotCounter" instantiated to "s2" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":293)
+WARN  (NL0002) : The module "SlotCounter" instantiated to "s5" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":305)
+WARN  (NL0002) : The module "SlotCounter" instantiated to "s8" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":317)
+WARN  (NL0002) : The module "TemporalMixer" instantiated to "tm" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\opll\vm2413\opll.vhd":363)
+WARN  (NL0002) : The module "scc_wave_mul" instantiated to "u_mul" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\OCM_3.9\sound\scc\scc_wave.vhd":394)
+WARN  (NL0002) : The module "CLOCK_DIV" instantiated to "cpuclkd" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\v9958_top.v":360)
+WARN  (NL0002) : The module "audio_info_frame" instantiated to "audio_info_frame" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":143)
+WARN  (NL0002) : The module "audio_sample_packet" instantiated to "audio_sample_packet" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":131)
+WARN  (NL0002) : The module "auxiliary_video_information_info_frame" instantiated to "auxiliary_video_information_info_frame" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":137)
+WARN  (NL0002) : The module "source_product_description_info_frame" instantiated to "source_product_description_info_frame" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":140)
+WARN  (NL0002) : The module "audio_info_frame" instantiated to "audio_info_frame" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":143)
+WARN  (NL0002) : The module "audio_sample_packet" instantiated to "audio_sample_packet" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":131)
+WARN  (NL0002) : The module "auxiliary_video_information_info_frame" instantiated to "auxiliary_video_information_info_frame" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":137)
+WARN  (NL0002) : The module "source_product_description_info_frame" instantiated to "source_product_description_info_frame" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\hdmi\packet_picker.sv":140)
+WARN  (NL0002) : The module "VDP_NTSC_PAL" instantiated to "U_VDP_NTSC_PAL" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp.vhd":1051)
+WARN  (NL0002) : The module "palette_g" instantiated to "U_PALETTEMEMG" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_register.vhd":394)
+WARN  (NL0002) : The module "VDP_LINEBUF" instantiated to "U_BUF_GE" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":128)
+WARN  (NL0002) : The module "VDP_LINEBUF" instantiated to "U_BUF_GO" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":155)
+WARN  (NL0002) : The module "VDP_LINEBUF" instantiated to "U_BUF_RE" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":119)
+WARN  (NL0002) : The module "VDP_LINEBUF" instantiated to "U_BUF_RO" is swept in optimizing("D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tn_vdp_v3_v9958\src\vdp\vdp_doublebuf.vhd":146)
+[95%] Generate netlist file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\gwsynthesis\Z80_goauld.vg" completed
+WARN  (CK3000) : The clock "clk_27m"'s frequency does not match vdp4/clk_135_inst/rpll_inst's param "FCLKIN = "27""
+[100%] Generate report file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\gwsynthesis\Z80_goauld_syn.rpt.html" completed
+GowinSynthesis finish
