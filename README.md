@@ -3,7 +3,7 @@ MSX Goa'uld board with Tang Nano 20k
 
 ![Pantallazo](/pantallazo.jpg)
 
-MSX2+ engine in z80 socket. It turns one MSX into an MSX2+ by replacing Z80 processor. FPGA in board contains: 
+MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 processor. FPGA in board contains: 
 * Z80
 * V9958 with hdmi output
 * MSX2+ BIOS
