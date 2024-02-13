@@ -1,13 +1,12 @@
-Reading netlist file: "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\gwsynthesis\Z80_goauld.vg"
-Parsing netlist file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\gwsynthesis\Z80_goauld.vg" completed
+Reading netlist file: "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\gwsynthesis\Z80_goauld.vg"
+Parsing netlist file "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\gwsynthesis\Z80_goauld.vg" completed
 Processing netlist completed
-Reading constraint file: "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\tang9k.cst"
+Reading constraint file: "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\tang9k.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
 [20%] Placement Phase 1 completed
 [30%] Placement Phase 2 completed
-WARN  (TA1117) : Can't calculate clocks' relationship between: "psg1/env_reset" and "clkdiv2_2/clkdiv_inst/CLKOUT.default_gen_clk"
 [50%] Placement Phase 3 completed
 Running routing......
 [60%] Routing Phase 0 completed
@@ -22,10 +21,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\pnr\Z80_goauld.power.html" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\pnr\Z80_goauld.pin.html" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\pnr\Z80_goauld.rpt.html" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\pnr\Z80_goauld.rpt.txt" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\45_Pruebas_Z80_v9958_bios_mapper_sonido_goauld\impl\pnr\Z80_goauld.tr.html" completed
-Sat Nov 18 09:05:50 2023
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\pnr\Z80_goauld.power.html" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\pnr\Z80_goauld.pin.html" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\pnr\Z80_goauld.rpt.html" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\pnr\Z80_goauld.rpt.txt" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\52_Z80_bios_goauld_basse3\impl\pnr\Z80_goauld.tr.html" completed
+Fri Feb 09 11:26:09 2024
 

@@ -3,13 +3,10 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C7/I6">gw2ar18c-001</Device>
     <FileList>
-        <File path="fm_filter/fm_filter.v" type="file.verilog" enable="1"/>
-        <File path="fm_filter/inter_clock.v" type="file.verilog" enable="1"/>
         <File path="src/bios_msx2p.v" type="file.verilog" enable="1"/>
-        <File path="src/fm_logo.v" type="file.verilog" enable="0"/>
-        <File path="src/gowin_clkdiv2/gowin_clkdiv2.v" type="file.verilog" enable="1"/>
+        <File path="src/gowin/clk_108p.v" type="file.verilog" enable="1"/>
         <File path="src/impulse.v" type="file.verilog" enable="1"/>
         <File path="src/logo.v" type="file.verilog" enable="1"/>
         <File path="src/memory.v" type="file.verilog" enable="1"/>
@@ -17,7 +14,6 @@
         <File path="src/rtc.v" type="file.verilog" enable="1"/>
         <File path="src/subrom_msx2p.v" type="file.verilog" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/clockdiv.v" type="file.verilog" enable="1"/>
-        <File path="tn_vdp_v3_v9958/src/gowin/clk_108p.v" type="file.verilog" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/gowin/clk_135.v" type="file.verilog" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/hdmi/audio_clock_regeneration_packet.sv" type="file.verilog" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/hdmi/audio_info_frame.sv" type="file.verilog" enable="1"/>
@@ -32,37 +28,19 @@
         <File path="tn_vdp_v3_v9958/src/memory_controller.v" type="file.verilog" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/sdram.v" type="file.verilog" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/v9958_top.v" type="file.verilog" enable="1"/>
-        <File path="tn_vdp_v3_v9958/src/vram.v" type="file.verilog" enable="1"/>
         <File path="top.v" type="file.verilog" enable="1"/>
-        <File path="OCM_3.9/sound/lpf/lpf.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/attacktable.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/controller.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/envelopegenerator.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/envelopememory.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/feedbackmemory.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/lineartable.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/operator.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/opll.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/outputgenerator.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/outputmemory.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/phasegenerator.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/phasememory.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/registermemory.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/sinetable.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/slotcounter.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/temporalmixer.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/vm2413.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/voicememory.vhd" type="file.vhdl" enable="1"/>
-        <File path="OCM_3.9/sound/opll/vm2413/voicerom.vhd" type="file.vhdl" enable="1"/>
         <File path="OCM_3.9/sound/scc/megaram.vhd" type="file.vhdl" enable="1"/>
         <File path="OCM_3.9/sound/scc/scc_wave.vhd" type="file.vhdl" enable="1"/>
         <File path="PSG_YM2149/YM2149.vhdl" type="file.vhdl" enable="1"/>
-        <File path="cpu/t80.vhd" type="file.vhdl" enable="1"/>
-        <File path="cpu/t80_alu.vhd" type="file.vhdl" enable="1"/>
-        <File path="cpu/t80_mcode.vhd" type="file.vhdl" enable="1"/>
-        <File path="cpu/t80_pack.vhd" type="file.vhdl" enable="1"/>
-        <File path="cpu/t80_reg.vhd" type="file.vhdl" enable="1"/>
-        <File path="cpu/t80a.vhd" type="file.vhdl" enable="1"/>
+        <File path="T80A/t80.vhd" type="file.vhdl" enable="1"/>
+        <File path="T80A/t80_alu.vhd" type="file.vhdl" enable="1"/>
+        <File path="T80A/t80_mcode.vhd" type="file.vhdl" enable="1"/>
+        <File path="T80A/t80_pack.vhd" type="file.vhdl" enable="1"/>
+        <File path="T80A/t80_reg.vhd" type="file.vhdl" enable="1"/>
+        <File path="T80A/t80a.vhd" type="file.vhdl" enable="1"/>
+        <File path="denoise/denoise.vhd" type="file.vhdl" enable="1"/>
+        <File path="denoise/denoise_low.vhd" type="file.vhdl" enable="1"/>
+        <File path="src/gowin_clkdiv2/gowin_clkdiv2.vhd" type="file.vhdl" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/ram.vhd" type="file.vhdl" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/vdp/vdp.vhd" type="file.vhdl" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/vdp/vdp_colordec.vhd" type="file.vhdl" enable="1"/>

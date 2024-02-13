@@ -82,6 +82,3 @@ IO_LOC "data_p[2]" 39,40;
 IO_PORT "data_p[2]" PULL_MODE=NONE DRIVE=4;
 IO_LOC "clk_p" 33,34;
 IO_PORT "clk_p" PULL_MODE=NONE DRIVE=4;
-
-IO_LOC "notocar" 75;
-IO_PORT "notocar"  IO_TYPE=LVCMOS33;

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="top" Register="137" Alu="10" Lut="160">
-    <SubModule name="clk_sdramp"/>
-    <SubModule name="clkdiv2"/>
+<Module name="top" Register="179" Alu="26" Lut="428">
+    <SubModule name="clk_main"/>
     <SubModule name="dn1" Register="3" Lut="2"/>
     <SubModule name="dn2" Register="3" Lut="2"/>
     <SubModule name="dn3" Register="3" Lut="2"/>
@@ -14,16 +13,22 @@
     <SubModule name="bus_din[5].dn" Register="3" Lut="2"/>
     <SubModule name="bus_din[6].dn" Register="3" Lut="2"/>
     <SubModule name="bus_din[7].dn" Register="3" Lut="2"/>
-    <SubModule name="cpu1" Register="17" Lut="39">
-        <SubModule name="u0" Register="448" Alu="70" Lut="1560" Bsram="1">
-            <SubModule name="mcode" Lut="332"/>
-            <SubModule name="alu" Alu="11" Lut="11"/>
-            <SubModule name="Regs" Ssram="12"/>
+    <SubModule name="cpu1" Register="17" Lut="29">
+        <SubModule name="u0" Register="482" Alu="70" Lut="1446" Bsram="1">
+            <SubModule name="mcode" Lut="314"/>
+            <SubModule name="alu" Alu="11" Lut="8"/>
+            <SubModule name="Regs" Lut="7" Ssram="12"/>
         </SubModule>
     </SubModule>
-    <SubModule name="vdp4" Register="18" Lut="91" Ssram="4">
+    <SubModule name="bios1" Register="1" Lut="1" Bsram="16"/>
+    <SubModule name="subrom1" Bsram="8"/>
+    <SubModule name="logo1" Bsram="8"/>
+    <SubModule name="rtc1" Register="75" Lut="187">
+        <SubModule name="u_mem" Register="6" Lut="12" Ssram="4"/>
+    </SubModule>
+    <SubModule name="vdp4" Register="18" Lut="90" Ssram="4">
         <SubModule name="clk_135_inst"/>
-        <SubModule name="u_v9958" Register="72" Lut="336">
+        <SubModule name="u_v9958" Register="72" Lut="337">
             <SubModule name="U_VDP_VGA" Register="11" Lut="19">
                 <SubModule name="DBUF" Lut="21">
                     <SubModule name="U_BUF_BE" Bsram="1"/>
@@ -31,64 +36,57 @@
                 </SubModule>
             </SubModule>
             <SubModule name="U_INTERRUPT" Register="2" Alu="8" Lut="3"/>
-            <SubModule name="U_SSG" Register="74" Alu="55" Lut="103">
-                <SubModule name="U_HVCOUNTER" Register="41" Lut="83"/>
+            <SubModule name="U_SSG" Register="74" Alu="55" Lut="104">
+                <SubModule name="U_HVCOUNTER" Register="41" Lut="81"/>
             </SubModule>
             <SubModule name="U_VDP_COLORDEC" Register="57" Lut="96"/>
-            <SubModule name="U_VDP_TEXT12" Register="95" Alu="12" Lut="153"/>
-            <SubModule name="U_VDP_GRAPHIC123M" Register="61" Alu="5" Lut="66"/>
-            <SubModule name="U_VDP_GRAPHIC4567" Register="150" Alu="41" Lut="159">
+            <SubModule name="U_VDP_TEXT12" Register="95" Alu="12" Lut="152"/>
+            <SubModule name="U_VDP_GRAPHIC123M" Register="61" Alu="5" Lut="67"/>
+            <SubModule name="U_VDP_GRAPHIC4567" Register="150" Alu="41" Lut="158">
                 <SubModule name="U_FIFOMEM" Bsram="1"/>
             </SubModule>
-            <SubModule name="U_SPRITE" Register="289" Alu="14" Lut="394">
+            <SubModule name="U_SPRITE" Register="289" Alu="14" Lut="389">
                 <SubModule name="ISPINFORAM" Register="3" Ssram="8"/>
                 <SubModule name="U_EVEN_LINE_BUF" Bsram="1"/>
                 <SubModule name="U_ODD_LINE_BUF" Bsram="1"/>
             </SubModule>
-            <SubModule name="U_VDP_REGISTER" Register="241" Lut="170">
+            <SubModule name="U_VDP_REGISTER" Register="241" Lut="165">
                 <SubModule name="U_PALETTEMEMRB" Register="5" Bsram="1"/>
             </SubModule>
-            <SubModule name="U_VDP_COMMAND" Register="179" Alu="77" Lut="569"/>
-            <SubModule name="U_VDP_WAIT_CONTROL" Register="16" Alu="152" Lut="175"/>
+            <SubModule name="U_VDP_COMMAND" Register="179" Alu="77" Lut="564"/>
+            <SubModule name="U_VDP_WAIT_CONTROL" Register="16" Alu="152" Lut="176"/>
         </SubModule>
         <SubModule name="audioclkd" Register="25" Alu="12" Lut="29"/>
-        <SubModule name="hdmi_ntsc" Register="61" Alu="9" Lut="52">
+        <SubModule name="hdmi_ntsc" Register="61" Alu="9" Lut="54">
             <SubModule name="true_hdmi_output.packet_picker" Register="420" Lut="335">
                 <SubModule name="audio_clock_regeneration_packet" Register="42" Alu="20" Lut="8"/>
             </SubModule>
             <SubModule name="true_hdmi_output.packet_assembler" Register="45" Alu="4" Lut="354"/>
-            <SubModule name="tmds_gen[0].tmds_channel" Register="14" Alu="16" Lut="86"/>
+            <SubModule name="tmds_gen[0].tmds_channel" Register="14" Alu="16" Lut="80"/>
             <SubModule name="tmds_gen[1].tmds_channel" Register="14" Alu="16" Lut="65"/>
-            <SubModule name="tmds_gen[2].tmds_channel" Register="14" Alu="16" Lut="66"/>
+            <SubModule name="tmds_gen[2].tmds_channel" Register="14" Alu="16" Lut="63"/>
         </SubModule>
-        <SubModule name="hdmi_pal" Register="45" Alu="11" Lut="61">
-            <SubModule name="true_hdmi_output.packet_picker" Register="404" Lut="330">
+        <SubModule name="hdmi_pal" Register="45" Alu="11" Lut="63">
+            <SubModule name="true_hdmi_output.packet_picker" Register="404" Lut="331">
                 <SubModule name="audio_clock_regeneration_packet" Register="42" Alu="20" Lut="8"/>
             </SubModule>
-            <SubModule name="true_hdmi_output.packet_assembler" Register="45" Alu="4" Lut="344"/>
-            <SubModule name="tmds_gen[0].tmds_channel" Register="14" Alu="16" Lut="81"/>
+            <SubModule name="true_hdmi_output.packet_assembler" Register="45" Alu="4" Lut="345"/>
+            <SubModule name="tmds_gen[0].tmds_channel" Register="14" Alu="16" Lut="78"/>
             <SubModule name="tmds_gen[1].tmds_channel" Register="14" Alu="16" Lut="64"/>
-            <SubModule name="tmds_gen[2].tmds_channel" Register="14" Alu="16" Lut="69"/>
+            <SubModule name="tmds_gen[2].tmds_channel" Register="14" Alu="16" Lut="68"/>
         </SubModule>
         <SubModule name="serializer"/>
     </SubModule>
-    <SubModule name="memory_ctrl" Register="40" Lut="80">
+    <SubModule name="memory_ctrl" Register="40" Lut="63">
         <SubModule name="start_vdp" Register="1"/>
         <SubModule name="start_mapper" Register="1"/>
-        <SubModule name="vram" Register="56" Lut="65">
-            <SubModule name="u_sdram" Register="57" Alu="14" Lut="108"/>
+        <SubModule name="vram" Register="55" Lut="43">
+            <SubModule name="u_sdram" Register="56" Alu="14" Lut="112"/>
         </SubModule>
     </SubModule>
-    <SubModule name="bios1" Register="1" Lut="1" Bsram="16"/>
-    <SubModule name="subrom1" Bsram="8"/>
-    <SubModule name="logo1" Bsram="8"/>
-    <SubModule name="rtc1" Register="75" Lut="204">
-        <SubModule name="u_mem" Register="6" Lut="12" Ssram="4"/>
-    </SubModule>
-    <SubModule name="clkdiv2_2"/>
-    <SubModule name="psg1" Register="226" Alu="62" Lut="249"/>
-    <SubModule name="scc1" Register="11" Lut="27">
-        <SubModule name="SccCh" Register="229" Lut="281" Dsp="1">
+    <SubModule name="psg1" Register="226" Alu="62" Lut="251"/>
+    <SubModule name="scc1" Register="11" Lut="17">
+        <SubModule name="SccCh" Register="229" Lut="294" Dsp="1">
             <SubModule name="wavemem" Bsram="1"/>
         </SubModule>
     </SubModule>
