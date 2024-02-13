@@ -1,4 +1,4 @@
-20600250246175834
+20601956117579148
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -58047,6 +58047,13 @@ Mis_huellas
 MSX_SLOT_IDC_Even
 Through hole IDC box header, 2x25, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
 Through hole vertical IDC box header THT 2x25 2.54mm double row
+0
+50
+50
+Mis_huellas
+QMTECH_XC7A15T_35T
+Through hole straight pin header, 2x25, 2.54mm pitch, double rows
+Through hole pin header THT 2x25 2.54mm double row
 0
 50
 50
