@@ -15,3 +15,5 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 Slot map
 
 ![Slot map](/mapa_slots.png)
+
+Warning: not yet fully working on all tangs
