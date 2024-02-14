@@ -21,7 +21,7 @@ Warning: not yet fully working on all tangs
 Tips:
 * Use turned pins in header to avoid damages in Z80 socket
 ![turned header](/torneados.jpg)
-* Diode avoids hdmi plug from powering the MSX, but causes a voltage drop. If tang doesn't boot, bridge the diode and rememeber to remove hdmi cable when not using
+* Diode avoids hdmi plug from powering the MSX, but causes a voltage drop. If tang doesn't boot, bridge the diode and remember to remove hdmi cable when not using
 ![diode](/diodo.jpg)
 * When soldering headers, start with the inner one (Z80)
 * Firmwares: start with the less demanding (Z80 + V9958), this is the one that works with most of the tangs
