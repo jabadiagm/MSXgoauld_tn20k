@@ -20,8 +20,8 @@ Warning: not yet fully working on all tangs
 
 Tips:
 * Use turned pins in header to avoid damages in Z80 socket
-*Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge contacts clean
 ![turned header](/torneados.jpg)
+* Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge contacts clean
 * Diode avoids hdmi plug from powering the MSX, but causes a voltage drop. If tang doesn't boot, bridge the diode and remember to remove hdmi cable when not using
 ![diode](/diodo.jpg)
 * When soldering headers, start with the inner one (Z80)
