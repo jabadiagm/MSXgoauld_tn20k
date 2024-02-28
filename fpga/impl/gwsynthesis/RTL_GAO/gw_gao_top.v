@@ -48,7 +48,6 @@ module gw_gao(
     \counter_demux[2] ,
     \counter_demux[1] ,
     \counter_demux[0] ,
-    latch_demux,
     \bus_data[7] ,
     \bus_data[6] ,
     \bus_data[5] ,
@@ -113,7 +112,6 @@ input \counter_demux[3] ;
 input \counter_demux[2] ;
 input \counter_demux[1] ;
 input \counter_demux[0] ;
-input latch_demux;
 input \bus_data[7] ;
 input \bus_data[6] ;
 input \bus_data[5] ;
@@ -177,7 +175,6 @@ wire \counter_demux[3] ;
 wire \counter_demux[2] ;
 wire \counter_demux[1] ;
 wire \counter_demux[0] ;
-wire latch_demux;
 wire \bus_data[7] ;
 wire \bus_data[6] ;
 wire \bus_data[5] ;
@@ -268,7 +265,7 @@ ao_top_0  u_la0_top(
     .trig5_i({\bus_data[7] ,\bus_data[6] ,\bus_data[5] ,\bus_data[4] ,\bus_data[3] ,\bus_data[2] ,\bus_data[1] ,\bus_data[0] }),
     .trig6_i({\bus_addr[7] ,\bus_addr[6] ,\bus_addr[5] ,\bus_addr[4] ,\bus_addr[3] ,\bus_addr[2] ,\bus_addr[1] ,\bus_addr[0] }),
     .trig7_i(bus_rd_n),
-    .data_i({ex_clk_27m,ex_bus_clk_3m6,bus_clk_3m6,clk_enable_3m6,ex_bus_reset_n,ex_bus_wait_n,ex_bus_int_n,ex_bus_rfsh_n,ex_bus_m1_n,ex_bus_mreq_n,bus_mreq_n,ex_bus_iorq_n,bus_iorq_n,ex_bus_rd_n,bus_rd_n,ex_bus_wr_n,bus_wr_n,ex_bus_data_reverse_n,\ex_bus_data[7] ,\ex_bus_data[6] ,\ex_bus_data[5] ,\ex_bus_data[4] ,\ex_bus_data[3] ,\ex_bus_data[2] ,\ex_bus_data[1] ,\ex_bus_data[0] ,\bus_addr[15] ,\bus_addr[14] ,\bus_addr[13] ,\bus_addr[12] ,\bus_addr[11] ,\bus_addr[10] ,\bus_addr[9] ,\bus_addr[8] ,\bus_addr[7] ,\bus_addr[6] ,\bus_addr[5] ,\bus_addr[4] ,\bus_addr[3] ,\bus_addr[2] ,\bus_addr[1] ,\bus_addr[0] ,\state_demux[1] ,\state_demux[0] ,\counter_demux[4] ,\counter_demux[3] ,\counter_demux[2] ,\counter_demux[1] ,\counter_demux[0] ,latch_demux}),
+    .data_i({ex_clk_27m,ex_bus_clk_3m6,bus_clk_3m6,clk_enable_3m6,ex_bus_reset_n,ex_bus_wait_n,ex_bus_int_n,ex_bus_rfsh_n,ex_bus_m1_n,ex_bus_mreq_n,bus_mreq_n,ex_bus_iorq_n,bus_iorq_n,ex_bus_rd_n,bus_rd_n,ex_bus_wr_n,bus_wr_n,ex_bus_data_reverse_n,\ex_bus_data[7] ,\ex_bus_data[6] ,\ex_bus_data[5] ,\ex_bus_data[4] ,\ex_bus_data[3] ,\ex_bus_data[2] ,\ex_bus_data[1] ,\ex_bus_data[0] ,\bus_addr[15] ,\bus_addr[14] ,\bus_addr[13] ,\bus_addr[12] ,\bus_addr[11] ,\bus_addr[10] ,\bus_addr[9] ,\bus_addr[8] ,\bus_addr[7] ,\bus_addr[6] ,\bus_addr[5] ,\bus_addr[4] ,\bus_addr[3] ,\bus_addr[2] ,\bus_addr[1] ,\bus_addr[0] ,\state_demux[1] ,\state_demux[0] ,\counter_demux[4] ,\counter_demux[3] ,\counter_demux[2] ,\counter_demux[1] ,\counter_demux[0] }),
     .clk_i(clk_108m)
 );
 

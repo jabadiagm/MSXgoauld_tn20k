@@ -61,7 +61,6 @@
                 <Signal>counter_demux[1]</Signal>
                 <Signal>counter_demux[0]</Signal>
             </Bus>
-            <Signal>latch_demux</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -177,5 +176,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1101111011001000</GAO_ID>
+    <GAO_ID>1001100010010000</GAO_ID>
 </GAO_CONFIG>

@@ -58,7 +58,7 @@ set_multicycle_path -from [get_clocks {clock_27m}] -to [get_pins {cpu1/DI_Reg*/D
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/?*?/?*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/wavemem/?*?/?*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/?*?/?*}]
-//
+
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/?*?/?*}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/u_mem/?*?/?*}]
 

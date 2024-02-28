@@ -3,7 +3,7 @@
 <Project>
     <Template>FPGA</Template>
     <Version>5</Version>
-    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C7/I6">gw2ar18c-001</Device>
+    <Device name="GW2AR-18C" pn="GW2AR-LV18QN88C8/I7">gw2ar18c-000</Device>
     <FileList>
         <File path="src/bios_msx2p.v" type="file.verilog" enable="1"/>
         <File path="src/gowin/clk_108p.v" type="file.verilog" enable="1"/>
@@ -38,8 +38,6 @@
         <File path="T80A/t80_pack.vhd" type="file.vhdl" enable="1"/>
         <File path="T80A/t80_reg.vhd" type="file.vhdl" enable="1"/>
         <File path="T80A/t80a.vhd" type="file.vhdl" enable="1"/>
-        <File path="denoise/denoise.vhd" type="file.vhdl" enable="1"/>
-        <File path="denoise/denoise_low.vhd" type="file.vhdl" enable="1"/>
         <File path="src/gowin_clkdiv2/gowin_clkdiv2.vhd" type="file.vhdl" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/ram.vhd" type="file.vhdl" enable="1"/>
         <File path="tn_vdp_v3_v9958/src/vdp/vdp.vhd" type="file.vhdl" enable="1"/>
