@@ -12,7 +12,16 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 * SCC (audio only) through hdmi
 * RTC
 
-Slot map
+## Revision 2 Board
+
+Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
+
+![](/kicad/v2/v2_real.jpg)
+![](/kicad/v2/V2_FRONT.png)
+![](/kicad/v2/V2_BACK.png)
+
+
+## Slot map
 
 ![Slot map](/mapa_slots.png)
 
