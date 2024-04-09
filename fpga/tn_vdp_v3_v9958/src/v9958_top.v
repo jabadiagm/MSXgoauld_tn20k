@@ -287,8 +287,8 @@ module v9958_top(
         end
     end
 
-    wire pal_mode;
-    //assign pal_mode = 0;
+    //wire pal_mode;
+    assign pal_mode = 0;
     wire vdp_hdmi_reset;
     wire [10:0] vdp_cx;
     wire [10:0] vdp_cy;
@@ -326,8 +326,8 @@ module v9958_top(
 		.VDP_ID				( VDP_ID							),
 		.OFFSET_Y			( OFFSET_Y							),
         .HDMI_RESET         ( vdp_hdmi_reset                    ),
-        .PAL_MODE           ( pal_mode                      ),
-        //.PAL_MODE           (                                 ),
+        //.PAL_MODE           ( pal_mode                      ),
+        .PAL_MODE           (                                 ),
         .SPMAXSPR           ( ~maxspr_n                         ),  
         .CX                 ( vdp_cx                            ),
         .CY                 ( vdp_cy                            )

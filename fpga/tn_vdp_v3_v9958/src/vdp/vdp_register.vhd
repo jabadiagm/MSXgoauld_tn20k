@@ -679,7 +679,7 @@ BEGIN
                             REG_R8_SP_OFF       <= VDPP1DATA(1);
                             REG_R8_COL0_ON      <= VDPP1DATA(5);
                         WHEN "01001" =>     -- #09
-                            REG_R9_PAL_MODE         <= VDPP1DATA(1);
+                            REG_R9_PAL_MODE         <= '0'; --VDPP1DATA(1);
                             FF_R9_2PAGE_MODE        <= VDPP1DATA(2);
                             REG_R9_INTERLACE_MODE   <= VDPP1DATA(3);
                             REG_R9_Y_DOTS           <= VDPP1DATA(7);
