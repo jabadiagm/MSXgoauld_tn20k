@@ -11,7 +11,7 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 
 Slot map
 
-![Slot map](/mapa_slots.png)
+![Slot map](/mapa_slots2.png)
 
 Warning: not yet fully working on all tangs, some cartridges may not work in slot 1 (used for msx 2+ subrom)
 
