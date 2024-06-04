@@ -29,7 +29,7 @@ Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 
 ![Slot map](/mapa_slots.png)
 
-Warning: not yet fully working on all tangs, some cartridges may not work in slot 1 (used for msx 2+ subrom)
+Warning: not yet fully working on all tangs!
 
 Tips:
 * Use integrated circuits from trusted sources
