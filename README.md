@@ -5,9 +5,16 @@ MSX Goa'uld board with Tang Nano 20k
 
 MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 processor. FPGA in board contains: 
 * Z80
-* V9958 with hdmi output, 60 Hz only
+* V9958 with hdmi output
 * MSX2+ BIOS
-* RTC
+* 4MB mapper
+* PSG through hdmi
+* SCC (audio only) through hdmi
+
+## How it works:
+Logic acts on bus control signals so that internal devices inside fpga take priority over external devices. 
+
+![Esquema](/esquema.png)
 
 ## Revision 2 Board
 
@@ -20,11 +27,12 @@ Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 
 ## Slot map
 
-![Slot map](/mapa_slots2.png)
+![Slot map](/mapa_slots.png)
 
 Warning: not yet fully working on all tangs, some cartridges may not work in slot 1 (used for msx 2+ subrom)
 
 Tips:
+* Use integrated circuits from trusted sources
 * Use turned pins in header to avoid damages in Z80 socket
 ![turned header](/torneados.jpg)
 * Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge contacts clean

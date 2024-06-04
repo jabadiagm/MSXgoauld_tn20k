@@ -1,0 +1,3781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Key Layout and Scancodes</title>
+
+<style type="text/css"><!--
+  .jpdiff {
+    background-color: #ffd8d8;
+  }
+  .axdiff {
+    background-color: #e0e0ff;
+  }
+  .k102diff {
+    background-color: #d8ffd8;
+  }
+  .kenh {
+    background-color: #e0e0e0;
+  }
+  .kprtscr {
+    background-color: #e0e0e0;
+  }
+  .kpause {
+    background-color: #e0e0e0;
+  }
+--></style>
+</head>
+<body>
+
+<h2 id="layout">Keyboard Layout and Key Number</h2>
+
+
+<h3 id="layout_us101">101 Keyboard (US English)</h3>
+
+<pre><tt>
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+|110|   |112|113|114|115| |116|117|118|119| |120|121|122|123|   |124|125|126|
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+-------+   +---+---+---+   +---+---+---+---+
+|  1|  2|  3|  4|  5|  6|  7|  8|  9| 10| 11| 12| 13|   15  |   | 75| 80| 85|   | 90| 95|100|105|
++---+---+---+---+---+---+---+---+---+---+---+---+---+-------+   +---+---+---+   +---+---+---+---+
++-----+---+---+---+---+---+---+---+---+---+---+---+---+-----+   +---+---+---+   +---+---+---+---+
+|  16 | 17| 18| 19| 20| 21| 22| 23| 24| 25| 26| 27| 28|  29 |   | 76| 81| 86|   | 91| 96|101|   |
++-----+---+---+---+---+---+---+---+---+---+---+---+---+-----+   +---+---+---+   +---+---+---|106|
++------+---+---+---+---+---+---+---+---+---+---+---+--------+                   +---+---+---|   |
+|  30  | 31| 32| 33| 34| 35| 36| 37| 38| 39| 40| 41|   43   |                   | 92| 97|102|   |
++------+---+---+---+---+---+---+---+---+---+---+---+--------+                   +---+---+---+---+
++--------+---+---+---+---+---+---+---+---+---+---+----------+       +---+       +---+---+---+---+
+|   44   | 46| 47| 48| 49| 50| 51| 52| 53| 54| 55|    57    |       | 83|       | 93| 98|103|   |
++--------+---+---+---+---+---+---+---+---+---+---+----------+       +---+       +---+---+---|108|
++-----+   +----+---------------------------+----+     +-----+   +---+---+---+   +-------+---|   |
+| 58  |   | 60 |             61            | 62 |     |  64 |   | 79| 84| 89|   |   99  |104|   |
++-----+   +----+---------------------------+----+     +-----+   +---+---+---+   +-------+---+---+
+
+</tt></pre>
+
+<p>
+</p><h3 id="layout_eu102">102 Keyboard (Europe and Latin America)</h3>
+
+<pre><tt>
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+|110|   |112|113|114|115| |116|117|118|119| |120|121|122|123|   |124|125|126|
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+-------+   +---+---+---+   +---+---+---+---+
+|  1|  2|  3|  4|  5|  6|  7|  8|  9| 10| 11| 12| 13|   15  |   | 75| 80| 85|   | 90| 95|100|105|
++---+---+---+---+---+---+---+---+---+---+---+---+---+-------+   +---+---+---+   +---+---+---+---+
++-----+---+---+---+---+---+---+---+---+---+---+---+---+-----+   +---+---+---+   +---+---+---+---+
+|  16 | 17| 18| 19| 20| 21| 22| 23| 24| 25| 26| 27| 28|     |   | 76| 81| 86|   | 91| 96|101|   |
++-----+---+---+---+---+---+---+---+---+---+---+---+---++ 43 |   +---+---+---+   +---+---+---|106|
++------+---+---+---+---+---+---+---+---+---+---+---+---|    |                   +---+---+---|   |
+|  30  | 31| 32| 33| 34| 35| 36| 37| 38| 39| 40| 41|<span class="k102diff"> 42</span>|    |                   | 92| 97|102|   |
++------+---+---+---+---+---+---+---+---+---+---+---+---+----+                   +---+---+---+---+
++----+---+---+---+---+---+---+---+---+---+---+---+----------+       +---+       +---+---+---+---+
+| 44 |<span class="k102diff"> 45</span>| 46| 47| 48| 49| 50| 51| 52| 53| 54| 55|    57    |       | 83|       | 93| 98|103|   |
++----+---+---+---+---+---+---+---+---+---+---+---+----------+       +---+       +---+---+---|108|
++-----+   +----+---------------------------+----+     +-----+   +---+---+---+   +-------+---|   |
+|  58 |   | 60 |             61            | 62 |     |  64 |   | 79| 84| 89|   |   99  |104|   |
++-----+   +----+---------------------------+----+     +-----+   +---+---+---+   +-------+---+---+
+</tt></pre>
+
+<p>
+</p><h3 id="layout_jp106">106 Keyboard (Japanese A01/OADG106/OADG109/OADG109A)</h3>
+
+
+<pre><tt>
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+|110|   |112|113|114|115| |116|117|118|119| |120|121|122|123|   |124|125|126|
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +---+---+---+   +---+---+---+---+
+|  1|  2|  3|  4|  5|  6|  7|  8|  9| 10| 11| 12| 13|<span class="jpdiff"> 14</span>| 15|   | 75| 80| 85|   | 90| 95|100|105|
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +---+---+---+   +---+---+---+---+
++-----+---+---+---+---+---+---+---+---+---+---+---+---+-----+   +---+---+---+   +---+---+---+---+
+|  16 | 17| 18| 19| 20| 21| 22| 23| 24| 25| 26| 27| 28|     |   | 76| 81| 86|   | 91| 96|101|   |
++-----+---+---+---+---+---+---+---+---+---+---+---+---++ 43 |   +---+---+---+   +---+---+---|106|
++------+---+---+---+---+---+---+---+---+---+---+---+---|    |                   +---+---+---|   |
+|  30  | 31| 32| 33| 34| 35| 36| 37| 38| 39| 40| 41|<span class="k102diff"> 42</span>|    |                   | 92| 97|102|   |
++------+---+---+---+---+---+---+---+---+---+---+---+---+----+                   +---+---+---+---+
++--------+---+---+---+---+---+---+---+---+---+---+---+------+       +---+       +---+---+---+---+
+|   44   | 46| 47| 48| 49| 50| 51| 52| 53| 54| 55|<span class="jpdiff"> 56</span>|  57  |       | 83|       | 93| 98|103|   |
++--------+---+---+---+---+---+---+---+---+---+---+---+------+       +---+       +---+---+---|108|
++-----+   +----+-----+--------+------+-----+----+     +-----+   +---+---+---+   +-------+---|   |
+|  58 |   | 60 |<span class="jpdiff"> 131 </span>|   61   |<span class="jpdiff">  132 </span>|<span class="jpdiff"> 133 </span>| 62 |     |  64 |   | 79| 84| 89|   |   99  |104|   |
++-----+   +----+-----+--------+------+-----+----+     +-----+   +---+---+---+   +-------+---+---+
+</tt></pre>
+
+<p>
+</p><h3 id="layout_jpax">AX Keyboard (Japanese AX/J3100)</h3>
+
+
+<pre><tt>
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+|<span class="axdiff"> AX</span>|   |112|113|114|115| |116|117|118|119| |120|121|122|123|   |124|125|126|
++---+   +---+---+---+---+ +---+---+---+---+ +---+---+---+---+   +---+---+---+
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+   +---+---+---+   +---+---+---+---+
+|<span class="axdiff">110</span>|  2|  3|  4|  5|  6|  7|  8|  9| 10| 11| 12| 13|<span class="axdiff"> 29</span>| 15|   | 75| 80| 85|   | 90| 95|100|105|
++---+---+---+---+---+---+---+---+---+---+---+---+---+-------+   +---+---+---+   +---+---+---+---+
++-----+---+---+---+---+---+---+---+---+---+---+---+---+-----+   +---+---+---+   +---+---+---+---+
+|  16 | 17| 18| 19| 20| 21| 22| 23| 24| 25| 26| 27| 28|     |   | 76| 81| 86|   | 91| 96|101|   |
++-----+---+---+---+---+---+---+---+---+---+---+---+---++ 43 |   +---+---+---+   +---+---+---|106|
++------+---+---+---+---+---+---+---+---+---+---+---+---|    |                   +---+---+---|   |
+|<span class="axdiff">  58  </span>| 31| 32| 33| 34| 35| 36| 37| 38| 39| 40| 41|<span class="axdiff">  1</span>|    |                   | 92| 97|102|   |
++------+---+---+---+---+---+---+---+---+---+---+---+---+----+                   +---+---+---+---+
++--------+---+---+---+---+---+---+---+---+---+---+---+------+       +---+       +---+---+---+---+
+|   44   | 46| 47| 48| 49| 50| 51| 52| 53| 54| 55|<span class="k102diff"> 45</span>|  57  |       | 83|       | 93| 98|103|   |
++--------+---+---+---+---+---+---+---+---+---+---+---+------+       +---+       +---+---+---|108|
++-----+   +----+-------+-------+----------+------+    +-----+   +---+---+---+   +-------+---|   |
+|<span class="axdiff">  30 </span>|   | 60 |<span class="axdiff">AXMUHEN</span>|   61  |<span class="axdiff"> AXHENKAN </span>|  62  |    |  64 |   | 79| 84| 89|   |   99  |104|   |
++-----+   +----+-------+-------+----------+------+    +-----+   +---+---+---+   +-------+---+---+
+</tt></pre>
+
+
+<p></p>
+<h2>Keyboard Scan Codes</h2>
+
+<table border="">
+<tbody><tr>
+<th rowspan="2" colspan="1">Key Number</th>
+<th colspan="2">Keytop char<br>(US English)</th>
+<th colspan="2">Keytop char<br>(Japanese AX)</th>
+<th colspan="2">Keytop char<br>(Japanese A01/106/109A)</th>
+<th colspan="3">Keyboard Scan Code<br>(Make / Break)</th>
+<th colspan="2">USB HID Usage</th>
+</tr>
+
+<tr>
+<td align="middle"><small>normal</small></td>
+<td align="middle"><small>shift</small></td>
+<td align="middle"><small>normal</small></td>
+<td align="middle"><small>shift</small></td>
+<td align="middle"><small>normal</small></td>
+<td align="middle"><small>shift</small></td>
+<td align="middle"><nobr>&nbsp; set 1 &nbsp;</nobr></td>
+<td align="middle"><nobr>&nbsp;&nbsp;&nbsp; set 2 &nbsp;&nbsp;&nbsp;</nobr></td>
+<td align="middle"><nobr>  set 3  </nobr></td>
+<td align="middle"><small>Page</small></td>
+<td align="middle"><small>ID</small></td>
+</tr>
+
+<tr>
+<td align="middle">1</td>
+<td align="middle"><b>`</b></td>
+<td align="middle"><b>~</b></td>
+<td align="middle"><b>`</b></td>
+<td align="middle"><b>~</b></td>
+<td align="middle" colspan="2"><b>&#21322;&#35282;/&#20840;&#35282;</b><small> <nobr>(Hankaku/Zenkaku)</nobr></small></td>
+<td align="middle">29 / A9</td>
+<td align="middle">0E / F0 0E</td>
+<td align="middle">0E / F0 0E (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">35</td>
+</tr>
+
+<tr>
+<td align="middle">2</td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>!</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>!</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>!</b></td>
+<td align="middle">02 / 82</td>
+<td align="middle">16 / F0 16</td>
+<td align="middle">16 / F0 16 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">1E</td>
+</tr>
+
+<tr>
+<td align="middle">3</td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>@</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>@</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>"</b></td>
+<td align="middle">03 / 83</td>
+<td align="middle">1E / F0 1E</td>
+<td align="middle">1E / F0 1E (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">1F</td>
+</tr>
+
+<tr>
+<td align="middle">4</td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>#</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>#</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>#</b></td>
+<td align="middle">04 / 84</td>
+<td align="middle">26 / F0 26</td>
+<td align="middle">26 / F0 26 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">20</td>
+</tr>
+
+<tr>
+<td align="middle">5</td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>$</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>$</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>$</b></td>
+<td align="middle">05 / 85</td>
+<td align="middle">25 / F0 25</td>
+<td align="middle">25 / F0 25 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">21</td>
+</tr>
+
+<tr>
+<td align="middle">6</td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b>%</b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b>%</b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b>%</b></td>
+<td align="middle">06 / 86</td>
+<td align="middle">2E / F0 2E</td>
+<td align="middle">2E / F0 2E (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">22</td>
+</tr>
+
+<tr>
+<td align="middle">7</td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>^</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>^</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>&amp;</b></td>
+<td align="middle">07 / 87</td>
+<td align="middle">36 / F0 36</td>
+<td align="middle">36 / F0 36 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">23</td>
+</tr>
+
+<tr>
+<td align="middle">8</td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>&amp;</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>&amp;</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>'</b></td>
+<td align="middle">08 / 88</td>
+<td align="middle">3D / F0 3D</td>
+<td align="middle">3D / F0 3D (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">24</td>
+</tr>
+
+<tr>
+<td align="middle">9</td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>*</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>*</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>(</b></td>
+<td align="middle">09 / 89</td>
+<td align="middle">3E / F0 3E</td>
+<td align="middle">3E / F0 3E (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">25</td>
+</tr>
+
+<tr>
+<td align="middle">10</td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>(</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>(</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>)</b></td>
+<td align="middle">0A / 8A</td>
+<td align="middle">46 / F0 46</td>
+<td align="middle">46 / F0 46 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">26</td>
+</tr>
+
+<tr>
+<td align="middle">11</td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b>)</b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b>)</b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b></b></td>
+<td align="middle">0B / 8B</td>
+<td align="middle">45 / F0 45</td>
+<td align="middle">45 / F0 45 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">27</td>
+</tr>
+
+<tr>
+<td align="middle">12</td>
+<td align="middle"><b>-</b></td>
+<td align="middle"><b>_</b><small> (Low Line)</small></td>
+<td align="middle"><b>-</b></td>
+<td align="middle"><b>_</b><small> (Low Line)</small></td>
+<td align="middle"><b>-</b></td>
+<td align="middle"><b>=</b></td>
+<td align="middle">0C / 8C</td>
+<td align="middle">4E / F0 4E</td>
+<td align="middle">4E / F0 4E (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">2D</td>
+</tr>
+
+<tr>
+<td align="middle">13</td>
+<td align="middle"><b>=</b></td>
+<td align="middle"><b>+</b></td>
+<td align="middle"><b>=</b></td>
+<td align="middle"><b>+</b></td>
+<td align="middle"><b>^</b></td>
+<td align="middle"><b> ~</b><small> (Tilde)</small></td>
+<td align="middle">0D / 8D</td>
+<td align="middle">55 / F0 55</td>
+<td align="middle">55 / F0 55 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">2E</td>
+</tr>
+
+
+<tr class="jpdiff">
+<td align="middle">14</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b>¥</b><small> (Yen sign)</small></td>
+<td align="middle"><b>|</b><small> (Vertical Line)</small></td>
+<td align="middle">7D / FD</td>
+<td align="middle">6A / F0 6A</td>
+<td align="middle">5D / F0 5D <small>(Typematic)</small></td>
+<td align="middle">07</td>
+<td align="middle">89</td>
+</tr>
+
+<tr>
+<td align="middle">15</td>
+<td align="middle" colspan="2"><b>BackSpace</b></td>
+<td align="middle" colspan="2"><b>BackSpace</b></td>
+<td align="middle" colspan="2"><b>BackSpace</b></td>
+<td align="middle">0E / 8E</td>
+<td align="middle">66 / F0 66</td>
+<td align="middle">66 / F0 66 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">2A</td>
+</tr>
+
+<tr>
+<td align="middle">16</td>
+<td align="middle" colspan="2"><b>Tab</b></td>
+<td align="middle" colspan="2"><b>Tab</b></td>
+<td align="middle" colspan="2"><b>Tab</b></td>
+<td align="middle">0F / 8F</td>
+<td align="middle">0D / F0 0D</td>
+<td align="middle">0D / F0 0D (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">2B</td>
+</tr>
+
+<tr>
+<td align="middle">17</td>
+<td align="middle" colspan="2"><b>Q</b></td>
+<td align="middle" colspan="2"><b>Q</b></td>
+<td align="middle" colspan="2"><b>Q</b></td>
+<td align="middle">10 / 90</td>
+<td align="middle">15 / F0 15</td>
+<td align="middle">15 / F0 15 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">14</td>
+</tr>
+
+<tr>
+<td align="middle">18</td>
+<td align="middle" colspan="2"><b>W</b></td>
+<td align="middle" colspan="2"><b>W</b></td>
+<td align="middle" colspan="2"><b>W</b></td>
+<td align="middle">11 / 91</td>
+<td align="middle">1D / F0 1D</td>
+<td align="middle">1D / F0 1D (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">1A</td>
+</tr>
+
+<tr>
+<td align="middle">19</td>
+<td align="middle" colspan="2"><b>E</b></td>
+<td align="middle" colspan="2"><b>E</b></td>
+<td align="middle" colspan="2"><b>E</b></td>
+<td align="middle">12 / 92</td>
+<td align="middle">24 / F0 24</td>
+<td align="middle">24 / F0 24 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">08</td>
+</tr>
+
+<tr>
+<td align="middle">20</td>
+<td align="middle" colspan="2"><b>R</b></td>
+<td align="middle" colspan="2"><b>R</b></td>
+<td align="middle" colspan="2"><b>R</b></td>
+<td align="middle">13 / 93</td>
+<td align="middle">2D / F0 2D</td>
+<td align="middle">2D / F0 2D (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">15</td>
+</tr>
+
+<tr>
+<td align="middle">21</td>
+<td align="middle" colspan="2"><b>T</b></td>
+<td align="middle" colspan="2"><b>T</b></td>
+<td align="middle" colspan="2"><b>T</b></td>
+<td align="middle">14 / 94</td>
+<td align="middle">2C / F0 2C</td>
+<td align="middle">2C / F0 2C (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">17</td>
+</tr>
+
+<tr>
+<td align="middle">22</td>
+<td align="middle" colspan="2"><b>Y</b></td>
+<td align="middle" colspan="2"><b>Y</b></td>
+<td align="middle" colspan="2"><b>Y</b></td>
+<td align="middle">15 / 95</td>
+<td align="middle">35 / F0 35</td>
+<td align="middle">25 / F0 35 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">1C</td>
+</tr>
+
+<tr>
+<td align="middle">23</td>
+<td align="middle" colspan="2"><b>U</b></td>
+<td align="middle" colspan="2"><b>U</b></td>
+<td align="middle" colspan="2"><b>U</b></td>
+<td align="middle">16 / 96</td>
+<td align="middle">3C / F0 3C</td>
+<td align="middle">3C / F0 3C (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">18</td>
+</tr>
+
+<tr>
+<td align="middle">24</td>
+<td align="middle" colspan="2"><b>I</b></td>
+<td align="middle" colspan="2"><b>I</b></td>
+<td align="middle" colspan="2"><b>I</b></td>
+<td align="middle">17 / 97</td>
+<td align="middle">43 / F0 43</td>
+<td align="middle">43 / F0 43 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">0C</td>
+</tr>
+
+<tr>
+<td align="middle">25</td>
+<td align="middle" colspan="2"><b>O</b></td>
+<td align="middle" colspan="2"><b>O</b></td>
+<td align="middle" colspan="2"><b>O</b></td>
+<td align="middle">18 / 98</td>
+<td align="middle">44 / F0 44</td>
+<td align="middle">44 / F0 44 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">12</td>
+</tr>
+
+<tr>
+<td align="middle">26</td>
+<td align="middle" colspan="2"><b>P</b></td>
+<td align="middle" colspan="2"><b>P</b></td>
+<td align="middle" colspan="2"><b>P</b></td>
+<td align="middle">19 / 99</td>
+<td align="middle">4D / F0 4D</td>
+<td align="middle">4D / F0 4D (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">13</td>
+</tr>
+
+<tr>
+<td align="middle">27</td>
+<td align="middle"><b>[</b></td>
+<td align="middle"><b>{</b></td>
+<td align="middle"><b>[</b></td>
+<td align="middle"><b>{</b></td>
+<td align="middle"><b>@</b></td>
+<td align="middle"><b>`</b></td>
+<td align="middle">1A / 9A</td>
+<td align="middle">54 / F0 54</td>
+<td align="middle">54 / F0 54 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">2F</td>
+</tr>
+
+<tr>
+<td align="middle">28</td>
+<td align="middle"><b>]</b></td>
+<td align="middle"><b>}</b></td>
+<td align="middle"><b>]</b></td>
+<td align="middle"><b>}</b></td>
+<td align="middle"><b>[</b></td>
+<td align="middle"><b>{</b></td>
+<td align="middle">1B / 9B</td>
+<td align="middle">5B / F0 5B</td>
+<td align="middle">5B / F0 5B (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">30</td>
+</tr>
+
+<tr>
+<td align="middle">29</td>
+<td align="middle"><b style="Font-Family: Times New Roman, Times, Serif;" lang="en">\</b><small> (Reverse Solidus)</small></td>
+<td align="middle"><b>¦</b><small> (Broken Bar)</small></td>
+<td align="middle"><b>¥</b><small> (Yen sign)</small></td>
+<td align="middle"><b>|</b><small> (Vertical Line)</small></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">2B / AB</td>
+<td align="middle">5D / F0 5D</td>
+<td align="middle">5C / F0 5C (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">31</td>
+</tr>
+
+<tr>
+<td align="middle">30</td>
+<td align="middle" colspan="2"><b>Caps Lock</b></td>
+<td align="middle" colspan="2"><b>Caps Lock</b></td>
+<td align="middle"><b>&#33521;&#25968;</b><small> (Eisuu)</small></td>
+<td align="middle"><b>Caps Lock</b></td>
+<td align="middle">3A / BA</td>
+<td align="middle">58 / F0 58</td>
+<td align="middle">14 / F0 14 (Make/Break)</td>
+<td align="middle">07</td>
+<td align="middle">39</td>
+</tr>
+
+<tr>
+<td align="middle">31</td>
+<td align="middle" colspan="2"><b>A</b></td>
+<td align="middle" colspan="2"><b>A</b></td>
+<td align="middle" colspan="2"><b>A</b></td>
+<td align="middle">1E / 9E</td>
+<td align="middle">1C / F0 1C</td>
+<td align="middle">1C / F0 1C (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">04</td>
+</tr>
+
+<tr>
+<td align="middle">32</td>
+<td align="middle" colspan="2"><b>S</b></td>
+<td align="middle" colspan="2"><b>S</b></td>
+<td align="middle" colspan="2"><b>S</b></td>
+<td align="middle">1F / 9F</td>
+<td align="middle">1B / F0 1B</td>
+<td align="middle">1B / F0 1B (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">16</td>
+</tr>
+
+<tr>
+<td align="middle">33</td>
+<td align="middle" colspan="2"><b>D</b></td>
+<td align="middle" colspan="2"><b>D</b></td>
+<td align="middle" colspan="2"><b>D</b></td>
+<td align="middle">20 / A0</td>
+<td align="middle">23 / F0 23</td>
+<td align="middle">23 / F0 23 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">07</td>
+</tr>
+
+<tr>
+<td align="middle">34</td>
+<td align="middle" colspan="2"><b>F</b></td>
+<td align="middle" colspan="2"><b>F</b></td>
+<td align="middle" colspan="2"><b>F</b></td>
+<td align="middle">21 / A1</td>
+<td align="middle">2B / F0 2B</td>
+<td align="middle">2B / F0 2B (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">09</td>
+</tr>
+
+<tr>
+<td align="middle">35</td>
+<td align="middle" colspan="2"><b>G</b></td>
+<td align="middle" colspan="2"><b>G</b></td>
+<td align="middle" colspan="2"><b>G</b></td>
+<td align="middle">22 / A2</td>
+<td align="middle">34 / F0 34</td>
+<td align="middle">34 / F0 34 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">0A</td>
+</tr>
+
+<tr>
+<td align="middle">36</td>
+<td align="middle" colspan="2"><b>H</b></td>
+<td align="middle" colspan="2"><b>H</b></td>
+<td align="middle" colspan="2"><b>H</b></td>
+<td align="middle">23 / A3</td>
+<td align="middle">33 / F0 33</td>
+<td align="middle">33 / F0 33 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">0B</td>
+</tr>
+
+<tr>
+<td align="middle">37</td>
+<td align="middle" colspan="2"><b>J</b></td>
+<td align="middle" colspan="2"><b>J</b></td>
+<td align="middle" colspan="2"><b>J</b></td>
+<td align="middle">24 / A4</td>
+<td align="middle">3B / F0 3B</td>
+<td align="middle">3B / F0 3B (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">0D</td>
+</tr>
+
+<tr>
+<td align="middle">38</td>
+<td align="middle" colspan="2"><b>K</b></td>
+<td align="middle" colspan="2"><b>K</b></td>
+<td align="middle" colspan="2"><b>K</b></td>
+<td align="middle">25 / A5</td>
+<td align="middle">42 / F0 42</td>
+<td align="middle">42 / F0 42 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">0E</td>
+</tr>
+
+<tr>
+<td align="middle">39</td>
+<td align="middle" colspan="2"><b>L</b></td>
+<td align="middle" colspan="2"><b>L</b></td>
+<td align="middle" colspan="2"><b>L</b></td>
+<td align="middle">26 / A6</td>
+<td align="middle">4B / F0 4B</td>
+<td align="middle">4B / F0 4B (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">0F</td>
+</tr>
+
+<tr>
+<td align="middle">40</td>
+<td align="middle"><b>;</b></td>
+<td align="middle"><b>:</b></td>
+<td align="middle"><b>;</b></td>
+<td align="middle"><b>:</b></td>
+<td align="middle"><b>;</b></td>
+<td align="middle"><b>+</b></td>
+<td align="middle">27 / A7</td>
+<td align="middle">4C / F0 4C</td>
+<td align="middle">4C / F0 4C (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">33</td>
+</tr>
+
+<tr>
+<td align="middle">41</td>
+<td align="middle"><b>`</b><small> (Grave Accent)</small></td>
+<td align="middle"><b>"</b></td>
+<td align="middle"><b>`</b><small> (Grave Accent)</small></td>
+<td align="middle"><b>"</b></td>
+<td align="middle"><b>:</b></td>
+<td align="middle"><b>*</b></td>
+<td align="middle">28 / A8</td>
+<td align="middle">52 / F0 52</td>
+<td align="middle">52 / F0 52 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">34</td>
+</tr>
+
+<tr class="k102diff">
+<td align="middle">42</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b>]</b></td>
+<td align="middle"><b>}</b></td>
+<td align="middle">2B / AB</td>
+<td align="middle">5D / F0 5D</td>
+<td align="middle">53 / F0 53 <small>(Typematic)</small></td>
+<td align="middle">07</td>
+<td align="middle">32</td>
+</tr>
+
+<tr>
+<td align="middle">43</td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle">1C / 9C</td>
+<td align="middle">5A / F0 5A</td>
+<td align="middle">5A / F0 5A (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">28</td>
+</tr>
+
+
+<tr>
+<td align="middle">44</td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle">2A / AA</td>
+<td align="middle">12 / F0 12</td>
+<td align="middle">12 / F0 12 (Make/Break)</td>
+<td align="middle">07</td>
+<td align="middle">21</td>
+</tr>
+
+<tr class="k102diff">
+<td align="middle">45</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b style="Font-Family: Times New Roman, Times, Serif;" lang="en">\</b><small> (Reverse Solidus)</small></td>
+<td align="middle"><b>¦</b><small> (Broken Bar)</small></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">56 / D6</td>
+<td align="middle">61 / F0 61</td>
+<td align="middle">13 / F0 13 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">64</td>
+</tr>
+
+<tr>
+<td align="middle">46</td>
+<td align="middle" colspan="2"><b>Z</b></td>
+<td align="middle" colspan="2"><b>Z</b></td>
+<td align="middle" colspan="2"><b>Z</b></td>
+<td align="middle">2C / AC</td>
+<td align="middle">1A / F0 1A</td>
+<td align="middle">1A / F0 1A (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">1D</td>
+</tr>
+
+<tr>
+<td align="middle">47</td>
+<td align="middle" colspan="2"><b>X</b></td>
+<td align="middle" colspan="2"><b>X</b></td>
+<td align="middle" colspan="2"><b>X</b></td>
+<td align="middle">2D / AD</td>
+<td align="middle">22 / F0 22</td>
+<td align="middle">22 / F0 22 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">1B</td>
+</tr>
+
+<tr>
+<td align="middle">48</td>
+<td align="middle" colspan="2"><b>C</b></td>
+<td align="middle" colspan="2"><b>C</b></td>
+<td align="middle" colspan="2"><b>C</b></td>
+<td align="middle">2E / AE</td>
+<td align="middle">21 / F0 21</td>
+<td align="middle">21 / F0 21 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">06</td>
+</tr>
+
+<tr>
+<td align="middle">49</td>
+<td align="middle" colspan="2"><b>V</b></td>
+<td align="middle" colspan="2"><b>V</b></td>
+<td align="middle" colspan="2"><b>V</b></td>
+<td align="middle">2F / AF</td>
+<td align="middle">2A / F0 2A</td>
+<td align="middle">2A / F0 2A (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">19</td>
+</tr>
+
+<tr>
+<td align="middle">50</td>
+<td align="middle" colspan="2"><b>B</b></td>
+<td align="middle" colspan="2"><b>B</b></td>
+<td align="middle" colspan="2"><b>B</b></td>
+<td align="middle">30 / B0</td>
+<td align="middle">32 / F0 32</td>
+<td align="middle">32 / F0 32 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">05</td>
+</tr>
+
+<tr>
+<td align="middle">51</td>
+<td align="middle" colspan="2"><b>N</b></td>
+<td align="middle" colspan="2"><b>N</b></td>
+<td align="middle" colspan="2"><b>N</b></td>
+<td align="middle">31 / B1</td>
+<td align="middle">31 / F0 31</td>
+<td align="middle">31 / F0 31 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">11</td>
+</tr>
+
+<tr>
+<td align="middle">52</td>
+<td align="middle" colspan="2"><b>M</b></td>
+<td align="middle" colspan="2"><b>M</b></td>
+<td align="middle" colspan="2"><b>M</b></td>
+<td align="middle">32 / B2</td>
+<td align="middle">3A / F0 3A</td>
+<td align="middle">3A / F0 3A (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">10</td>
+</tr>
+
+<tr>
+<td align="middle">53</td>
+<td align="middle"><b>,</b></td>
+<td align="middle"><b>&lt;</b></td>
+<td align="middle"><b>,</b></td>
+<td align="middle"><b>&lt;</b></td>
+<td align="middle"><b>,</b></td>
+<td align="middle"><b>&lt;</b></td>
+<td align="middle">33 / B3</td>
+<td align="middle">41 / F0 41</td>
+<td align="middle">41 / F0 41 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">36</td>
+</tr>
+
+<tr>
+<td align="middle">54</td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>&gt;</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>&gt;</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>&gt;</b></td>
+<td align="middle">34 / B4</td>
+<td align="middle">49 / F0 49</td>
+<td align="middle">49 / F0 49 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">37</td>
+</tr>
+
+<tr>
+<td align="middle">55</td>
+<td align="middle"><b>/</b></td>
+<td align="middle"><b>?</b></td>
+<td align="middle"><b>/</b></td>
+<td align="middle"><b>?</b></td>
+<td align="middle"><b>/</b></td>
+<td align="middle"><b>?</b></td>
+<td align="middle">35 / B5</td>
+<td align="middle">4A / F0 4A</td>
+<td align="middle">4A / F0 4A (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">38</td>
+</tr>
+
+<tr class="jpdiff">
+<td align="middle">56</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b style="Font-Family: Times New Roman, Times, Serif" lang="en">\</b><small> (Reverse Solidus)</small></td>
+<td align="middle"><b>_</b><small> (Low Line)</small></td>
+<td align="middle">73 / F3</td>
+<td align="middle">51 / F0 51</td>
+<td align="middle">51 / F0 51 <small>(Typematic)</small></td>
+<td align="middle">07</td>
+<td align="middle">87</td>
+</tr>
+
+<tr>
+<td align="middle">57</td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle">36 / B6</td>
+<td align="middle">59 / F0 59</td>
+<td align="middle">59 / F0 59 (Make/Break)</td>
+<td align="middle">07</td>
+<td align="middle">E5</td>
+</tr>
+
+<tr>
+<td align="middle">58</td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle">1D / 9D</td>
+<td align="middle">14 / F0 14</td>
+<td align="middle">11 / F0 11 (Make/Break)</td>
+<td align="middle">07</td>
+<td align="middle">E0</td>
+</tr>
+
+<tr>
+<td align="middle">60</td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle">38 / B8</td>
+<td align="middle">11 / F0 11</td>
+<td align="middle">19 / F0 19 (Make/Break)</td>
+<td align="middle">07</td>
+<td align="middle">E2</td>
+</tr>
+
+<tr>
+<td align="middle">61</td>
+<td align="middle" colspan="2">(space)</td>
+<td align="middle" colspan="2">(space)</td>
+<td align="middle" colspan="2">(space)</td>
+<td align="middle">39 / B9</td>
+<td align="middle">29 / F0 29</td>
+<td align="middle">29 / F0 29 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">2C</td>
+</tr>
+
+<tr>
+<td align="middle">62</td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle" colspan="2"><b>&#28450;&#23383;</b><small> (Kanji)</small></td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle">E0 38 / E0 B8</td>
+<td align="middle">E0 11 / E0 F0 11</td>
+<td align="middle">39 / F0 39 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">E6</td>
+</tr>
+
+<tr>
+<td align="middle">64</td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle" colspan="2"><b>&#12459;&#12490;</b><small> (Kana)</small></td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle">E0 1D / E0 9D</td>
+<td align="middle">E0 14 / E0 F0 14</td>
+<td align="middle">58 / F0 58 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">E4</td>
+</tr>
+
+
+<tr class="kenh">
+<td align="middle">75</td>
+<td align="middle" colspan="2"><b>Insert</b></td>
+<td align="middle" colspan="2"><b>Insert</b></td>
+<td align="middle" colspan="2"><b>Insert</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">67 / F0 67 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">49</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">76</td>
+<td align="middle" colspan="2"><b>Delete</b></td>
+<td align="middle" colspan="2"><b>Delete</b></td>
+<td align="middle" colspan="2"><b>Delete</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">64 / F0 64 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">4C</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">79</td>
+<td align="middle" colspan="2"><b>&#8592;</b></td>
+<td align="middle" colspan="2"><b>&#8592;</b></td>
+<td align="middle" colspan="2"><b>&#8592;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">61 / F0 61 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">50</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">80</td>
+<td align="middle" colspan="2"><b>Home</b></td>
+<td align="middle" colspan="2"><b>Home</b></td>
+<td align="middle" colspan="2"><b>Home</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">6E / F0 6E (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">4A</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">81</td>
+<td align="middle" colspan="2"><b>End</b></td>
+<td align="middle" colspan="2"><b>End</b></td>
+<td align="middle" colspan="2"><b>End</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">65 / F0 65 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">4D</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">83</td>
+<td align="middle" colspan="2"><b>&#8593;</b></td>
+<td align="middle" colspan="2"><b>&#8593;</b></td>
+<td align="middle" colspan="2"><b>&#8593;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">63 / F0 63 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">52</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">84</td>
+<td align="middle" colspan="2"><b>&#8595;</b></td>
+<td align="middle" colspan="2"><b>&#8595;</b></td>
+<td align="middle" colspan="2"><b>&#8595;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">60 / F0 60 (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">51</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">85</td>
+<td align="middle" colspan="2"><b>Page<br>Up</b></td>
+<td align="middle" colspan="2"><b>Page<br>Up</b></td>
+<td align="middle" colspan="2"><b>Page<br>Up</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">6F / F0 6F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">4B</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">86</td>
+<td align="middle" colspan="2"><b>Page<br>Down</b></td>
+<td align="middle" colspan="2"><b>Page<br>Down</b></td>
+<td align="middle" colspan="2"><b>Page<br>Down</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">6D / F0 6D (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">4E</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">89</td>
+<td align="middle" colspan="2"><b>&#8594;</b></td>
+<td align="middle" colspan="2"><b>&#8594;</b></td>
+<td align="middle" colspan="2"><b>&#8594;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">6A / F0 6A (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">4F</td>
+</tr>
+
+<tr>
+<td align="middle">90</td>
+<td align="middle" colspan="2"><b>Num<br>Lock</b></td>
+<td align="middle" colspan="2"><b>Num<br>Lock</b></td>
+<td align="middle" colspan="2"><b>Num<br>Lock</b></td>
+<td align="middle">45 / C5</td>
+<td align="middle">77 / F0 77</td>
+<td align="middle">76 / F0 76 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">53</td>
+</tr>
+
+<tr>
+<td align="middle">91</td>
+<td align="middle"><b>Home</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>Home</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>Home</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle">47 / C7</td>
+<td align="middle">6C / F0 6C</td>
+<td align="middle">6C / F0 6C (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">5F</td>
+</tr>
+
+<tr>
+<td align="middle">92</td>
+<td align="middle"><b>&#8592;</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>&#8592;</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>&#8592;</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle">4B / CB</td>
+<td align="middle">6B / F0 6B</td>
+<td align="middle">6B / F0 6B (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">5C</td>
+</tr>
+
+<tr>
+<td align="middle">93</td>
+<td align="middle"><b>End</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>End</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>End</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle">4F / CF</td>
+<td align="middle">69 / F0 69</td>
+<td align="middle">69 / F0 69 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">59</td>
+</tr>
+
+<tr>
+<td align="middle">95</td>
+<td align="middle" colspan="2"><b>/</b></td>
+<td align="middle" colspan="2"><b>/</b></td>
+<td align="middle" colspan="2"><b>/</b></td>
+<td align="middle">E0 35 / E0 B5</td>
+<td align="middle">E0 4A / E0 F0 4A</td>
+<td align="middle">77 / F0 77 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">54</td>
+</tr>
+
+<tr>
+<td align="middle">96</td>
+<td align="middle"><b>&#8593;</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>&#8593;</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>&#8593;</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle">48 / C8</td>
+<td align="middle">75 / F0 75</td>
+<td align="middle">75 / F0 75 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">60</td>
+</tr>
+
+<tr>
+<td align="middle">97</td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle">4C / CC</td>
+<td align="middle">73 / F0 73</td>
+<td align="middle">73 / F0 73 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">5D</td>
+</tr>
+
+<tr>
+<td align="middle">98</td>
+<td align="middle"><b>&#8595;</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>&#8595;</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>&#8595;</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle">50 / D0</td>
+<td align="middle">72 / F0 72</td>
+<td align="middle">72 / F0 72 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">5A</td>
+</tr>
+
+<tr>
+<td align="middle">99</td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle">52 / D2</td>
+<td align="middle">70 / F0 70</td>
+<td align="middle">70 / F0 70 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">62</td>
+</tr>
+
+<tr>
+<td align="middle">100</td>
+<td align="middle" colspan="2"><b>*</b></td>
+<td align="middle" colspan="2"><b>*</b></td>
+<td align="middle" colspan="2"><b>*</b></td>
+<td align="middle">37 / B7</td>
+<td align="middle">7C / F0 7C</td>
+<td align="middle">7E / F0 7E (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">55</td>
+</tr>
+
+<tr>
+<td align="middle">101</td>
+<td align="middle"><b>PgUp</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>PgUp</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>PgUp</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle">49 / C9</td>
+<td align="middle">7D / F0 7D</td>
+<td align="middle">7D / F0 7D (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">61</td>
+</tr>
+
+<tr>
+<td align="middle">102</td>
+<td align="middle"><b>&#8594;</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>&#8594;</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>&#8594;</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle">4D / CD</td>
+<td align="middle">74 / F0 74</td>
+<td align="middle">74 / F0 74 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">5E</td>
+</tr>
+
+<tr>
+<td align="middle">103</td>
+<td align="middle"><b>PgDn</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>PgDn</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>PgDn</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle">51 / D1</td>
+<td align="middle">7A / F0 7A</td>
+<td align="middle">7A / F0 7A (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">5B</td>
+</tr>
+
+<tr>
+<td align="middle">104</td>
+<td align="middle"><b>Del</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>Del</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>Del</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle">53 / D3</td>
+<td align="middle">71 / F0 71</td>
+<td align="middle">71 / F0 71 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">63</td>
+</tr>
+
+<tr>
+<td align="middle">105</td>
+<td align="middle" colspan="2"><b>-</b></td>
+<td align="middle" colspan="2"><b>-</b></td>
+<td align="middle" colspan="2"><b>-</b></td>
+<td align="middle">4A / CA</td>
+<td align="middle">7B / F0 7B</td>
+<td align="middle">84 / F0 84 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">56</td>
+</tr>
+
+<tr>
+<td align="middle">106</td>
+<td align="middle" colspan="2"><b>+</b></td>
+<td align="middle" colspan="2"><b>+</b></td>
+<td align="middle" colspan="2"><b>+</b></td>
+<td align="middle">4E / CE</td>
+<td align="middle">79 / F0 79</td>
+<td align="middle">7C / F0 7C (Typematic)</td>
+<td align="middle">07</td>
+<td align="middle">57</td>
+</tr>
+
+<tr>
+<td align="middle">108</td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle">E0 1C / E0 9C</td>
+<td align="middle">E0 5A / E0 F0 5A</td>
+<td align="middle">79 / F0 79 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">58</td>
+</tr>
+
+<tr>
+<td align="middle">110</td>
+<td align="middle" colspan="2"><b>Esc</b></td>
+<td align="middle" colspan="2"><b>Esc</b></td>
+<td align="middle" colspan="2"><b>Esc</b></td>
+<td align="middle">01 / 81</td>
+<td align="middle">76 / F0 76</td>
+<td align="middle">08 / F0 08 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">29</td>
+</tr>
+
+<tr>
+<td align="middle">112</td>
+<td align="middle" colspan="2"><b>F1</b></td>
+<td align="middle" colspan="2"><b>F1</b></td>
+<td align="middle" colspan="2"><b>F1</b></td>
+<td align="middle">3B / BB</td>
+<td align="middle">05 / F0 05</td>
+<td align="middle">07 / F0 07 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">3A</td>
+</tr>
+
+<tr>
+<td align="middle">113</td>
+<td align="middle" colspan="2"><b>F2</b></td>
+<td align="middle" colspan="2"><b>F2</b></td>
+<td align="middle" colspan="2"><b>F2</b></td>
+<td align="middle">3C / BC</td>
+<td align="middle">06 / F0 06</td>
+<td align="middle">0F / F0 0F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">3B</td>
+</tr>
+
+<tr>
+<td align="middle">114</td>
+<td align="middle" colspan="2"><b>F3</b></td>
+<td align="middle" colspan="2"><b>F3</b></td>
+<td align="middle" colspan="2"><b>F3</b></td>
+<td align="middle">3D / BD</td>
+<td align="middle">04 / F0 04</td>
+<td align="middle">17 / F0 17 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">3C</td>
+</tr>
+
+<tr>
+<td align="middle">115</td>
+<td align="middle" colspan="2"><b>F4</b></td>
+<td align="middle" colspan="2"><b>F4</b></td>
+<td align="middle" colspan="2"><b>F4</b></td>
+<td align="middle">3E / BE</td>
+<td align="middle">0C / F0 0C</td>
+<td align="middle">1F / F0 1F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">3D</td>
+</tr>
+
+<tr>
+<td align="middle">116</td>
+<td align="middle" colspan="2"><b>F5</b></td>
+<td align="middle" colspan="2"><b>F5</b></td>
+<td align="middle" colspan="2"><b>F5</b></td>
+<td align="middle">3F / BF</td>
+<td align="middle">03 / F0 03</td>
+<td align="middle">27 / F0 27 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">3E</td>
+</tr>
+
+<tr>
+<td align="middle">117</td>
+<td align="middle" colspan="2"><b>F6</b></td>
+<td align="middle" colspan="2"><b>F6</b></td>
+<td align="middle" colspan="2"><b>F6</b></td>
+<td align="middle">40 / C0</td>
+<td align="middle">0B / F0 0B</td>
+<td align="middle">2F / F0 2F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">3F</td>
+</tr>
+
+<tr>
+<td align="middle">118</td>
+<td align="middle" colspan="2"><b>F7</b></td>
+<td align="middle" colspan="2"><b>F7</b></td>
+<td align="middle" colspan="2"><b>F7</b></td>
+<td align="middle">41 / C1</td>
+<td align="middle">83 / F0 83</td>
+<td align="middle">37 / F0 37 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">40</td>
+</tr>
+
+<tr>
+<td align="middle">119</td>
+<td align="middle" colspan="2"><b>F8</b></td>
+<td align="middle" colspan="2"><b>F8</b></td>
+<td align="middle" colspan="2"><b>F8</b></td>
+<td align="middle">42 / C2</td>
+<td align="middle">0A / F0 0A</td>
+<td align="middle">3F / F0 3F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">41</td>
+</tr>
+
+<tr>
+<td align="middle">120</td>
+<td align="middle" colspan="2"><b>F9</b></td>
+<td align="middle" colspan="2"><b>F9</b></td>
+<td align="middle" colspan="2"><b>F9</b></td>
+<td align="middle">43 / C3</td>
+<td align="middle">01 / F0 01</td>
+<td align="middle">47 / F0 47 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">42</td>
+</tr>
+
+<tr>
+<td align="middle">121</td>
+<td align="middle" colspan="2"><b>F10</b></td>
+<td align="middle" colspan="2"><b>F10</b></td>
+<td align="middle" colspan="2"><b>F10</b></td>
+<td align="middle">44 / C4</td>
+<td align="middle">09 / F0 09</td>
+<td align="middle">4F / F0 4F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">43</td>
+</tr>
+
+<tr>
+<td align="middle">122</td>
+<td align="middle" colspan="2"><b>F11</b></td>
+<td align="middle" colspan="2"><b>F11</b></td>
+<td align="middle" colspan="2"><b>F11</b></td>
+<td align="middle">57 / D7</td>
+<td align="middle">78 / F0 78</td>
+<td align="middle">56 / F0 56 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">44</td>
+</tr>
+
+<tr>
+<td align="middle">123</td>
+<td align="middle" colspan="2"><b>F12</b></td>
+<td align="middle" colspan="2"><b>F12</b></td>
+<td align="middle" colspan="2"><b>F12</b></td>
+<td align="middle">58 / D8</td>
+<td align="middle">07 / F0 07</td>
+<td align="middle">5E / F0 5E (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">45</td>
+</tr>
+
+<tr class="kprtscr">
+<td align="middle">124</td>
+<td align="middle" colspan="2"><b>Print<br>Screen</b></td>
+<td align="middle" colspan="2"><b>Print<br>Screen</b></td>
+<td align="middle" colspan="2"><b>Print<br>Screen</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n2">*2</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n2">*2</a></td>
+<td align="middle">57 / F0 57 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">46</td>
+</tr>
+
+<tr>
+<td align="middle">125</td>
+<td align="middle" colspan="2"><b>Scroll<br>Lock</b></td>
+<td align="middle" colspan="2"><b>Scroll<br>Lock</b></td>
+<td align="middle" colspan="2"><b>Scroll<br>Lock</b></td>
+<td align="middle">46 / C6</td>
+<td align="middle">7E / F0 7E</td>
+<td align="middle">5F / F0 5F (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">47</td>
+</tr>
+
+<tr class="kpause">
+<td align="middle">126</td>
+<td align="middle" colspan="2"><b>Pause</b></td>
+<td align="middle" colspan="2"><b>Pause</b></td>
+<td align="middle" colspan="2"><b>Pause</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n3">*3</a></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n3">*3</a></td>
+<td align="middle">62 / F0 62 (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">48</td>
+</tr>
+
+<tr>
+<td align="middle">LWIN<br>(127)</td>
+<td align="middle" colspan="2"><b></b>(Left Windows)</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b>(Left Windows)</td>
+<td align="middle">E0 5B / E0 DB</td>
+<td align="middle">E0 1F / E0 F0 1F</td>
+<td align="middle">8B / F0 8B (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">E3</td>
+</tr>
+
+<tr>
+<td align="middle">RWIN<br>(128)</td>
+<td align="middle" colspan="2"><b></b>(Right Windows)</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b>(Right Windows)</td>
+<td align="middle">E0 5C / E0 DC</td>
+<td align="middle">E0 27 / E0 F0 27</td>
+<td align="middle">8C / F0 8C (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">E7</td>
+</tr>
+
+<tr>
+<td align="middle">APP<br>(129)</td>
+<td align="middle" colspan="2"><b></b>(Application)</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b>(Application)</td>
+<td align="middle">E0 5D / E0 DD</td>
+<td align="middle">E0 2F / E0 F0 2F</td>
+<td align="middle">8D / F0 8D (Make only)</td>
+<td align="middle">07</td>
+<td align="middle">65</td>
+</tr>
+
+
+<tr class="jpdiff">
+<td align="middle">131</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b>&#28961;&#22793;&#25563;</b> (Muhenkan)</td>
+<td align="middle">7B / FB</td>
+<td align="middle">67 / F0 67</td>
+<td align="middle">85 / F0 85 <small>(Make only)</small></td>
+<td align="middle">07</td>
+<td align="middle">8B</td>
+</tr>
+
+<tr class="jpdiff">
+<td align="middle">132</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b>&#22793;&#25563;</b><small> (Henkan)</small></td>
+<td align="middle">79 / F9</td>
+<td align="middle">64 / F0 64</td>
+<td align="middle">86 / F0 86 <small>(Make only)</small></td>
+<td align="middle">07</td>
+<td align="middle">8A</td>
+</tr>
+
+<tr class="jpdiff">
+<td align="middle">133</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b>&#12402;&#12425;&#12364;&#12394;</b><small> (Hiragana)</small></td>
+<td align="middle"><b>&#12459;&#12479;&#12459;&#12490;</b><small> (Katakana)</small></td>
+<td align="middle">70 / F0</td>
+<td align="middle">13 / F0 13</td>
+<td align="middle">87 / F0 87 <small>(Make only)</small></td>
+<td align="middle">07</td>
+<td align="middle">88</td>
+</tr>
+
+
+
+<!--
+<TR>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle COLSPAN=2><B></B></TD>
+<TD ALIGN=middle COLSPAN=2><B></B></TD>
+<TD ALIGN=middle COLSPAN=2><B></B></TD>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle></TD>
+</TR>
+
+<TR>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle></TD>
+</TR>
+-->
+</tbody></table>
+
+<p>
+
+</p><h3 id="scan_n1">(*1) Keyboard Scan Code: Some Enhanced Keys</h3>
+
+<table border="">
+<tbody><tr>
+<th rowspan="3">Key Number</th>
+<th rowspan="3">Keytop char</th>
+<th colspan="7">Keyboard Scan Code (Make / Break)</th>
+</tr>
+
+<tr>
+<th align="middle" colspan="3">set 1</th>
+<th align="middle" colspan="3">set 2</th>
+<th align="middle" colspan="1" rowspan="2">set 3</th>
+</tr>
+
+<tr>
+<td align="middle">Base or<br><nobr>NumLocked Shift</nobr></td>
+<td align="middle">Shift</td>
+<td align="middle">Numlocked</td>
+<td align="middle">Base or<br><nobr>NumLocked Shift</nobr></td>
+<td align="middle">Shift</td>
+<td align="middle">Numlocked</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">75</td>
+<td align="middle"><b>Insert</b></td>
+<td align="middle">E0 52 / E0 D2</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 52</nobr> / <nobr>E0 D2 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 52</nobr> / <nobr>E0 D2 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 70</nobr> / <nobr>E0 F0 70</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 70</nobr> / <nobr>E0 F0 70 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 70</nobr> / <nobr>E0 F0 70 E0 F0 12</nobr></td>
+<td align="middle">67 / F0 67 (Make only)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">76</td>
+<td align="middle"><b>Delete</b></td>
+<td align="middle">E0 53 / E0 D3</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 53</nobr> / <nobr>E0 D3 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 53</nobr> / <nobr>E0 D3 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 71</nobr> / <nobr>E0 F0 71</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 71</nobr> / <nobr>E0 F0 71 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 71</nobr> / <nobr>E0 F0 71 E0 F0 12</nobr></td>
+<td align="middle">64 / F0 64 (Typematic)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">79</td>
+<td align="middle"><b>&#8592;</b></td>
+<td align="middle">E0 4B / E0 CB</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 4B</nobr> / <nobr>E0 CB <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 4B</nobr> / <nobr>E0 CB E0 AA</nobr></td>
+<td align="middle"><nobr>E0 6B</nobr> / <nobr>E0 F0 6B</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 6B</nobr> / <nobr>E0 F0 6B <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 6B</nobr> / <nobr>E0 F0 6B E0 F0 12</nobr></td>
+<td align="middle">61 / F0 61 (Typematic)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">80</td>
+<td align="middle"><b>Home</b></td>
+<td align="middle">E0 47 / E0 C7</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 47</nobr> / <nobr>E0 C7 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 47</nobr> / <nobr>E0 C7 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 6C</nobr> / <nobr>E0 F0 6C</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 6C</nobr> / <nobr>E0 F0 6C <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 6C</nobr> / <nobr>E0 F0 6C E0 F0 12</nobr></td>
+<td align="middle">6E / F0 6E (Make only)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">81</td>
+<td align="middle"><b>End</b></td>
+<td align="middle">E0 4F / E0 CF</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 4F</nobr> / <nobr>E0 CF <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 4F</nobr> / <nobr>E0 CF E0 AA</nobr></td>
+<td align="middle"><nobr>E0 69</nobr> / <nobr>E0 F0 69</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 69</nobr> / <nobr>E0 F0 69 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 69</nobr> / <nobr>E0 F0 69 E0 F0 12</nobr></td>
+<td align="middle">65 / F0 65 (Make only)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">83</td>
+<td align="middle"><b>&#8593;</b></td>
+<td align="middle">E0 48 / E0 C8</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 48</nobr> / <nobr>E0 C8 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 48</nobr> / <nobr>E0 C8 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 75</nobr> / <nobr>E0 F0 75</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 75</nobr> / <nobr>E0 F0 75 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 75</nobr> / <nobr>E0 F0 75 E0 F0 12</nobr></td>
+<td align="middle">63 / F0 63 (Typematic)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">84</td>
+<td align="middle"><b>&#8595;</b></td>
+<td align="middle">E0 50 / E0 D0</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 50</nobr> / <nobr>E0 D0 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 50</nobr> / <nobr>E0 D0 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 72</nobr> / <nobr>E0 F0 72</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 72</nobr> / <nobr>E0 F0 72 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 72</nobr> / <nobr>E0 F0 72 E0 F0 12</nobr></td>
+<td align="middle">60 / F0 60 (Typematic)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">85</td>
+<td align="middle"><b>PageUp</b></td>
+<td align="middle">E0 49 / E0 C9</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 49</nobr> / <nobr>E0 C9 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 49</nobr> / <nobr>E0 C9 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 7D</nobr> / <nobr>E0 F0 7D</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 7D</nobr> / <nobr>E0 F0 7D <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 7D</nobr> / <nobr>E0 F0 7D E0 F0 12</nobr></td>
+<td align="middle">6F / F0 6F (Make only)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">86</td>
+<td align="middle"><b>PageDown</b></td>
+<td align="middle">E0 51 / E0 D1</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 51</nobr> / <nobr>E0 D1 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 51</nobr> / <nobr>E0 D1 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 7A</nobr> / <nobr>E0 F0 7A</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 7A</nobr> / <nobr>E0 F0 7A <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 7A</nobr> / <nobr>E0 F0 7A E0 F0 12</nobr></td>
+<td align="middle">6D / F0 6D (Make only)</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">89</td>
+<td align="middle"><b>&#8594;</b></td>
+<td align="middle">E0 4D / E0 CD</td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 4D</nobr> / <nobr>E0 CD <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 2A E0 4D</nobr> / <nobr>E0 CD E0 AA</nobr></td>
+<td align="middle"><nobr>E0 74</nobr> / <nobr>E0 F0 74</nobr></td>
+<td align="middle"><nobr><a href="scan_codes_us_jp.htm#scan_n1.1">[SBRK]</a> E0 74</nobr> / <nobr>E0 F0 74 <a href="scan_codes_us_jp.htm#scan_n1.1">[SRMK]</a></nobr></td>
+<td align="middle"><nobr>E0 12 E0 74</nobr> / <nobr>E0 F0 74 E0 F0 12</nobr></td>
+<td align="middle">6A / F0 6A (Typematic)</td>
+</tr>
+
+
+<!--
+<TR>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle><B></B></TD>
+<TD ALIGN=middle> / </TD>
+<TD ALIGN=middle><NOBR></NOBR> / <NOBR></NOBR></TD>
+<TD ALIGN=middle><NOBR></NOBR> / <NOBR></NOBR></TD>
+<TD ALIGN=middle><NOBR></NOBR> / <NOBR></NOBR></TD>
+<TD ALIGN=middle><NOBR></NOBR> / <NOBR></NOBR></TD>
+<TD ALIGN=middle><NOBR></NOBR> / <NOBR></NOBR></TD>
+</TR>
+
+-->
+
+</tbody></table>
+
+
+<p>
+</p><h4 id="scan_n1.1">Shift-State on Some Enhanced Keys</h4>
+
+<table border="">
+<tbody><tr>
+<th rowspan="3">STATE</th>
+<th colspan="6">Scan Code (when Left/Right Shift key is pressed)</th>
+</tr>
+<tr>
+<th colspan="2">Left Shift</th>
+<th colspan="2">Right Shift</th>
+<th colspan="2">Both Left and Right</th>
+</tr>
+<tr>
+<td align="middle">set 1</td>
+<td align="middle">set 2</td>
+<td align="middle">set 1</td>
+<td align="middle">set 2</td>
+<td align="middle">set 1</td>
+<td align="middle">set 2</td>
+</tr>
+
+<tr>
+<td align="middle">SBRK<br><small>(Break Shift state)</small></td>
+<td align="middle"><nobr>E0 AA</nobr></td>
+<td align="middle"><nobr>E0 F0 12</nobr></td>
+<td align="middle"><nobr>E0 B6</nobr></td>
+<td align="middle"><nobr>E0 F0 59</nobr></td>
+<td align="middle"><nobr>E0 AA</nobr> <nobr>E0 B6</nobr></td>
+<td align="middle"><nobr>E0 F0 12</nobr> <nobr>E0 F0 59</nobr></td>
+</tr>
+
+<tr>
+<td align="middle">SRMK<br><small>(ReMake Shift state)</small></td>
+<td align="middle"><nobr>E0 2A</nobr></td>
+<td align="middle"><nobr>E0 12</nobr></td>
+<td align="middle"><nobr>E0 36</nobr></td>
+<td align="middle"><nobr>E0 59</nobr></td>
+<td align="middle"><nobr>E0 36</nobr> <nobr>E0 2A</nobr></td>
+<td align="middle"><nobr>E0 59</nobr> <nobr>E0 12</nobr></td>
+</tr>
+</tbody></table>
+
+
+
+<p>
+</p><h3 id="scan_n2">(*2) Keyboard Scan Code: Print Screen</h3>
+
+<table border="">
+<tbody><tr>
+<th rowspan="3">Key Number</th>
+<th rowspan="3">Keytop char</th>
+<th colspan="7">Keyboard Scan Code (Make / Break)</th>
+</tr>
+<tr>
+<th align="middle" colspan="3">set 1</th>
+<th align="middle" colspan="3">set 2</th>
+<th align="middle" colspan="1" rowspan="2">set 3</th>
+</tr>
+
+<tr>
+<td align="middle">Base</td>
+<td align="middle">Ctrl or<br>Shift</td>
+<td align="middle">Alt</td>
+<td align="middle">Base</td>
+<td align="middle">Ctrl or<br>Shift</td>
+<td align="middle">Alt</td>
+</tr>
+
+<tr class="kprtscr">
+<td align="middle">124</td>
+<td align="middle"><b>Print<br>Screen</b></td>
+<td align="middle"><nobr>E0 2A E0 37</nobr> / <nobr>E0 B7 E0 AA</nobr></td>
+<td align="middle"><nobr>E0 37</nobr> / <nobr>E0 B7</nobr></td>
+<td align="middle"><nobr>54</nobr> / <nobr>D4</nobr></td>
+<td align="middle"><nobr>E0 12 E0 7C</nobr> / <nobr>E0 F0 7C E0 F0 12</nobr></td>
+<td align="middle"><nobr>E0 7C</nobr> / <nobr>E0 F0 7C</nobr></td>
+<td align="middle"><nobr>84</nobr> / <nobr>F0 84</nobr></td>
+<td align="middle">57 / F0 57 (Make only)</td>
+</tr>
+
+</tbody></table>
+
+
+<p>
+</p><p>
+</p><h3 id="scan_n3">(*3) Keyboard Scan Code: Pause/Break</h3>
+
+<table border="">
+<tbody><tr>
+<th rowspan="3">Key Number</th>
+<th rowspan="3">Keytop char</th>
+<th colspan="5">Keyboard Scan Code (Make / Break)</th>
+</tr>
+
+<tr>
+<th align="middle" colspan="2">set 1</th>
+<th align="middle" colspan="2">set 2</th>
+<th align="middle" colspan="1" rowspan="2">set 3</th>
+</tr>
+
+<tr>
+<td align="middle">Base</td>
+<td align="middle">Ctrl</td>
+<td align="middle">Base</td>
+<td align="middle">Ctrl</td>
+</tr>
+
+<tr class="kpause">
+<td align="middle">126</td>
+<td align="middle"><b>Pause</b></td>
+<td align="middle"><nobr>E1 1D 45 E1 9D C5</nobr><br><small>(Make only, not typematic)</small></td>
+<td align="middle"><nobr>E0 46 E0 C6</nobr><br><small>(Make only, not typematic)</small></td>
+<td align="middle"><nobr>E1 14 77 E1 F0 14 F0 77</nobr><br><small>(Make only, not typematic)</small></td>
+<td align="middle"><nobr>E0 7E E0 F0 7E</nobr><br><small>(Make only, not typematic)</small></td>
+<td align="middle">62 / F0 62 (Make only)</td>
+</tr>
+
+</tbody></table>
+
+
+<p>
+
+</p><h3 id="scan_ax">Keyboard Scan Code: Japanese AX specific keys</h3>
+
+<table border="">
+<tbody><tr>
+<th rowspan="2" colspan="1">Key Number</th>
+<th colspan="2">Keytop char<br>(US English)</th>
+<th colspan="2">Keytop char<br>(Japanese AX)</th>
+<th colspan="2">Keytop char<br>(Japanese A01)</th>
+<th colspan="3">Scan Code<br>(Make / Break)</th>
+<th colspan="2">USB HID Usage</th>
+</tr>
+
+<tr>
+<td align="middle">normal</td>
+<td align="middle">shift</td>
+<td align="middle">normal</td>
+<td align="middle">shift</td>
+<td align="middle">normal</td>
+<td align="middle">shift</td>
+<td align="middle">set 1</td>
+<td align="middle">set 2</td>
+<td align="middle">set 3</td>
+<td align="middle"><small>Page</small></td>
+<td align="middle"><small>ID</small></td>
+</tr>
+
+<tr class="axdiff">
+<td align="middle">AX</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b><em>AX</em></b><small> (AX application key)</small></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">(5C / DC)</td>
+<td align="middle">27 / F0 27</td>
+<td align="middle"></td>
+<td align="middle">07</td>
+<td align="middle">8C</td>
+</tr>
+
+<tr class="axdiff">
+<td align="middle">AXMUHEN</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b>&#28961;&#22793;&#25563;</b> (Muhenkan)</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">(5A / DA)</td>
+<td align="middle">17 / F0 17</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<tr class="axdiff">
+<td align="middle">AXHENKAN</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b>&#22793;&#25563;</b> (Henkan)</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">(5B / DB)</td>
+<td align="middle">1F / F0 1F</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<!--
+<TR>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle><B></B> / <B></B></TD>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle></TD>
+<TD ALIGN=middle></TD>
+</TR>
+-->
+</tbody></table>
+
+<p></p>
+note:
+<ul>
+<li>AX/J3100(enhanced) keyboard does not support scan code set 1 and 3.
+</li><li>J3100(enhanced) keyboard does not have "&#22793;&#25563;" key and "&#28961;&#22793;&#25563;" key.
+</li></ul>
+
+<h2 id="bioskey">DOS/BIOS Scan Code and Character</h2>
+
+<table border="">
+<tbody><tr>
+<th rowspan="3" colspan="1">Key Number</th>
+<th colspan="2">Keytop char<br>(US English)</th>
+<th colspan="2">Keytop char<br>(Japanese A01/106/109A)</th>
+<th rowspan="3">Keyboard Scan Code 1<br>(Make / Break)</th>
+<th colspan="8">DOS/BIOS Scan Code and Character<br>(int 16h,ah=10h AH/AL)</th>
+</tr>
+
+<tr>
+<td align="middle" rowspan="2"><small>normal</small></td>
+<td align="middle" rowspan="2"><small>shift</small></td>
+<td align="middle" rowspan="2"><small>normal</small></td>
+<td align="middle" rowspan="2"><small>shift</small></td>
+<td align="middle" colspan="4"><b>BIOS default</b></td>
+<td align="middle" colspan="4"><b>Keymapping for Japanese A01/OADG106</b><br><small>(KEYB JP,932,KEYBOARD.SYS)</small></td>
+</tr>
+
+<tr>
+<td align="middle"><small>base</small></td>
+<td align="middle"><small>shift</small></td>
+<td align="middle"><small>ctrl</small></td>
+<td align="middle"><small>alt</small></td>
+<td align="middle"><small>base</small></td>
+<td align="middle"><small>shift</small></td>
+<td align="middle"><small>ctrl</small></td>
+<td align="middle"><small>alt</small></td>
+</tr>
+
+
+<tr>
+<td align="middle">1</td>
+<td align="middle"><b>`</b></td>
+<td align="middle"><b>~</b></td>
+<td align="middle" colspan="2"><b>&#21322;&#35282;/&#20840;&#35282;</b><small> <nobr>(Hankaku/Zenkaku)</nobr></small></td>
+<td align="middle">29 / A9</td>
+<td align="middle">29/60</td>
+<td align="middle">29/7E</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">29/00</td>
+<td align="middle">AF/00</td>
+<td align="middle">B0/00</td>
+<td align="middle">B1/00</td>
+<td align="middle">B2/00</td>
+</tr>
+
+<tr>
+<td align="middle">2</td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>!</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>!</b></td>
+<td align="middle">02 / 82</td>
+<td align="middle">02/31</td>
+<td align="middle">02/21</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">78/00</td>
+<td align="middle">02/31</td>
+<td align="middle">02/21</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">78/00</td>
+</tr>
+
+<tr>
+<td align="middle">3</td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>@</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>"</b></td>
+<td align="middle">03 / 83</td>
+<td align="middle">03/32</td>
+<td align="middle">03/40</td>
+<td align="middle">03/00</td>
+<td align="middle">79/00</td>
+<td align="middle">03/32</td>
+<td align="middle">03/22</td>
+<td align="middle">03/00</td>
+<td align="middle">79/00</td>
+</tr>
+
+<tr>
+<td align="middle">4</td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>#</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>#</b></td>
+<td align="middle">04 / 84</td>
+<td align="middle">04/33</td>
+<td align="middle">04/23</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7A/00</td>
+<td align="middle">04/33</td>
+<td align="middle">04/23</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7A/00</td>
+</tr>
+
+<tr>
+<td align="middle">5</td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>$</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>$</b></td>
+<td align="middle">05 / 85</td>
+<td align="middle">05/34</td>
+<td align="middle">05/24</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7B/00</td>
+<td align="middle">05/34</td>
+<td align="middle">05/24</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7B/00</td>
+</tr>
+
+<tr>
+<td align="middle">6</td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b>%</b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b>%</b></td>
+<td align="middle">06 / 86</td>
+<td align="middle">06/35</td>
+<td align="middle">06/25</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7C/00</td>
+<td align="middle">06/35</td>
+<td align="middle">06/25</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7C/00</td>
+</tr>
+
+<tr>
+<td align="middle">7</td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>^</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>&amp;</b></td>
+<td align="middle">07 / 87</td>
+<td align="middle">07/36</td>
+<td align="middle">07/5E</td>
+<td align="middle">07/1E</td>
+<td align="middle">7D/00</td>
+<td align="middle">07/36</td>
+<td align="middle">07/26</td>
+<td align="middle">07/1E</td>
+<td align="middle">7D/00</td>
+</tr>
+
+<tr>
+<td align="middle">8</td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>&amp;</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>'</b></td>
+<td align="middle">08 / 88</td>
+<td align="middle">08/37</td>
+<td align="middle">08/26</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7E/00</td>
+<td align="middle">08/37</td>
+<td align="middle">08/27</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7E/00</td>
+</tr>
+
+<tr>
+<td align="middle">9</td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>*</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>(</b></td>
+<td align="middle">09 / 89</td>
+<td align="middle">09/38</td>
+<td align="middle">09/2A</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7F/00</td>
+<td align="middle">09/38</td>
+<td align="middle">09/28</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7F/00</td>
+</tr>
+
+<tr>
+<td align="middle">10</td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>(</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>)</b></td>
+<td align="middle">0A / 8A</td>
+<td align="middle">0A/39</td>
+<td align="middle">0A/28</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">80/00</td>
+<td align="middle">0A/39</td>
+<td align="middle">0A/29</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">80/00</td>
+</tr>
+
+<tr>
+<td align="middle">11</td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b>)</b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b></b></td>
+<td align="middle">0B / 8B</td>
+<td align="middle">0B/30</td>
+<td align="middle">0B/29</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">81/00</td>
+<td align="middle">0B/30</td>
+<td align="middle">0B/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">81/00</td>
+</tr>
+
+<tr>
+<td align="middle">12</td>
+<td align="middle"><b>-</b></td>
+<td align="middle"><b>_</b><small> (Low Line)</small></td>
+<td align="middle"><b>-</b></td>
+<td align="middle"><b>=</b></td>
+<td align="middle">0C / 8C</td>
+<td align="middle">0C/2D</td>
+<td align="middle">0C/5F</td>
+<td align="middle">0C/1F</td>
+<td align="middle">82/00</td>
+<td align="middle">0C/2D</td>
+<td align="middle">0C/3D</td>
+<td align="middle">0C/1F</td>
+<td align="middle">82/00</td>
+</tr>
+
+<tr>
+<td align="middle">13</td>
+<td align="middle"><b>=</b></td>
+<td align="middle"><b>+</b></td>
+<td align="middle"><b>^</b></td>
+<td align="middle"><b> ~</b><small> (Tilde)</small></td>
+<td align="middle">0D / 8D</td>
+<td align="middle">0D/3D</td>
+<td align="middle">0D/2B</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">83/00</td>
+<td align="middle">0D/5E</td>
+<td align="middle">0D/7E</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">83/00</td>
+</tr>
+
+
+<tr class="jpdiff">
+<td align="middle">14</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b>¥</b><small> (Yen sign)</small></td>
+<td align="middle"><b>|</b><small> (Vertical Line)</small></td>
+<td align="middle">7D / FD</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7D/5C</td>
+<td align="middle">7D/7C</td>
+<td align="middle">7D/1C</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">15</td>
+<td align="middle" colspan="2"><b>BackSpace</b></td>
+<td align="middle" colspan="2"><b>BackSpace</b></td>
+<td align="middle">0E / 8E</td>
+<td align="middle">0E/08</td>
+<td align="middle">0E/08</td>
+<td align="middle">0E/7F</td>
+<td align="middle">0E/00</td>
+<td align="middle">0E/08</td>
+<td align="middle">0E/08</td>
+<td align="middle">0E/7F</td>
+<td align="middle">0E/00</td>
+</tr>
+
+<tr>
+<td align="middle">16</td>
+<td align="middle" colspan="2"><b>Tab</b></td>
+<td align="middle" colspan="2"><b>Tab</b></td>
+<td align="middle">0F / 8F</td>
+<td align="middle">0F/09</td>
+<td align="middle">0F/00</td>
+<td align="middle">94/00</td>
+<td align="middle">A5/00</td>
+<td align="middle">0F/09</td>
+<td align="middle">0F/00</td>
+<td align="middle">94/00</td>
+<td align="middle">A5/00</td>
+</tr>
+
+<tr>
+<td align="middle">17</td>
+<td align="middle" colspan="2"><b>Q</b></td>
+<td align="middle" colspan="2"><b>Q</b></td>
+<td align="middle">10 / 90</td>
+<td align="middle">10/71<br><nobr>Caps:10/51</nobr></td>
+<td align="middle">10/51<br><nobr>Caps:10/71</nobr></td>
+<td align="middle">10/11</td>
+<td align="middle">10/00</td>
+<td align="middle">10/71<br><nobr>Caps:10/51</nobr></td>
+<td align="middle">10/51<br><nobr>Caps:10/71</nobr></td>
+<td align="middle">10/11</td>
+<td align="middle">10/00</td>
+</tr>
+
+<tr>
+<td align="middle">18</td>
+<td align="middle" colspan="2"><b>W</b></td>
+<td align="middle" colspan="2"><b>W</b></td>
+<td align="middle">11 / 91</td>
+<td align="middle">11/77<br><nobr>Caps:11/57</nobr></td>
+<td align="middle">11/57<br><nobr>Caps:11/77</nobr></td>
+<td align="middle">11/17</td>
+<td align="middle">11/00</td>
+<td align="middle">11/77<br><nobr>Caps:11/57</nobr></td>
+<td align="middle">11/57<br><nobr>Caps:11/77</nobr></td>
+<td align="middle">11/17</td>
+<td align="middle">11/00</td>
+</tr>
+
+<tr>
+<td align="middle">19</td>
+<td align="middle" colspan="2"><b>E</b></td>
+<td align="middle" colspan="2"><b>E</b></td>
+<td align="middle">12 / 92</td>
+<td align="middle">12/65<br><nobr>Caps:12/45</nobr></td>
+<td align="middle">12/45<br><nobr>Caps:12/65</nobr></td>
+<td align="middle">12/05</td>
+<td align="middle">12/00</td>
+<td align="middle">12/65<br><nobr>Caps:12/45</nobr></td>
+<td align="middle">12/45<br><nobr>Caps:12/65</nobr></td>
+<td align="middle">12/05</td>
+<td align="middle">12/00</td>
+</tr>
+
+<tr>
+<td align="middle">20</td>
+<td align="middle" colspan="2"><b>R</b></td>
+<td align="middle" colspan="2"><b>R</b></td>
+<td align="middle">13 / 93</td>
+<td align="middle">13/72<br><nobr>Caps:13/52</nobr></td>
+<td align="middle">13/52<br><nobr>Caps:13/72</nobr></td>
+<td align="middle">13/12</td>
+<td align="middle">13/00</td>
+<td align="middle">13/72<br><nobr>Caps:13/52</nobr></td>
+<td align="middle">13/52<br><nobr>Caps:13/72</nobr></td>
+<td align="middle">13/12</td>
+<td align="middle">13/00</td>
+</tr>
+
+<tr>
+<td align="middle">21</td>
+<td align="middle" colspan="2"><b>T</b></td>
+<td align="middle" colspan="2"><b>T</b></td>
+<td align="middle">14 / 94</td>
+<td align="middle">14/74<br><nobr>Caps:14/54</nobr></td>
+<td align="middle">14/54<br><nobr>Caps:14/74</nobr></td>
+<td align="middle">14/14</td>
+<td align="middle">14/00</td>
+<td align="middle">14/74<br><nobr>Caps:14/54</nobr></td>
+<td align="middle">14/54<br><nobr>Caps:14/74</nobr></td>
+<td align="middle">14/14</td>
+<td align="middle">14/00</td>
+</tr>
+
+<tr>
+<td align="middle">22</td>
+<td align="middle" colspan="2"><b>Y</b></td>
+<td align="middle" colspan="2"><b>Y</b></td>
+<td align="middle">15 / 95</td>
+<td align="middle">15/79<br><nobr>Caps:15/59</nobr></td>
+<td align="middle">15/59<br><nobr>Caps:15/79</nobr></td>
+<td align="middle">15/19</td>
+<td align="middle">15/00</td>
+<td align="middle">15/79<br><nobr>Caps:15/59</nobr></td>
+<td align="middle">15/59<br><nobr>Caps:15/79</nobr></td>
+<td align="middle">15/19</td>
+<td align="middle">15/00</td>
+</tr>
+
+<tr>
+<td align="middle">23</td>
+<td align="middle" colspan="2"><b>U</b></td>
+<td align="middle" colspan="2"><b>U</b></td>
+<td align="middle">16 / 96</td>
+<td align="middle">16/75<br><nobr>Caps:16/55</nobr></td>
+<td align="middle">16/55<br><nobr>Caps:16/75</nobr></td>
+<td align="middle">16/15</td>
+<td align="middle">16/00</td>
+<td align="middle">16/75<br><nobr>Caps:16/55</nobr></td>
+<td align="middle">16/55<br><nobr>Caps:16/75</nobr></td>
+<td align="middle">16/15</td>
+<td align="middle">16/00</td>
+</tr>
+
+<tr>
+<td align="middle">24</td>
+<td align="middle" colspan="2"><b>I</b></td>
+<td align="middle" colspan="2"><b>I</b></td>
+<td align="middle">17 / 97</td>
+<td align="middle">17/69<br><nobr>Caps:17/49</nobr></td>
+<td align="middle">17/49<br><nobr>Caps:17/69</nobr></td>
+<td align="middle">17/09</td>
+<td align="middle">17/00</td>
+<td align="middle">17/69<br><nobr>Caps:17/49</nobr></td>
+<td align="middle">17/49<br><nobr>Caps:17/69</nobr></td>
+<td align="middle">17/09</td>
+<td align="middle">17/00</td>
+</tr>
+
+<tr>
+<td align="middle">25</td>
+<td align="middle" colspan="2"><b>O</b></td>
+<td align="middle" colspan="2"><b>O</b></td>
+<td align="middle">18 / 98</td>
+<td align="middle">18/6F<br><nobr>Caps:18/4F</nobr></td>
+<td align="middle">18/4F<br><nobr>Caps:18/6F</nobr></td>
+<td align="middle">18/0F</td>
+<td align="middle">18/00</td>
+<td align="middle">18/6F<br><nobr>Caps:18/4F</nobr></td>
+<td align="middle">18/4F<br><nobr>Caps:18/6F</nobr></td>
+<td align="middle">18/0F</td>
+<td align="middle">18/00</td>
+</tr>
+
+<tr>
+<td align="middle">26</td>
+<td align="middle" colspan="2"><b>P</b></td>
+<td align="middle" colspan="2"><b>P</b></td>
+<td align="middle">19 / 99</td>
+<td align="middle">19/70<br><nobr>Caps:19/50</nobr></td>
+<td align="middle">19/50<br><nobr>Caps:19/70</nobr></td>
+<td align="middle">19/10</td>
+<td align="middle">19/00</td>
+<td align="middle">19/70<br><nobr>Caps:19/50</nobr></td>
+<td align="middle">19/50<br><nobr>Caps:19/70</nobr></td>
+<td align="middle">19/10</td>
+<td align="middle">19/00</td>
+</tr>
+
+<tr>
+<td align="middle">27</td>
+<td align="middle"><b>[</b></td>
+<td align="middle"><b>{</b></td>
+<td align="middle"><b>@</b></td>
+<td align="middle"><b>`</b></td>
+<td align="middle">1A / 9A</td>
+<td align="middle">1A/5B</td>
+<td align="middle">1A/7B</td>
+<td align="middle">1A/1B</td>
+<td align="middle">1A/00</td>
+<td align="middle">1A/40</td>
+<td align="middle">1A/60</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">1A/00</td>
+</tr>
+
+<tr>
+<td align="middle">28</td>
+<td align="middle"><b>]</b></td>
+<td align="middle"><b>}</b></td>
+<td align="middle"><b>[</b></td>
+<td align="middle"><b>{</b></td>
+<td align="middle">1B / 9B</td>
+<td align="middle">1B/5D</td>
+<td align="middle">1B/7D</td>
+<td align="middle">1B/1D</td>
+<td align="middle">1B/00</td>
+<td align="middle">1B/5B</td>
+<td align="middle">1B/7B</td>
+<td align="middle">1B/1B</td>
+<td align="middle">1B/00</td>
+</tr>
+
+<tr>
+<td align="middle">29</td>
+<td align="middle"><b style="Font-Family: Times New Roman, Times, Serif;" lang="en">\</b><small> (Reverse Solidus)</small></td>
+<td align="middle"><b>¦</b><small> (Broken Bar)</small></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">2B / AB</td>
+<td align="middle">2B/5C</td>
+<td align="middle">2B/7C</td>
+<td align="middle">2B/1C</td>
+<td align="middle">2B/00</td>
+<td align="middle">2B/5D</td>
+<td align="middle">2B/7D</td>
+<td align="middle">2B/1D</td>
+<td align="middle">2B/00</td>
+</tr>
+
+<tr>
+<td align="middle">30</td>
+<td align="middle" colspan="2"><b>Caps Lock</b></td>
+<td align="middle"><b>&#33521;&#25968;</b><small> (Eisuu)</small></td>
+<td align="middle"><b>Caps Lock</b></td>
+<td align="middle">3A / BA</td>
+<td align="middle">(toggle CapsLock)</td>
+<td align="middle">(toggle CapsLock)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(toggle CapsLock)</td>
+<td align="middle">B3/00</td>
+<td align="middle">(toggle CapsLock)</td>
+<td align="middle">B4/00</td>
+<td align="middle">B5/00</td>
+</tr>
+
+<tr>
+<td align="middle">31</td>
+<td align="middle" colspan="2"><b>A</b></td>
+<td align="middle" colspan="2"><b>A</b></td>
+<td align="middle">1E / 9E</td>
+<td align="middle">1E/61<br><nobr>Caps:1E/41</nobr></td>
+<td align="middle">1E/41<br><nobr>Caps:1E/61</nobr></td>
+<td align="middle">1E/01</td>
+<td align="middle">1E/00</td>
+<td align="middle">1E/61<br><nobr>Caps:1E/41</nobr></td>
+<td align="middle">1E/41<br><nobr>Caps:1E/61</nobr></td>
+<td align="middle">1E/01</td>
+<td align="middle">1E/00</td>
+</tr>
+
+<tr>
+<td align="middle">32</td>
+<td align="middle" colspan="2"><b>S</b></td>
+<td align="middle" colspan="2"><b>S</b></td>
+<td align="middle">1F / 9F</td>
+<td align="middle">1F/73<br><nobr>Caps:1F/53</nobr></td>
+<td align="middle">1F/53<br><nobr>Caps:1F/73</nobr></td>
+<td align="middle">1F/13</td>
+<td align="middle">1F/00</td>
+<td align="middle">1F/73<br><nobr>Caps:1F/53</nobr></td>
+<td align="middle">1F/53<br><nobr>Caps:1F/73</nobr></td>
+<td align="middle">1F/13</td>
+<td align="middle">1F/00</td>
+</tr>
+
+<tr>
+<td align="middle">33</td>
+<td align="middle" colspan="2"><b>D</b></td>
+<td align="middle" colspan="2"><b>D</b></td>
+<td align="middle">20 / A0</td>
+<td align="middle">20/64<br><nobr>Caps:20/44</nobr></td>
+<td align="middle">20/44<br><nobr>Caps:20/64</nobr></td>
+<td align="middle">20/04</td>
+<td align="middle">20/00</td>
+<td align="middle">20/64<br><nobr>Caps:20/44</nobr></td>
+<td align="middle">20/44<br><nobr>Caps:20/64</nobr></td>
+<td align="middle">20/04</td>
+<td align="middle">20/00</td>
+</tr>
+
+<tr>
+<td align="middle">34</td>
+<td align="middle" colspan="2"><b>F</b></td>
+<td align="middle" colspan="2"><b>F</b></td>
+<td align="middle">21 / A1</td>
+<td align="middle">21/66<br><nobr>Caps:21/46</nobr></td>
+<td align="middle">21/46<br><nobr>Caps:21/66</nobr></td>
+<td align="middle">21/06</td>
+<td align="middle">21/00</td>
+<td align="middle">21/66<br><nobr>Caps:21/46</nobr></td>
+<td align="middle">21/46<br><nobr>Caps:21/66</nobr></td>
+<td align="middle">21/06</td>
+<td align="middle">21/00</td>
+</tr>
+
+<tr>
+<td align="middle">35</td>
+<td align="middle" colspan="2"><b>G</b></td>
+<td align="middle" colspan="2"><b>G</b></td>
+<td align="middle">22 / A2</td>
+<td align="middle">22/67<br><nobr>Caps:22/47</nobr></td>
+<td align="middle">22/47<br><nobr>Caps:22/67</nobr></td>
+<td align="middle">22/07</td>
+<td align="middle">22/00</td>
+<td align="middle">22/67<br><nobr>Caps:22/47</nobr></td>
+<td align="middle">22/47<br><nobr>Caps:22/67</nobr></td>
+<td align="middle">22/07</td>
+<td align="middle">22/00</td>
+</tr>
+
+<tr>
+<td align="middle">36</td>
+<td align="middle" colspan="2"><b>H</b></td>
+<td align="middle" colspan="2"><b>H</b></td>
+<td align="middle">23 / A3</td>
+<td align="middle">23/68<br><nobr>Caps:23/48</nobr></td>
+<td align="middle">23/48<br><nobr>Caps:23/68</nobr></td>
+<td align="middle">23/08</td>
+<td align="middle">23/00</td>
+<td align="middle">23/68<br><nobr>Caps:23/48</nobr></td>
+<td align="middle">23/48<br><nobr>Caps:23/68</nobr></td>
+<td align="middle">23/08</td>
+<td align="middle">23/00</td>
+</tr>
+
+<tr>
+<td align="middle">37</td>
+<td align="middle" colspan="2"><b>J</b></td>
+<td align="middle" colspan="2"><b>J</b></td>
+<td align="middle">24 / A4</td>
+<td align="middle">24/6A<br><nobr>Caps:24/4A</nobr></td>
+<td align="middle">24/4A<br><nobr>Caps:24/6A</nobr></td>
+<td align="middle">24/0A</td>
+<td align="middle">24/00</td>
+<td align="middle">24/6A<br><nobr>Caps:24/4A</nobr></td>
+<td align="middle">24/4A<br><nobr>Caps:24/6A</nobr></td>
+<td align="middle">24/0A</td>
+<td align="middle">24/00</td>
+</tr>
+
+<tr>
+<td align="middle">38</td>
+<td align="middle" colspan="2"><b>K</b></td>
+<td align="middle" colspan="2"><b>K</b></td>
+<td align="middle">25 / A5</td>
+<td align="middle">25/6B<br><nobr>Caps:25/4B</nobr></td>
+<td align="middle">25/4B<br><nobr>Caps:25/6B</nobr></td>
+<td align="middle">25/0B</td>
+<td align="middle">25/00</td>
+<td align="middle">25/6B<br><nobr>Caps:25/4B</nobr></td>
+<td align="middle">25/4B<br><nobr>Caps:25/6B</nobr></td>
+<td align="middle">25/0B</td>
+<td align="middle">25/00</td>
+</tr>
+
+<tr>
+<td align="middle">39</td>
+<td align="middle" colspan="2"><b>L</b></td>
+<td align="middle" colspan="2"><b>L</b></td>
+<td align="middle">26 / A6</td>
+<td align="middle">26/6C<br><nobr>Caps:26/4C</nobr></td>
+<td align="middle">26/4C<br><nobr>Caps:26/6C</nobr></td>
+<td align="middle">26/0C</td>
+<td align="middle">26/00</td>
+<td align="middle">26/6C<br><nobr>Caps:26/4C</nobr></td>
+<td align="middle">26/4C<br><nobr>Caps:26/6C</nobr></td>
+<td align="middle">26/0C</td>
+<td align="middle">26/00</td>
+</tr>
+
+<tr>
+<td align="middle">40</td>
+<td align="middle"><b>;</b></td>
+<td align="middle"><b>:</b></td>
+<td align="middle"><b>;</b></td>
+<td align="middle"><b>+</b></td>
+<td align="middle">27 / A7</td>
+<td align="middle">27/3B</td>
+<td align="middle">27/3A</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">27/00</td>
+<td align="middle">27/3B</td>
+<td align="middle">27/2B</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">27/00</td>
+</tr>
+
+<tr>
+<td align="middle">41</td>
+<td align="middle"><b>`</b><small> (Grave Accent)</small></td>
+<td align="middle"><b>"</b></td>
+<td align="middle"><b>:</b></td>
+<td align="middle"><b>*</b></td>
+<td align="middle">28 / A8</td>
+<td align="middle">28/27</td>
+<td align="middle">28/22</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">28/00</td>
+<td align="middle">28/3A</td>
+<td align="middle">28/2A</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">28/00</td>
+</tr>
+
+<tr class="k102diff">
+<td align="middle">42</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b>]</b></td>
+<td align="middle"><b>}</b></td>
+<td align="middle">2B / AB</td>
+<td align="middle">2B/5C</td>
+<td align="middle">2B/7C</td>
+<td align="middle">2B/1C</td>
+<td align="middle">2B/00</td>
+<td align="middle">2B/5D</td>
+<td align="middle">2B/7D</td>
+<td align="middle">2B/1D</td>
+<td align="middle">2B/00</td>
+</tr>
+
+<tr>
+<td align="middle">43</td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle">1C / 9C</td>
+<td align="middle">1C/0D</td>
+<td align="middle">1C/0D</td>
+<td align="middle">1C/0A</td>
+<td align="middle">1C/00</td>
+<td align="middle">1C/0D</td>
+<td align="middle">1C/0D</td>
+<td align="middle">1C/0A</td>
+<td align="middle">1C/00</td>
+</tr>
+
+
+<tr>
+<td align="middle">44</td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle">2A / AA</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<tr class="k102diff">
+<td align="middle">45</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle">56 / D6</td>
+<td align="middle">56/5C</td>
+<td align="middle">56/7C</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">7D/5C</td>
+<td align="middle">7D/7C</td>
+<td align="middle">7D/1C</td>
+<td align="middle">7D/FF</td>
+</tr>
+
+<tr>
+<td align="middle">46</td>
+<td align="middle" colspan="2"><b>Z</b></td>
+<td align="middle" colspan="2"><b>Z</b></td>
+<td align="middle">2C / AC</td>
+<td align="middle">2C/7A<br><nobr>Caps:2C/5A</nobr></td>
+<td align="middle">2C/5A<br><nobr>Caps:2C/7A</nobr></td>
+<td align="middle">2C/1A</td>
+<td align="middle">2C/00</td>
+<td align="middle">2C/7A<br><nobr>Caps:2C/5A</nobr></td>
+<td align="middle">2C/5A<br><nobr>Caps:2C/7A</nobr></td>
+<td align="middle">2C/1A</td>
+<td align="middle">2C/00</td>
+</tr>
+
+<tr>
+<td align="middle">47</td>
+<td align="middle" colspan="2"><b>X</b></td>
+<td align="middle" colspan="2"><b>X</b></td>
+<td align="middle">2D / AD</td>
+<td align="middle">2D/78<br><nobr>Caps:2D/58</nobr></td>
+<td align="middle">2D/58<br><nobr>Caps:2D/78</nobr></td>
+<td align="middle">2D/18</td>
+<td align="middle">2D/00</td>
+<td align="middle">2D/78<br><nobr>Caps:2D/58</nobr></td>
+<td align="middle">2D/58<br><nobr>Caps:2D/78</nobr></td>
+<td align="middle">2D/18</td>
+<td align="middle">2D/00</td>
+</tr>
+
+<tr>
+<td align="middle">48</td>
+<td align="middle" colspan="2"><b>C</b></td>
+<td align="middle" colspan="2"><b>C</b></td>
+<td align="middle">2E / AE</td>
+<td align="middle">2E/63<br><nobr>Caps:2E/43</nobr></td>
+<td align="middle">2E/43<br><nobr>Caps:2E/63</nobr></td>
+<td align="middle">2E/03</td>
+<td align="middle">2E/00</td>
+<td align="middle">2E/63<br><nobr>Caps:2E/43</nobr></td>
+<td align="middle">2E/43<br><nobr>Caps:2E/63</nobr></td>
+<td align="middle">2E/03</td>
+<td align="middle">2E/00</td>
+</tr>
+
+<tr>
+<td align="middle">49</td>
+<td align="middle" colspan="2"><b>V</b></td>
+<td align="middle" colspan="2"><b>V</b></td>
+<td align="middle">2F / AF</td>
+<td align="middle">2F/76<br><nobr>Caps:2F/56</nobr></td>
+<td align="middle">2F/56<br><nobr>Caps:2F/76</nobr></td>
+<td align="middle">2F/16</td>
+<td align="middle">2F/00</td>
+<td align="middle">2F/76<br><nobr>Caps:2F/56</nobr></td>
+<td align="middle">2F/56<br><nobr>Caps:2F/76</nobr></td>
+<td align="middle">2F/16</td>
+<td align="middle">2F/00</td>
+</tr>
+
+<tr>
+<td align="middle">50</td>
+<td align="middle" colspan="2"><b>B</b></td>
+<td align="middle" colspan="2"><b>B</b></td>
+<td align="middle">30 / B0</td>
+<td align="middle">30/62<br><nobr>Caps:30/42</nobr></td>
+<td align="middle">30/42<br><nobr>Caps:30/62</nobr></td>
+<td align="middle">30/02</td>
+<td align="middle">30/00</td>
+<td align="middle">30/62<br><nobr>Caps:30/42</nobr></td>
+<td align="middle">30/42<br><nobr>Caps:30/62</nobr></td>
+<td align="middle">30/02</td>
+<td align="middle">30/00</td>
+</tr>
+
+<tr>
+<td align="middle">51</td>
+<td align="middle" colspan="2"><b>N</b></td>
+<td align="middle" colspan="2"><b>N</b></td>
+<td align="middle">31 / B1</td>
+<td align="middle">31/6E<br><nobr>Caps:31/4E</nobr></td>
+<td align="middle">31/4E<br><nobr>Caps:31/6E</nobr></td>
+<td align="middle">31/0E</td>
+<td align="middle">31/00</td>
+<td align="middle">31/6E<br><nobr>Caps:31/4E</nobr></td>
+<td align="middle">31/4E<br><nobr>Caps:31/6E</nobr></td>
+<td align="middle">31/0E</td>
+<td align="middle">31/00</td>
+</tr>
+
+<tr>
+<td align="middle">52</td>
+<td align="middle" colspan="2"><b>M</b></td>
+<td align="middle" colspan="2"><b>M</b></td>
+<td align="middle">32 / B2</td>
+<td align="middle">32/6D<br><nobr>Caps:32/4D</nobr></td>
+<td align="middle">32/4D<br><nobr>Caps:32/6D</nobr></td>
+<td align="middle">32/0D</td>
+<td align="middle">32/00</td>
+<td align="middle">32/6D<br><nobr>Caps:32/4D</nobr></td>
+<td align="middle">32/4D<br><nobr>Caps:32/6D</nobr></td>
+<td align="middle">32/0D</td>
+<td align="middle">32/00</td>
+</tr>
+
+<tr>
+<td align="middle">53</td>
+<td align="middle"><b>,</b></td>
+<td align="middle"><b>&lt;</b></td>
+<td align="middle"><b>,</b></td>
+<td align="middle"><b>&lt;</b></td>
+<td align="middle">33 / B3</td>
+<td align="middle">33/2C</td>
+<td align="middle">33/3C</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">33/00</td>
+<td align="middle">33/2C</td>
+<td align="middle">33/3C</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">33/00</td>
+</tr>
+
+<tr>
+<td align="middle">54</td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>&gt;</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>&gt;</b></td>
+<td align="middle">34 / B4</td>
+<td align="middle">34/2E</td>
+<td align="middle">34/3E</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">34/00</td>
+<td align="middle">34/2E</td>
+<td align="middle">34/3E</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">34/00</td>
+</tr>
+
+<tr>
+<td align="middle">55</td>
+<td align="middle"><b>/</b></td>
+<td align="middle"><b>?</b></td>
+<td align="middle"><b>/</b></td>
+<td align="middle"><b>?</b></td>
+<td align="middle">35 / B5</td>
+<td align="middle">35/2F</td>
+<td align="middle">35/3F</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">35/00</td>
+<td align="middle">35/2F</td>
+<td align="middle">35/3F</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">35/00</td>
+</tr>
+
+<tr class="jpdiff">
+<td align="middle">56</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b style="Font-Family: Times New Roman, Times, Serif" lang="en">\</b><small> (Reverse Solidus)</small></td>
+<td align="middle"><b>_</b><small> (Low Line)</small></td>
+<td align="middle">73 / F3</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">73/5C</td>
+<td align="middle">73/5F</td>
+<td align="middle">73/1C</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">57</td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle" colspan="2"><b>Shift</b></td>
+<td align="middle">36 / B6</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<tr>
+<td align="middle">58</td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle">1D / 9D</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<tr>
+<td align="middle">60</td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle">38 / B8</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<tr>
+<td align="middle">61</td>
+<td align="middle" colspan="2">(space)</td>
+<td align="middle" colspan="2">(space)</td>
+<td align="middle">39 / B9</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+<td align="middle">39/20</td>
+</tr>
+
+<tr>
+<td align="middle">62</td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle" colspan="2"><b>Alt</b></td>
+<td align="middle">E0 38 / E0 B8</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+<tr>
+<td align="middle">64</td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle" colspan="2"><b>Ctrl</b></td>
+<td align="middle">E0 1D / E0 9D</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+</tr>
+
+
+<tr class="kenh">
+<td align="middle">75</td>
+<td align="middle" colspan="2"><b>Insert</b></td>
+<td align="middle" colspan="2"><b>Insert</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">52/E0</td>
+<td align="middle">52/E0</td>
+<td align="middle">92/E0</td>
+<td align="middle">A2/00</td>
+<td align="middle">52/E0</td>
+<td align="middle">52/E0</td>
+<td align="middle">92/E0</td>
+<td align="middle">A2/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">76</td>
+<td align="middle" colspan="2"><b>Delete</b></td>
+<td align="middle" colspan="2"><b>Delete</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">53/E0</td>
+<td align="middle">53/E0</td>
+<td align="middle">93/E0</td>
+<td align="middle">A3/00</td>
+<td align="middle">53/E0</td>
+<td align="middle">53/E0</td>
+<td align="middle">93/E0</td>
+<td align="middle">A3/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">79</td>
+<td align="middle" colspan="2"><b>&#8592;</b></td>
+<td align="middle" colspan="2"><b>&#8592;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">4B/E0</td>
+<td align="middle">4B/E0</td>
+<td align="middle">73/E0</td>
+<td align="middle">9B/00</td>
+<td align="middle">4B/E0</td>
+<td align="middle">4B/E0</td>
+<td align="middle">73/E0</td>
+<td align="middle">9B/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">80</td>
+<td align="middle" colspan="2"><b>Home</b></td>
+<td align="middle" colspan="2"><b>Home</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">47/E0</td>
+<td align="middle">47/E0</td>
+<td align="middle">77/E0</td>
+<td align="middle">97/00</td>
+<td align="middle">47/E0</td>
+<td align="middle">47/E0</td>
+<td align="middle">77/E0</td>
+<td align="middle">97/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">81</td>
+<td align="middle" colspan="2"><b>End</b></td>
+<td align="middle" colspan="2"><b>End</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">4F/E0</td>
+<td align="middle">4F/E0</td>
+<td align="middle">75/E0</td>
+<td align="middle">9F/00</td>
+<td align="middle">4F/E0</td>
+<td align="middle">4F/E0</td>
+<td align="middle">75/E0</td>
+<td align="middle">9F/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">83</td>
+<td align="middle" colspan="2"><b>&#8593;</b></td>
+<td align="middle" colspan="2"><b>&#8593;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">48/E0</td>
+<td align="middle">48/E0</td>
+<td align="middle">8D/E0</td>
+<td align="middle">98/00</td>
+<td align="middle">48/E0</td>
+<td align="middle">48/E0</td>
+<td align="middle">8D/E0</td>
+<td align="middle">98/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">84</td>
+<td align="middle" colspan="2"><b>&#8595;</b></td>
+<td align="middle" colspan="2"><b>&#8595;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">50/E0</td>
+<td align="middle">50/E0</td>
+<td align="middle">91/E0</td>
+<td align="middle">A0/00</td>
+<td align="middle">50/E0</td>
+<td align="middle">50/E0</td>
+<td align="middle">91/E0</td>
+<td align="middle">A0/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">85</td>
+<td align="middle" colspan="2"><b>Page<br>Up</b></td>
+<td align="middle" colspan="2"><b>Page<br>Up</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">49/E0</td>
+<td align="middle">49/E0</td>
+<td align="middle">84/E0</td>
+<td align="middle">99/00</td>
+<td align="middle">49/E0</td>
+<td align="middle">49/E0</td>
+<td align="middle">84/E0</td>
+<td align="middle">99/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">86</td>
+<td align="middle" colspan="2"><b>Page<br>Down</b></td>
+<td align="middle" colspan="2"><b>Page<br>Down</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">51/E0</td>
+<td align="middle">51/E0</td>
+<td align="middle">76/E0</td>
+<td align="middle">A1/00</td>
+<td align="middle">51/E0</td>
+<td align="middle">51/E0</td>
+<td align="middle">76/E0</td>
+<td align="middle">A1/00</td>
+</tr>
+
+<tr class="kenh">
+<td align="middle">89</td>
+<td align="middle" colspan="2"><b>&#8594;</b></td>
+<td align="middle" colspan="2"><b>&#8594;</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n1">*1</a></td>
+<td align="middle">4D/E0</td>
+<td align="middle">4D/E0</td>
+<td align="middle">74/E0</td>
+<td align="middle">9D/00</td>
+<td align="middle">4D/E0</td>
+<td align="middle">4D/E0</td>
+<td align="middle">74/E0</td>
+<td align="middle">9D/00</td>
+</tr>
+
+<tr>
+<td align="middle">90</td>
+<td align="middle" colspan="2"><b>Num<br>Lock</b></td>
+<td align="middle" colspan="2"><b>Num<br>Lock</b></td>
+<td align="middle">45 / C5</td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle"></td>
+<td align="middle">(toggle NumLock)</td>
+<td align="middle">(toggle NumLock)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(toggle NumLock)</td>
+</tr>
+
+<tr>
+<td align="middle">91</td>
+<td align="middle"><b>Home</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle"><b>Home</b></td>
+<td align="middle"><b>7</b></td>
+<td align="middle">47 / C7</td>
+<td align="middle">47/00<br><nobr>Num: 47/37</nobr></td>
+<td align="middle">47/37<br><nobr>Num: 47/00</nobr></td>
+<td align="middle">77/00<br><nobr>Num: 77/00</nobr></td>
+<td align="middle">(no stroke)</td>
+<td align="middle">47/00<br><nobr>Num: 47/37</nobr></td>
+<td align="middle">47/37<br><nobr>Num: 47/00</nobr></td>
+<td align="middle">77/00<br><nobr>Num: 77/00</nobr></td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">92</td>
+<td align="middle"><b>&#8592;</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle"><b>&#8592;</b></td>
+<td align="middle"><b>4</b></td>
+<td align="middle">4B / CB</td>
+<td align="middle">4B/00<br><nobr>Num: 4B/34</nobr></td>
+<td align="middle">4B/34<br><nobr>Num: 4B/00</nobr></td>
+<td align="middle">73/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">4B/00<br><nobr>Num: 4B/34</nobr></td>
+<td align="middle">4B/34<br><nobr>Num: 4B/00</nobr></td>
+<td align="middle">73/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">93</td>
+<td align="middle"><b>End</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle"><b>End</b></td>
+<td align="middle"><b>1</b></td>
+<td align="middle">4F / CF</td>
+<td align="middle">4F/00<br><nobr>Num: 4F/31</nobr></td>
+<td align="middle">4F/31<br><nobr>Num: 4F/00</nobr></td>
+<td align="middle">75/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">4F/00<br><nobr>Num: 4F/31</nobr></td>
+<td align="middle">4F/31<br><nobr>Num: 4F/00</nobr></td>
+<td align="middle">75/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">95</td>
+<td align="middle" colspan="2"><b>/</b></td>
+<td align="middle" colspan="2"><b>/</b></td>
+<td align="middle">E0 35 / E0 B5</td>
+<td align="middle">E0/2F</td>
+<td align="middle">E0/2F</td>
+<td align="middle">95/00</td>
+<td align="middle">A4/00</td>
+<td align="middle">E0/2F</td>
+<td align="middle">E0/2F</td>
+<td align="middle">95/00</td>
+<td align="middle">A4/00</td>
+</tr>
+
+<tr>
+<td align="middle">96</td>
+<td align="middle"><b>&#8593;</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle"><b>&#8593;</b></td>
+<td align="middle"><b>8</b></td>
+<td align="middle">48 / C8</td>
+<td align="middle">48/00<br><nobr>Num: 48/38</nobr></td>
+<td align="middle">48/38<br><nobr>Num: 48/00</nobr></td>
+<td align="middle">8D/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">48/00<br><nobr>Num: 48/38</nobr></td>
+<td align="middle">48/38<br><nobr>Num: 48/00</nobr></td>
+<td align="middle">8D/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">97</td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>5</b></td>
+<td align="middle">4C / CC</td>
+<td align="middle">4C/00<br><nobr>Num: 4C/35</nobr></td>
+<td align="middle">4C/35<br><nobr>Num: 4C/00</nobr></td>
+<td align="middle">8F/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">4C/00<br><nobr>Num: 4C/35</nobr></td>
+<td align="middle">4C/35<br><nobr>Num: 4C/00</nobr></td>
+<td align="middle">8F/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">98</td>
+<td align="middle"><b>&#8595;</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle"><b>&#8595;</b></td>
+<td align="middle"><b>2</b></td>
+<td align="middle">50 / D0</td>
+<td align="middle">50/00<br><nobr>Num: 50/32</nobr></td>
+<td align="middle">50/32<br><nobr>Num: 50/00</nobr></td>
+<td align="middle">91/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">50/00<br><nobr>Num: 50/32</nobr></td>
+<td align="middle">50/32<br><nobr>Num: 50/00</nobr></td>
+<td align="middle">91/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">99</td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle"><b></b></td>
+<td align="middle"><b>0</b></td>
+<td align="middle">52 / D2</td>
+<td align="middle">52/00<br><nobr>Num: 52/30</nobr></td>
+<td align="middle">52/30<br><nobr>Num: 52/00</nobr></td>
+<td align="middle">92/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">52/00<br><nobr>Num: 52/30</nobr></td>
+<td align="middle">52/30<br><nobr>Num: 52/00</nobr></td>
+<td align="middle">92/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">100</td>
+<td align="middle" colspan="2"><b>*</b></td>
+<td align="middle" colspan="2"><b>*</b></td>
+<td align="middle">37 / B7</td>
+<td align="middle">37/2A</td>
+<td align="middle">37/2A</td>
+<td align="middle">96/00</td>
+<td align="middle">37/00</td>
+<td align="middle">37/2A</td>
+<td align="middle">37/2A</td>
+<td align="middle">96/00</td>
+<td align="middle">37/00</td>
+</tr>
+
+<tr>
+<td align="middle">101</td>
+<td align="middle"><b>PgUp</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle"><b>PgUp</b></td>
+<td align="middle"><b>9</b></td>
+<td align="middle">49 / C9</td>
+<td align="middle">49/00<br><nobr>Num: 49/39</nobr></td>
+<td align="middle">49/39<br><nobr>Num: 49/00</nobr></td>
+<td align="middle">84/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">49/00<br><nobr>Num: 49/39</nobr></td>
+<td align="middle">49/39<br><nobr>Num: 49/00</nobr></td>
+<td align="middle">84/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">102</td>
+<td align="middle"><b>&#8594;</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle"><b>&#8594;</b></td>
+<td align="middle"><b>6</b></td>
+<td align="middle">4D / CD</td>
+<td align="middle">4D/00<br><nobr>Num: 4D/36</nobr></td>
+<td align="middle">4D/36<br><nobr>Num: 4D/00</nobr></td>
+<td align="middle">74/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">4D/00<br><nobr>Num: 4D/36</nobr></td>
+<td align="middle">4D/36<br><nobr>Num: 4D/00</nobr></td>
+<td align="middle">74/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">103</td>
+<td align="middle"><b>PgDn</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle"><b>PgDn</b></td>
+<td align="middle"><b>3</b></td>
+<td align="middle">51 / D1</td>
+<td align="middle">51/00<br><nobr>Num: 51/33</nobr></td>
+<td align="middle">51/33<br><nobr>Num: 51/00</nobr></td>
+<td align="middle">76/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">51/00<br><nobr>Num: 51/33</nobr></td>
+<td align="middle">51/33<br><nobr>Num: 51/00</nobr></td>
+<td align="middle">76/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">104</td>
+<td align="middle"><b>Del</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle"><b>Del</b></td>
+<td align="middle"><b>.</b></td>
+<td align="middle">53 / D3</td>
+<td align="middle">53/00<br><nobr>Num: 53/2E</nobr></td>
+<td align="middle">53/2E<br><nobr>Num: 53/00</nobr></td>
+<td align="middle">93/00</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">53/00<br><nobr>Num: 53/2E</nobr></td>
+<td align="middle">53/2E<br><nobr>Num: 53/00</nobr></td>
+<td align="middle">93/00</td>
+<td align="middle">(no stroke)</td>
+</tr>
+
+<tr>
+<td align="middle">105</td>
+<td align="middle" colspan="2"><b>-</b></td>
+<td align="middle" colspan="2"><b>-</b></td>
+<td align="middle">4A / CA</td>
+<td align="middle">4A/2D</td>
+<td align="middle">4A/2D</td>
+<td align="middle">8E/00</td>
+<td align="middle">4A/00</td>
+<td align="middle">4A/2D</td>
+<td align="middle">4A/2D</td>
+<td align="middle">8E/00</td>
+<td align="middle">4A/00</td>
+</tr>
+
+<tr>
+<td align="middle">106</td>
+<td align="middle" colspan="2"><b>+</b></td>
+<td align="middle" colspan="2"><b>+</b></td>
+<td align="middle">4E / CE</td>
+<td align="middle">4A/2B</td>
+<td align="middle">4A/2B</td>
+<td align="middle">90/00</td>
+<td align="middle">4E/00</td>
+<td align="middle">4A/2B</td>
+<td align="middle">4A/2B</td>
+<td align="middle">90/00</td>
+<td align="middle">4E/00</td>
+</tr>
+
+<tr>
+<td align="middle">108</td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle" colspan="2"><b>Enter</b></td>
+<td align="middle">E0 1C / E0 9C</td>
+<td align="middle">E0/0D</td>
+<td align="middle">E0/0D</td>
+<td align="middle">E0/0A</td>
+<td align="middle">A6/00</td>
+<td align="middle">E0/0D</td>
+<td align="middle">E0/0D</td>
+<td align="middle">E0/0A</td>
+<td align="middle">A6/00</td>
+</tr>
+
+<tr>
+<td align="middle">110</td>
+<td align="middle" colspan="2"><b>Esc</b></td>
+<td align="middle" colspan="2"><b>Esc</b></td>
+<td align="middle">01 / 81</td>
+<td align="middle">01/1B</td>
+<td align="middle">01/1B</td>
+<td align="middle">01/1B</td>
+<td align="middle">01/00</td>
+<td align="middle">01/1B</td>
+<td align="middle">01/1B</td>
+<td align="middle">01/1B</td>
+<td align="middle">01/00</td>
+</tr>
+
+<tr>
+<td align="middle">112</td>
+<td align="middle" colspan="2"><b>F1</b></td>
+<td align="middle" colspan="2"><b>F1</b></td>
+<td align="middle">3B / BB</td>
+<td align="middle">3B/00</td>
+<td align="middle">54/00</td>
+<td align="middle">5E/00</td>
+<td align="middle">68/00</td>
+<td align="middle">3B/00</td>
+<td align="middle">54/00</td>
+<td align="middle">5E/00</td>
+<td align="middle">68/00</td>
+</tr>
+
+<tr>
+<td align="middle">113</td>
+<td align="middle" colspan="2"><b>F2</b></td>
+<td align="middle" colspan="2"><b>F2</b></td>
+<td align="middle">3C / BC</td>
+<td align="middle">3C/00</td>
+<td align="middle">55/00</td>
+<td align="middle">5F/00</td>
+<td align="middle">69/00</td>
+<td align="middle">3C/00</td>
+<td align="middle">55/00</td>
+<td align="middle">5F/00</td>
+<td align="middle">69/00</td>
+</tr>
+
+<tr>
+<td align="middle">114</td>
+<td align="middle" colspan="2"><b>F3</b></td>
+<td align="middle" colspan="2"><b>F3</b></td>
+<td align="middle">3D / BD</td>
+<td align="middle">3D/00</td>
+<td align="middle">56/00</td>
+<td align="middle">60/00</td>
+<td align="middle">6A/00</td>
+<td align="middle">3D/00</td>
+<td align="middle">56/00</td>
+<td align="middle">60/00</td>
+<td align="middle">6A/00</td>
+</tr>
+
+<tr>
+<td align="middle">115</td>
+<td align="middle" colspan="2"><b>F4</b></td>
+<td align="middle" colspan="2"><b>F4</b></td>
+<td align="middle">3E / BE</td>
+<td align="middle">3E/00</td>
+<td align="middle">57/00</td>
+<td align="middle">61/00</td>
+<td align="middle">6B/00</td>
+<td align="middle">3E/00</td>
+<td align="middle">57/00</td>
+<td align="middle">61/00</td>
+<td align="middle">6B/00</td>
+</tr>
+
+<tr>
+<td align="middle">116</td>
+<td align="middle" colspan="2"><b>F5</b></td>
+<td align="middle" colspan="2"><b>F5</b></td>
+<td align="middle">3F / BF</td>
+<td align="middle">3F/00</td>
+<td align="middle">58/00</td>
+<td align="middle">62/00</td>
+<td align="middle">6C/00</td>
+<td align="middle">3F/00</td>
+<td align="middle">58/00</td>
+<td align="middle">62/00</td>
+<td align="middle">6C/00</td>
+</tr>
+
+<tr>
+<td align="middle">117</td>
+<td align="middle" colspan="2"><b>F6</b></td>
+<td align="middle" colspan="2"><b>F6</b></td>
+<td align="middle">40 / C0</td>
+<td align="middle">40/00</td>
+<td align="middle">59/00</td>
+<td align="middle">63/00</td>
+<td align="middle">6D/00</td>
+<td align="middle">40/00</td>
+<td align="middle">59/00</td>
+<td align="middle">63/00</td>
+<td align="middle">6D/00</td>
+</tr>
+
+<tr>
+<td align="middle">118</td>
+<td align="middle" colspan="2"><b>F7</b></td>
+<td align="middle" colspan="2"><b>F7</b></td>
+<td align="middle">41 / C1</td>
+<td align="middle">41/00</td>
+<td align="middle">5A/00</td>
+<td align="middle">64/00</td>
+<td align="middle">6E/00</td>
+<td align="middle">41/00</td>
+<td align="middle">5A/00</td>
+<td align="middle">64/00</td>
+<td align="middle">6E/00</td>
+</tr>
+
+<tr>
+<td align="middle">119</td>
+<td align="middle" colspan="2"><b>F8</b></td>
+<td align="middle" colspan="2"><b>F8</b></td>
+<td align="middle">42 / C2</td>
+<td align="middle">42/00</td>
+<td align="middle">4B/00</td>
+<td align="middle">65/00</td>
+<td align="middle">6F/00</td>
+<td align="middle">42/00</td>
+<td align="middle">4B/00</td>
+<td align="middle">65/00</td>
+<td align="middle">6F/00</td>
+</tr>
+
+<tr>
+<td align="middle">120</td>
+<td align="middle" colspan="2"><b>F9</b></td>
+<td align="middle" colspan="2"><b>F9</b></td>
+<td align="middle">43 / C3</td>
+<td align="middle">43/00</td>
+<td align="middle">5C/00</td>
+<td align="middle">66/00</td>
+<td align="middle">70/00</td>
+<td align="middle">43/00</td>
+<td align="middle">5C/00</td>
+<td align="middle">66/00</td>
+<td align="middle">70/00</td>
+</tr>
+
+<tr>
+<td align="middle">121</td>
+<td align="middle" colspan="2"><b>F10</b></td>
+<td align="middle" colspan="2"><b>F10</b></td>
+<td align="middle">44 / C4</td>
+<td align="middle">44/00</td>
+<td align="middle">5D/00</td>
+<td align="middle">67/00</td>
+<td align="middle">71/00</td>
+<td align="middle">44/00</td>
+<td align="middle">5D/00</td>
+<td align="middle">67/00</td>
+<td align="middle">71/00</td>
+</tr>
+
+<tr>
+<td align="middle">122</td>
+<td align="middle" colspan="2"><b>F11</b></td>
+<td align="middle" colspan="2"><b>F11</b></td>
+<td align="middle">57 / D7</td>
+<td align="middle">85/00</td>
+<td align="middle">87/00</td>
+<td align="middle">89/00</td>
+<td align="middle">8B/00</td>
+<td align="middle">85/00</td>
+<td align="middle">87/00</td>
+<td align="middle">89/00</td>
+<td align="middle">8B/00</td>
+</tr>
+
+<tr>
+<td align="middle">123</td>
+<td align="middle" colspan="2"><b>F12</b></td>
+<td align="middle" colspan="2"><b>F12</b></td>
+<td align="middle">58 / D8</td>
+<td align="middle">86/00</td>
+<td align="middle">88/00</td>
+<td align="middle">8A/00</td>
+<td align="middle">8C/00</td>
+<td align="middle">86/00</td>
+<td align="middle">88/00</td>
+<td align="middle">8A/00</td>
+<td align="middle">8C/00</td>
+</tr>
+
+<tr class="kprtscr">
+<td align="middle">124</td>
+<td align="middle" colspan="2"><b>Print<br>Screen</b></td>
+<td align="middle" colspan="2"><b>Print<br>Screen</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n2">*2</a></td>
+<td align="middle">(print screen)</td>
+<td align="middle">(print screen)</td>
+<td align="middle">72/00</td>
+<td align="middle">(sysreq: int 15h,ax=850xh)</td>
+<td align="middle">(print screen)</td>
+<td align="middle">(print screen)</td>
+<td align="middle">72/00</td>
+<td align="middle">(sysreq: int 15h,ax=850xh)</td>
+</tr>
+
+<tr>
+<td align="middle">125</td>
+<td align="middle" colspan="2"><b>Scroll<br>Lock</b></td>
+<td align="middle" colspan="2"><b>Scroll<br>Lock</b></td>
+<td align="middle">46 / C6</td>
+<td align="middle">(toggle ScrollLock)</td>
+<td align="middle">(toggle ScrollLock)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(toggle ScrollLock)</td>
+<td align="middle">(toggle ScrollLock)</td>
+<td align="middle">(toggle ScrollLock)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(toggle ScrollLock)</td>
+</tr>
+
+<tr class="kpause">
+<td align="middle">126</td>
+<td align="middle" colspan="2"><b>Pause</b></td>
+<td align="middle" colspan="2"><b>Pause</b></td>
+<td align="middle"><a href="scan_codes_us_jp.htm#scan_n3">*3</a></td>
+<td align="middle">(pause)</td>
+<td align="middle">(pause)</td>
+<td align="middle">00/00 (break: int 1Bh)</td>
+<td align="middle">(pause)</td>
+<td align="middle">(pause)</td>
+<td align="middle">(pause)</td>
+<td align="middle">00/00 (break: int 1Bh)</td>
+<td align="middle">(pause)</td>
+</tr>
+
+<tr>
+<td align="middle">LWIN<br>(127)</td>
+<td align="middle" colspan="2"><b></b>(Left Windows)</td>
+<td align="middle" colspan="2"><b></b>(Left Windows)</td>
+<td align="middle">E0 5B / E0 DB</td>
+<td align="middle">EC/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">C1/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">CE/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">DA/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">EC/F8</td>
+<td align="middle">C1/F8</td>
+<td align="middle">CE/F8</td>
+<td align="middle">DA/F8</td>
+</tr>
+
+<tr>
+<td align="middle">RWIN<br>(128)</td>
+<td align="middle" colspan="2"><b></b>(Right Windows)</td>
+<td align="middle" colspan="2"><b></b>(Right Windows)</td>
+<td align="middle">E0 5C / E0 DC</td>
+<td align="middle">ED/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">C3/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">CF/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">DB/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">ED/F8</td>
+<td align="middle">C3/F8</td>
+<td align="middle">CF/F8</td>
+<td align="middle">DB/F8</td>
+</tr>
+
+<tr>
+<td align="middle">APP<br>(129)</td>
+<td align="middle" colspan="2"><b></b>(Application)</td>
+<td align="middle" colspan="2"><b></b>(Application)</td>
+<td align="middle">E0 5D / E0 DD</td>
+<td align="middle">EE/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">C4/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">D0/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">DC/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">EE/F8</td>
+<td align="middle">C4/F8</td>
+<td align="middle">D0/F8</td>
+<td align="middle">DC/F8</td>
+</tr>
+
+
+
+
+<tr class="jpdiff">
+<td align="middle">131</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b>&#28961;&#22793;&#25563;</b> (Muhenkan)</td>
+<td align="middle">7B / FB</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">AB/00</td>
+<td align="middle">AC/00</td>
+<td align="middle">AD/00</td>
+<td align="middle">AE/00</td>
+</tr>
+
+<tr class="jpdiff">
+<td align="middle">132</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle" colspan="2"><b>&#22793;&#25563;</b><small> (Henkan)</small></td>
+<td align="middle">79 / F9</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">A7/00</td>
+<td align="middle">A8/00</td>
+<td align="middle">A9/00</td>
+<td align="middle">AA/00</td>
+</tr>
+
+<tr class="jpdiff">
+<td align="middle">133</td>
+<td align="middle" colspan="2"><b></b></td>
+<td align="middle"><b><nobr>&#12402;&#12425;&#12364;&#12394;</nobr></b><small> (Hiragana)</small></td>
+<td align="middle"><b><nobr>&#12459;&#12479;&#12459;&#12490;</nobr></b><small> (Katakana)</small></td>
+<td align="middle">70 / F0</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">(no stroke)</td>
+<td align="middle">B6/00</td>
+<td align="middle">B7/00</td>
+<td align="middle">B8/00</td>
+<td align="middle">B9/00</td>
+</tr>
+
+<tr class="axdiff">
+<td align="middle">AX</td>
+<td align="middle" colspan="4">(AX application key)</td>
+<td align="middle">(5C / DC)</td>
+<td align="middle">ED/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">C3/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">CF/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">DB/F8 or <nobr>no stroke</nobr> <a href="scan_codes_us_jp.htm#scan_n4">(*4)</a></td>
+<td align="middle">ED/F8</td>
+<td align="middle">C3/F8</td>
+<td align="middle">CF/F8</td>
+<td align="middle">DB/F8</td>
+</tr>
+
+
+</tbody></table>
+
+<br><h3 id="scan_n4">(*4) Depend on BIOS implementation.</h3><br>
+
+</body></html>

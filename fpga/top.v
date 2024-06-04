@@ -1,6 +1,6 @@
 `define ENABLE_BIOS
-//`define ENABLE_EXP_SLOT //bios required
-
+`define ENABLE_SOUND //bios required
+`define ENABLE_MAPPER //bios required
 
 module top(
     input ex_clk_27m,
@@ -293,12 +293,15 @@ end
 
     assign bus_mreq_disable = ( 
                         `ifdef ENABLE_BIOS
-                                bios_req == 1 || subrom_req == 1
-                            `ifdef ENABLE_EXP_SLOT
-                                    || exp_slot3_req_r == 1
-                            `endif
+                                bios_req == 1 || exp_slot3_req_r == 1 || subrom_req == 1 || msx_logo_req == 1 
                         `else
                                 0 
+                        `endif
+                        `ifdef ENABLE_MAPPER
+                                || mapper_read == 1 || mapper_write == 1 
+                        `endif
+                        `ifdef ENABLE_SOUND
+                                || scc_req == 1 
                         `endif
                                 ) ? 1 : 0;
     //assign bus_mreq_disable = ( bios_req == 1 || subrom_req == 1 || msx_logo_req == 1 || scc_req == 1 || mapper_read == 1 || mapper_write == 1) ? 1 : 0;
@@ -307,19 +310,27 @@ end
     assign bus_disable = bus_mreq_disable | bus_iorq_disable;
     assign ex_bus_data = ( bus_data_reverse == 1 /* && bus_disable == 0 */ ) ? cpu_dout : 8'hzz;
     assign cpu_din = 
-
+                `ifdef ENABLE_MAPPER
+                     ( mapper_read == 1) ? mapper_dout :
+                `endif
                 `ifdef ENABLE_BIOS
+                     ( exp_slot3_req_r == 1) ? ~exp_slot3  :
                      ( bios_req == 1) ? bios_dout : 
                      ( subrom_req == 1) ? subrom_dout :
-                    `ifdef ENABLE_EXP_SLOT
-                        ( exp_slot3_req_r == 1) ? ~exp_slot3  :
-                    `endif
+                     ( msx_logo_req == 1 ) ? msx_logo_dout :
                 `endif
                      ( rtc_req_r == 1 ) ? rtc_dout :
                      ( vdp_csr_n == 0) ? vdp_dout :
-
+                `ifdef ENABLE_SOUND
+                     ( scc_req == 1 ) ? scc_dout:
+                `endif
                       bus_data;
 
+
+//    wire ex_bus_rd_n_test;
+//    wire ex_bus_wr_n_test;
+//    wire ex_bus_iorq_n_test;
+//    wire ex_bus_mreq_n_test;
     reg ex_bus_rd_n_ff;
     reg ex_bus_wr_n_ff;
     reg ex_bus_iorq_n_ff;
@@ -416,7 +427,6 @@ end
         end
     end
 
-`ifdef ENABLE_EXP_SLOT
     //expanded slot 3
     reg [7:0] exp_slot3;
     wire [1:0] exp_slot3_page;
@@ -439,7 +449,6 @@ end
             end
         end
     end
-`endif
 
     // slots decoding
     assign pri_slot = ( bus_addr[15:14] == 2'b00) ? ppi_port_a[1:0] :
@@ -456,7 +465,7 @@ end
                       ( bus_addr[15:14] == 2'b01) ? 4'b0010 :
                       ( bus_addr[15:14] == 2'b10) ? 4'b0100 :
                                                     4'b1000;
-`ifdef ENABLE_EXP_SLOT
+
     assign exp_slot3_page = ( bus_addr[15:14] == 2'b00) ? exp_slot3[1:0] :
                             ( bus_addr[15:14] == 2'b01) ? exp_slot3[3:2] :
                             ( bus_addr[15:14] == 2'b10) ? exp_slot3[5:4] :
@@ -466,20 +475,18 @@ end
                            ( exp_slot3_page == 2'b01 ) ? 4'b0010 :
                            ( exp_slot3_page == 2'b10 ) ? 4'b0100 :
                                                          4'b1000;
-`endif
+
+    wire slot3_req;
+    assign slot3_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_rd_n == 0 || bus_wr_n == 0) && pri_slot_num[3] == 1 && bus_rfsh_n == 1) ? 1 : 0;
 
 `ifdef ENABLE_BIOS
     //bios
     wire bios_req;
     wire [7:0] bios_dout;
+    assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[0] == 1 ) ? 1 : 0;
+    //assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 ) ? 1 : 0;
 
-    `ifdef ENABLE_EXP_SLOT
-        assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[0] == 1 ) ? 1 : 0;
-    `else
-        assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 ) ? 1 : 0;
-    `endif
-
-    bios_msx2p_nologo_int bios1 (
+    bios_msx2p bios1 (
         .address (bus_addr[14:0]),
         .clock (clk_108m),
         .data (8'h00),
@@ -490,12 +497,8 @@ end
     //subrom
     wire subrom_req;
     wire [7:0] subrom_dout;
-
-    `ifdef ENABLE_EXP_SLOT
-        assign subrom_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[0] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
-    `else
-        assign subrom_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[1] == 1 && page_num[0] == 1 ) ? 1 : 0;
-    `endif
+    assign subrom_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[0] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
+    //assign subrom_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[0] == 1 ) ? 1 : 0;
 
     subrom_msx2p subrom1 (
         .address (bus_addr[13:0]),
@@ -505,6 +508,19 @@ end
         .q (subrom_dout)
     );
 
+    //msx logo
+    wire msx_logo_req;
+    wire [7:0] msx_logo_dout;
+    assign msx_logo_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[1] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
+    //assign msx_logo_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[1] == 1 ) ? 1 : 0;
+
+    logo logo1 (
+        .address (bus_addr[13:0]),
+        .clock (clk_108m),
+        .data (8'h00),
+        .wren (0),
+        .q (msx_logo_dout)
+    );
 `endif
 
     //rtc
@@ -539,7 +555,6 @@ end
     wire VideoDLClk;
     assign vdp_csw_n = (bus_addr[7:2] == 6'b100110 && bus_iorq_n == 0 && bus_m1_n == 1 && bus_wr_n == 0)? 0:1; // I/O:98-9Bh   / VDP (V9938/V9958)
     assign vdp_csr_n = (bus_addr[7:2] == 6'b100110 && bus_iorq_n == 0 && bus_m1_n == 1 && bus_rd_n == 0)? 0:1; // I/O:98-9Bh   / VDP (V9938/V9958)
-    wire [15:0] audio_sample;
 
     v9958_top vdp4 (
         .clk (clk_27m),
@@ -584,7 +599,46 @@ end
         .tmds_data_n   (data_n)
     );
 
+`ifdef ENABLE_MAPPER
+    //mapper
+    wire mapper_read;
+    wire mapper_write;
+    wire [7:0] mapper_dout;
+    wire [21:0] mapper_addr;
+    reg [7:0] mapper_reg0;
+    reg [7:0] mapper_reg1;
+    reg [7:0] mapper_reg2;
+    reg [7:0] mapper_reg3;
+    wire mapper_reg_write;
 
+    assign mapper_addr = (bus_addr [15:14] == 2'b00 ) ? { mapper_reg0, bus_addr[13:0] } :
+                         (bus_addr [15:14] == 2'b01 ) ? { mapper_reg1, bus_addr[13:0] } :
+                         (bus_addr [15:14] == 2'b10 ) ? { mapper_reg2, bus_addr[13:0] } :
+                                                        { mapper_reg3, bus_addr[13:0] };
+
+    assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
+    assign mapper_write = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_wr_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
+    //assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
+    //assign mapper_write = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_wr_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
+    assign mapper_reg_write = ( (bus_iorq_n == 0 && bus_m1_n == 1 && bus_wr_n == 0) && (bus_addr [7:2] == 6'b111111) )?1:0;
+
+    always @(posedge clk_108m or negedge bus_reset_n) begin
+        if (bus_reset_n == 0) begin
+            mapper_reg0	<= 8'b00000011;
+            mapper_reg1	<= 8'b00000010;
+            mapper_reg2	<= 8'b00000001;
+            mapper_reg3	<= 8'b00000000;
+        end
+        else if (mapper_reg_write == 1) begin
+            case (bus_addr[1:0])
+                2'b00: mapper_reg0 <= cpu_dout;
+                2'b01: mapper_reg1 <= cpu_dout;
+                2'b10: mapper_reg2 <= cpu_dout;
+                2'b11: mapper_reg3 <= cpu_dout;
+            endcase
+        end
+    end
+`else
     wire mapper_read;
     wire mapper_write;
     wire [7:0] mapper_dout;
@@ -592,6 +646,7 @@ end
     assign mapper_read = 0;
     assign mapper_write = 0;
     assign mapper_addr = 22'd0;
+`endif
 
 memory memory_ctrl (
     .clk_108m(clk_108m),
@@ -620,6 +675,116 @@ memory memory_ctrl (
     .O_sdram_ba(O_sdram_ba),
     .O_sdram_dqm(O_sdram_dqm)
 );
+
+    //YM219 PSG
+    wire psgBdir;
+    wire psgBc1;
+    wire iorq_wr_n;
+    wire iorq_rd_n;
+    wire [7:0] psg_dout;
+    wire [7:0] psgSound1;
+    wire [7:0] psgPA;
+    wire [7:0] psgPB;
+    reg clk_1m8;
+    assign iorq_wr_n = bus_iorq_n | bus_wr_n;
+    assign iorq_rd_n = bus_iorq_n | bus_rd_n;
+    assign psgBdir = ( bus_addr[7:3]== 5'b10100 && iorq_wr_n == 0 && bus_addr[1]== 0 ) ?  1 : 0; // I/O:A0-A2h / PSG(AY-3-8910) bdir = 1 when writing to &HA0-&Ha1
+    assign psgBc1 = ( bus_addr[7:3]== 5'b10100 && ((iorq_rd_n==0 && bus_addr[1]== 1) || (bus_addr[1]==0 && iorq_wr_n==0 && bus_addr[0]==0))) ? 1 : 0; // I/O:A0-A2h / PSG(AY-3-8910) bc1 = 1 when writing A0 or reading A2
+    assign psgPA =8'h00;
+    reg psgPB = 8'hff;
+
+    wire clk_enable_1m8;
+    reg clk_1m8_prev;
+    always @ (posedge clk_108m) begin
+        if (clk_enable_3m6) begin
+            clk_1m8 <= ~clk_1m8;
+        end
+    end
+    assign clk_enable_1m8 = (clk_enable_3m6 == 1 && clk_1m8 == 1);
+
+
+`ifdef ENABLE_SOUND
+
+    YM2149 psg1 (
+        .I_DA(cpu_dout),
+        .O_DA(),
+        .O_DA_OE_L(),
+        .I_A9_L(0),
+        .I_A8(1),
+        .I_BDIR(psgBdir),
+        .I_BC2(1),
+        .I_BC1(psgBc1),
+        .I_SEL_L(1),
+        .O_AUDIO(psgSound1),
+        .I_IOA(psgPA),
+        .O_IOA(),
+        .O_IOA_OE_L(),
+        .I_IOB(psgPB),
+        .O_IOB(psgPB),
+        .O_IOB_OE_L(),
+        
+        .ENA(clk_enable_1m8), // clock enable for higher speed operation
+        .RESET_L(bus_reset_n),
+        .CLK(clk_108m),
+        .clkHigh(clk_108m),
+        .debug ()
+    );
+
+
+    //scc
+    wire [14:0] scc_wav;
+    wire [7:0] scc_dout;
+    wire scc_req;
+    wire scc_wrt;
+
+    assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 ) ? 1 : 0;
+    //assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[2] == 1 ) ? 1 : 0;
+    assign scc_wrt = ( scc_req == 1 && bus_wr_n == 0 ) ? 1 : 0;
+
+    megaram scc1 (
+        .clk21m (clk_108m),
+        .reset (~bus_reset_n),
+        .clkena (clk_enable_3m6),
+        .req (scc_req),
+        .ack (),
+        .wrt (scc_wrt),
+        .adr (bus_addr),
+        .dbi (scc_dout),
+        .dbo (cpu_dout),
+
+        .ramreq (),
+        .ramwrt (), 
+        .ramadr (), 
+        .ramdbi (8'h00),
+        .ramdbo  (),
+
+        .mapsel (2'b00),        // "0-":SCC+, "10":ASC8K, "11":ASC16K
+
+        .wavl (scc_wav),
+        .wavr ()
+    );
+
+
+    //mixer
+    reg [23:0] fm_wav;
+    reg [16:0] fm_mix;
+    reg [14:0] scc_wav2;
+	reg [15:0] audio_sample;
+	reg [15:0] audio_sample1;
+	reg [15:0] audio_sample2;
+
+    always @ (posedge clk_108m) begin
+        if (clk_enable_3m6 == 1 ) begin
+            scc_wav2 <= { 0 , ~scc_wav[14] , scc_wav[13:1] };
+            fm_wav <= { 0, scc_wav2, 8'b00000000 };
+
+            audio_sample1 <= { 4'b0000 , psgSound1 , 4'b0000 };
+            audio_sample2 <= fm_wav[23:8];
+            audio_sample <= audio_sample1 + audio_sample2;
+        end
+    end
+
+`endif
 
 
 endmodule
