@@ -8,6 +8,7 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 * V9958 with hdmi output
 * MSX2+ BIOS
 * 4MB mapper
+* RTC
 * PSG through hdmi
 * SCC (audio only) through hdmi
 
