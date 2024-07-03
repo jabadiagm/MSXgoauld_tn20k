@@ -33,10 +33,10 @@ Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 Warning: not yet fully working on all tangs!
 
 Tips:
-* Use integrated circuits from trusted sources
+* Get integrated circuits from trusted sources
 * Use turned pins in header to avoid damages in Z80 socket
 ![turned header](/torneados.jpg)
-* Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge contacts clean
+* Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge & Z80 socket contacts clean
 * Diode avoids hdmi plug from powering the MSX, but causes a voltage drop. If tang doesn't boot, bridge the diode and remember to remove hdmi cable when not using
 ![diode](/diodo.jpg)
 * When soldering headers, start with the inner one (Z80)
