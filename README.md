@@ -10,7 +10,8 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 * 4MB mapper
 * RTC
 * PSG through hdmi
-* SCC (audio only) through hdmi
+* OPLL through hdmi
+* MEGARAM-SCC through hdmi
 
 ## How it works:
 Logic acts on bus control signals so that internal devices inside fpga take priority over external devices. 

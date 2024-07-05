@@ -7,4 +7,5 @@
 `define CORE0_DEF_TRIG_5_EN
 `define CORE0_DEF_TRIG_6_EN
 `define CORE0_DEF_TRIG_7_EN
+`define CORE0_DEF_TRIG_8_EN
 `define CORE0_DEF_SYN_BSRAM

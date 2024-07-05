@@ -1,6 +1,8 @@
 `define ENABLE_BIOS
 `define ENABLE_SOUND //bios required
+`define ENABLE_MEGARAM //enable megaram, disable scc. sound required
 `define ENABLE_MAPPER //bios required
+`define ENABLE_SCAN_LINES
 
 module top(
     input ex_clk_27m,
@@ -227,9 +229,9 @@ end
     reg [15:0] bus_addr_demux;
     reg low_byte_demux;
     wire update_demux;
-    assign update_demux = (bus_addr_demux != bus_addr) ? 1 : 0;
+    assign update_demux = (bus_addr_demux != bus_addr && bus_clk_3m6 == 1) ? 1 : 0;
     assign bus_mp = ( low_byte_demux == 0 ) ? bus_addr[15:8] : bus_addr[7:0];
-    always @ (posedge clk_108m or negedge bus_reset_n) begin
+    always @ (posedge clk_108m) begin
         if (~bus_reset_n) begin
             state_demux <= IDLE;
             bus_addr_demux <= ~ bus_addr;
@@ -301,7 +303,11 @@ end
                                 || mapper_read == 1 || mapper_write == 1 
                         `endif
                         `ifdef ENABLE_SOUND
-                                || scc_req == 1 
+                            `ifndef ENABLE_MEGARAM
+                                || scc_req == 1
+                            `else
+                                || megaram_scc_req == 1
+                            `endif
                         `endif
                                 ) ? 1 : 0;
     //assign bus_mreq_disable = ( bios_req == 1 || subrom_req == 1 || msx_logo_req == 1 || scc_req == 1 || mapper_read == 1 || mapper_write == 1) ? 1 : 0;
@@ -322,7 +328,12 @@ end
                      ( rtc_req_r == 1 ) ? rtc_dout :
                      ( vdp_csr_n == 0) ? vdp_dout :
                 `ifdef ENABLE_SOUND
+                    `ifndef ENABLE_MEGARAM
                      ( scc_req == 1 ) ? scc_dout:
+                    `else
+                     ( sccp_req == 1 ) ? sccp_dout:
+                     ( megaram_req == 1) ? mapper_dout :
+                    `endif
                 `endif
                       bus_data;
 
@@ -514,6 +525,7 @@ end
     assign msx_logo_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[1] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
     //assign msx_logo_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[1] == 1 ) ? 1 : 0;
 
+  `ifndef ENABLE_MEGARAM
     logo logo1 (
         .address (bus_addr[13:0]),
         .clock (clk_108m),
@@ -521,6 +533,15 @@ end
         .wren (0),
         .q (msx_logo_dout)
     );
+  `else
+    logo_fm logo1 (
+        .address (bus_addr[13:0]),
+        .clock (clk_108m),
+        .data (8'h00),
+        .wren (0),
+        .q (msx_logo_dout)
+    );
+  `endif
 `endif
 
     //rtc
@@ -581,7 +602,11 @@ end
         .adc_miso (0),
 
         .maxspr_n    (1),
+    `ifdef ENABLE_SCAN_LINES
         .scanlin_n   (0),
+    `else
+        .scanlin_n   (1),
+    `endif
         .gromclk_ena_n (1),
         .cpuclk_ena_n  (1),
 
@@ -648,6 +673,31 @@ end
     assign mapper_addr = 22'd0;
 `endif
 
+wire [22:0] sdram_addr;
+wire sdram_read;
+wire sdram_write;
+wire sdram_dout;
+
+`ifdef ENABLE_MEGARAM
+
+    assign sdram_addr = (megaram_req == 1) ? megaram_addr[22:0] : mapper_addr;
+
+    assign sdram_read = (mapper_read == 1) ? ~bus_rd_n :
+                        (megaram_req == 1) ? ~bus_rd_n :
+                        0;
+
+    assign sdram_write = (mapper_write == 1 ) ? ~bus_wr_n :
+                         (megaram_req == 1 && megaram_enabled) ? ~bus_wr_n :
+                          0;
+`else
+
+    assign sdram_addr = mapper_addr;
+    assign sdram_read = mapper_read;
+    assign sdram_write = mapper_write;
+
+`endif
+
+
 memory memory_ctrl (
     .clk_108m(clk_108m),
     .clk_108m_n(clk_108m_n),
@@ -657,9 +707,9 @@ memory memory_ctrl (
     .vdp_din(VrmDbo),
     .mapper_din(cpu_dout),
     .vdp_addr(VdpAdr),
-    .mapper_addr(mapper_addr),
-    .mapper_read(mapper_read),
-    .mapper_write(mapper_write),
+    .mapper_addr(sdram_addr),
+    .mapper_read(sdram_read),
+    .mapper_write(sdram_write),
     .refresh(ex_bus_rfsh_n),
     .vdp_dout(VrmDbi),
     .mapper_dout(mapper_dout),
@@ -675,6 +725,8 @@ memory memory_ctrl (
     .O_sdram_ba(O_sdram_ba),
     .O_sdram_dqm(O_sdram_dqm)
 );
+
+`ifdef ENABLE_SOUND
 
     //YM219 PSG
     wire psgBdir;
@@ -702,9 +754,6 @@ memory memory_ctrl (
     end
     assign clk_enable_1m8 = (clk_enable_3m6 == 1 && clk_1m8 == 1);
 
-
-`ifdef ENABLE_SOUND
-
     YM2149 psg1 (
         .I_DA(cpu_dout),
         .O_DA(),
@@ -730,40 +779,143 @@ memory memory_ctrl (
         .debug ()
     );
 
+    //opll
+    wire opll_req_n; 
+    wire [9:0] opll_mo;
+    wire [9:0] opll_ro;
+    reg [11:0] opll_mix;
+    wire [15:0] jt2413_wav;
 
+    assign opll_req_n = ( bus_iorq_n == 1'b0 && bus_addr[7:1] == 7'b0111110  &&  bus_wr_n == 1'b0 )  ? 1'b0 : 1'b1;    // I/O:7C-7Dh   / OPLL (YM2413)
+  
+    jt2413 opll(
+        .rst (~bus_reset_n),        // rst should be at least 6 clk&cen cycles long
+        .clk (clk_108m),        // CPU clock
+        .cen (clk_enable_3m6),        // optional clock enable, if not needed leave as 1'b1
+        .din (cpu_dout),
+        .addr (bus_addr[0]),
+        .cs_n (opll_req_n),
+        .wr_n (1'b0),
+        // combined output
+        .snd (jt2413_wav),
+        .sample   ( )
+    ); 
+
+    `ifndef ENABLE_MEGARAM
     //scc
-    wire [14:0] scc_wav;
-    wire [7:0] scc_dout;
-    wire scc_req;
-    wire scc_wrt;
+     wire [14:0] scc_wav;
+     wire [7:0] scc_dout;
+     wire scc_req;
+     wire scc_wrt;
 
-    assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 ) ? 1 : 0;
-    //assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[2] == 1 ) ? 1 : 0;
-    assign scc_wrt = ( scc_req == 1 && bus_wr_n == 0 ) ? 1 : 0;
+     assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 ) ? 1 : 0;
+     //assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[2] == 1 ) ? 1 : 0;
+     assign scc_wrt = ( scc_req == 1 && bus_wr_n == 0 ) ? 1 : 0;
 
-    megaram scc1 (
-        .clk21m (clk_108m),
-        .reset (~bus_reset_n),
-        .clkena (clk_enable_3m6),
-        .req (scc_req),
-        .ack (),
-        .wrt (scc_wrt),
-        .adr (bus_addr),
-        .dbi (scc_dout),
-        .dbo (cpu_dout),
+     megaram scc1 (
+         .clk21m (clk_108m),
+         .reset (~bus_reset_n),
+         .clkena (clk_enable_3m6),
+         .req (scc_req),
+         .ack (),
+         .wrt (scc_wrt),
+         .adr (bus_addr),
+         .dbi (scc_dout),
+         .dbo (cpu_dout),
 
-        .ramreq (),
-        .ramwrt (), 
-        .ramadr (), 
-        .ramdbi (8'h00),
-        .ramdbo  (),
+         .ramreq (),
+         .ramwrt (), 
+         .ramadr (), 
+         .ramdbi (8'h00),
+         .ramdbo  (),
 
-        .mapsel (2'b00),        // "0-":SCC+, "10":ASC8K, "11":ASC16K
+         .mapsel (2'b00),        // "0-":SCC+, "10":ASC8K, "11":ASC16K
 
-        .wavl (scc_wav),
-        .wavr ()
-    );
+         .wavl (scc_wav),
+         .wavr ()
+     );
 
+    `else
+
+	//megaram
+	wire megaram_enabled;
+	wire [22:0] megaram_addr;
+	wire sccp_req;
+	wire [7:0] sccp_dout;
+	wire [14:0] sccp_wav;
+	wire megaram_req;
+	wire megaram_scc_req;
+	assign megaram_scc_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && pri_slot_num[3] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
+	//assign megaram_scc_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
+
+	wire megaram_type_req;
+	assign megaram_type_req = (bus_reset_n && ~bus_iorq_n && bus_m1_n && bus_rd_n && ~bus_wr_n && bus_addr[7:0] == 8'h8F) ? 1 : 0;
+
+	wire sccp_enable;
+	wire [1:0] megaram_type;
+	reg ff_scc_enable;
+	reg [1:0] ff_megaram_type; // 0 Konami, 1 Konami SCC+, 2 ASCII16, 3 ASCII8
+	assign sccp_enable = ff_scc_enable;
+	assign megaram_type = ff_megaram_type;
+
+	always @(posedge clk_108m or negedge bus_reset_n) begin
+		if (~bus_reset_n) begin
+			ff_megaram_type <= 2'b01;
+			ff_scc_enable <= '1;
+		end else begin
+//			if (megaram_type_req) begin
+
+//				case(cpu_dout)
+//					8'h05: begin
+//						ff_scc_enable <= 1'b1;
+//						ff_megaram_type <= 2'b01;
+//					end
+//					8'h16: begin
+//						ff_scc_enable <= 1'b0;
+//						ff_megaram_type <= 2'b10;
+//					end
+//					8'h08: begin
+//						ff_scc_enable <= 1'b0;
+//						ff_megaram_type <= 2'b11;
+//					end
+//					default: begin
+//						ff_scc_enable <= 1'b0;
+//						ff_megaram_type <= 2'b00;
+//					end
+//				endcase
+
+//			end
+		end
+	end
+
+	megaramSCC #
+		(
+			.OFFSET_ADDR (23'h600000)
+		) megaram1 (
+		.clk(clk_108m),
+		.reset_n(bus_reset_n),
+		.addr(bus_addr),
+		.cdin(cpu_dout),
+		.cdout(sccp_dout),
+		.busreq(sccp_req),
+		.merq_n(bus_mreq_n),
+		.merq2_n(bus_mreq_n),
+        .clk_3m6(bus_clk_3m6),
+		.enable(clk_enable_3m6),
+		.sltsl_n(~megaram_scc_req),
+		.iorq_n(bus_iorq_n),
+		.m1_n(bus_m1_n),
+		.rd_n(bus_rd_n),
+		.wr_n(bus_wr_n),
+		.ram_ena(megaram_enabled),
+		.mem_addr(megaram_addr),
+		.cart_ena(megaram_req),
+		.scc_wave(sccp_wav),
+		.scc_enable(sccp_enable),
+		.megaram_type(megaram_type)
+	);
+
+    `endif
 
     //mixer
     reg [23:0] fm_wav;
@@ -775,12 +927,16 @@ memory memory_ctrl (
 
     always @ (posedge clk_108m) begin
         if (clk_enable_3m6 == 1 ) begin
-            scc_wav2 <= { 0 , ~scc_wav[14] , scc_wav[13:1] };
-            fm_wav <= { 0, scc_wav2, 8'b00000000 };
+            audio_sample1 <= { 3'b000 , psgSound1 , 5'b00000 };
 
-            audio_sample1 <= { 4'b0000 , psgSound1 , 4'b0000 };
-            audio_sample2 <= fm_wav[23:8];
+          `ifndef ENABLE_MEGARAM
+            audio_sample2 <= { scc_wav, 1'b0 } + jt2413_wav;
+          `else
+            audio_sample2 <= { sccp_wav, 1'b0 } + jt2413_wav;
+          `endif
+
             audio_sample <= audio_sample1 + audio_sample2;
+
         end
     end
 

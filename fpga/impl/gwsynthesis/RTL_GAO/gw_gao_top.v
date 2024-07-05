@@ -1,7 +1,6 @@
 module gw_gao(
     ex_clk_27m,
     ex_bus_clk_3m6,
-    bus_clk_3m6,
     clk_enable_3m6,
     ex_bus_reset_n,
     ex_bus_wait_n,
@@ -16,15 +15,9 @@ module gw_gao(
     bus_rd_n,
     ex_bus_wr_n,
     bus_wr_n,
-    ex_bus_data_reverse_n,
-    \ex_bus_data[7] ,
-    \ex_bus_data[6] ,
-    \ex_bus_data[5] ,
-    \ex_bus_data[4] ,
-    \ex_bus_data[3] ,
-    \ex_bus_data[2] ,
-    \ex_bus_data[1] ,
-    \ex_bus_data[0] ,
+    sccp_req,
+    megaram_req,
+    megaram_scc_req,
     \bus_addr[15] ,
     \bus_addr[14] ,
     \bus_addr[13] ,
@@ -41,13 +34,23 @@ module gw_gao(
     \bus_addr[2] ,
     \bus_addr[1] ,
     \bus_addr[0] ,
-    \state_demux[1] ,
-    \state_demux[0] ,
-    \counter_demux[4] ,
-    \counter_demux[3] ,
-    \counter_demux[2] ,
-    \counter_demux[1] ,
-    \counter_demux[0] ,
+    \cpu_dout[7] ,
+    \cpu_dout[6] ,
+    \cpu_dout[5] ,
+    \cpu_dout[4] ,
+    \cpu_dout[3] ,
+    \cpu_dout[2] ,
+    \cpu_dout[1] ,
+    \cpu_dout[0] ,
+    problema,
+    \ex_bus_data[7] ,
+    \ex_bus_data[6] ,
+    \ex_bus_data[5] ,
+    \ex_bus_data[4] ,
+    \ex_bus_data[3] ,
+    \ex_bus_data[2] ,
+    \ex_bus_data[1] ,
+    \ex_bus_data[0] ,
     \bus_data[7] ,
     \bus_data[6] ,
     \bus_data[5] ,
@@ -65,7 +68,6 @@ module gw_gao(
 
 input ex_clk_27m;
 input ex_bus_clk_3m6;
-input bus_clk_3m6;
 input clk_enable_3m6;
 input ex_bus_reset_n;
 input ex_bus_wait_n;
@@ -80,15 +82,9 @@ input ex_bus_rd_n;
 input bus_rd_n;
 input ex_bus_wr_n;
 input bus_wr_n;
-input ex_bus_data_reverse_n;
-input \ex_bus_data[7] ;
-input \ex_bus_data[6] ;
-input \ex_bus_data[5] ;
-input \ex_bus_data[4] ;
-input \ex_bus_data[3] ;
-input \ex_bus_data[2] ;
-input \ex_bus_data[1] ;
-input \ex_bus_data[0] ;
+input sccp_req;
+input megaram_req;
+input megaram_scc_req;
 input \bus_addr[15] ;
 input \bus_addr[14] ;
 input \bus_addr[13] ;
@@ -105,13 +101,23 @@ input \bus_addr[3] ;
 input \bus_addr[2] ;
 input \bus_addr[1] ;
 input \bus_addr[0] ;
-input \state_demux[1] ;
-input \state_demux[0] ;
-input \counter_demux[4] ;
-input \counter_demux[3] ;
-input \counter_demux[2] ;
-input \counter_demux[1] ;
-input \counter_demux[0] ;
+input \cpu_dout[7] ;
+input \cpu_dout[6] ;
+input \cpu_dout[5] ;
+input \cpu_dout[4] ;
+input \cpu_dout[3] ;
+input \cpu_dout[2] ;
+input \cpu_dout[1] ;
+input \cpu_dout[0] ;
+input problema;
+input \ex_bus_data[7] ;
+input \ex_bus_data[6] ;
+input \ex_bus_data[5] ;
+input \ex_bus_data[4] ;
+input \ex_bus_data[3] ;
+input \ex_bus_data[2] ;
+input \ex_bus_data[1] ;
+input \ex_bus_data[0] ;
 input \bus_data[7] ;
 input \bus_data[6] ;
 input \bus_data[5] ;
@@ -128,7 +134,6 @@ output tdo_pad_o;
 
 wire ex_clk_27m;
 wire ex_bus_clk_3m6;
-wire bus_clk_3m6;
 wire clk_enable_3m6;
 wire ex_bus_reset_n;
 wire ex_bus_wait_n;
@@ -143,15 +148,9 @@ wire ex_bus_rd_n;
 wire bus_rd_n;
 wire ex_bus_wr_n;
 wire bus_wr_n;
-wire ex_bus_data_reverse_n;
-wire \ex_bus_data[7] ;
-wire \ex_bus_data[6] ;
-wire \ex_bus_data[5] ;
-wire \ex_bus_data[4] ;
-wire \ex_bus_data[3] ;
-wire \ex_bus_data[2] ;
-wire \ex_bus_data[1] ;
-wire \ex_bus_data[0] ;
+wire sccp_req;
+wire megaram_req;
+wire megaram_scc_req;
 wire \bus_addr[15] ;
 wire \bus_addr[14] ;
 wire \bus_addr[13] ;
@@ -168,13 +167,23 @@ wire \bus_addr[3] ;
 wire \bus_addr[2] ;
 wire \bus_addr[1] ;
 wire \bus_addr[0] ;
-wire \state_demux[1] ;
-wire \state_demux[0] ;
-wire \counter_demux[4] ;
-wire \counter_demux[3] ;
-wire \counter_demux[2] ;
-wire \counter_demux[1] ;
-wire \counter_demux[0] ;
+wire \cpu_dout[7] ;
+wire \cpu_dout[6] ;
+wire \cpu_dout[5] ;
+wire \cpu_dout[4] ;
+wire \cpu_dout[3] ;
+wire \cpu_dout[2] ;
+wire \cpu_dout[1] ;
+wire \cpu_dout[0] ;
+wire problema;
+wire \ex_bus_data[7] ;
+wire \ex_bus_data[6] ;
+wire \ex_bus_data[5] ;
+wire \ex_bus_data[4] ;
+wire \ex_bus_data[3] ;
+wire \ex_bus_data[2] ;
+wire \ex_bus_data[1] ;
+wire \ex_bus_data[0] ;
 wire \bus_data[7] ;
 wire \bus_data[6] ;
 wire \bus_data[5] ;
@@ -265,7 +274,8 @@ ao_top_0  u_la0_top(
     .trig5_i({\bus_data[7] ,\bus_data[6] ,\bus_data[5] ,\bus_data[4] ,\bus_data[3] ,\bus_data[2] ,\bus_data[1] ,\bus_data[0] }),
     .trig6_i({\bus_addr[7] ,\bus_addr[6] ,\bus_addr[5] ,\bus_addr[4] ,\bus_addr[3] ,\bus_addr[2] ,\bus_addr[1] ,\bus_addr[0] }),
     .trig7_i(bus_rd_n),
-    .data_i({ex_clk_27m,ex_bus_clk_3m6,bus_clk_3m6,clk_enable_3m6,ex_bus_reset_n,ex_bus_wait_n,ex_bus_int_n,ex_bus_rfsh_n,ex_bus_m1_n,ex_bus_mreq_n,bus_mreq_n,ex_bus_iorq_n,bus_iorq_n,ex_bus_rd_n,bus_rd_n,ex_bus_wr_n,bus_wr_n,ex_bus_data_reverse_n,\ex_bus_data[7] ,\ex_bus_data[6] ,\ex_bus_data[5] ,\ex_bus_data[4] ,\ex_bus_data[3] ,\ex_bus_data[2] ,\ex_bus_data[1] ,\ex_bus_data[0] ,\bus_addr[15] ,\bus_addr[14] ,\bus_addr[13] ,\bus_addr[12] ,\bus_addr[11] ,\bus_addr[10] ,\bus_addr[9] ,\bus_addr[8] ,\bus_addr[7] ,\bus_addr[6] ,\bus_addr[5] ,\bus_addr[4] ,\bus_addr[3] ,\bus_addr[2] ,\bus_addr[1] ,\bus_addr[0] ,\state_demux[1] ,\state_demux[0] ,\counter_demux[4] ,\counter_demux[3] ,\counter_demux[2] ,\counter_demux[1] ,\counter_demux[0] }),
+    .trig8_i(problema),
+    .data_i({ex_clk_27m,ex_bus_clk_3m6,clk_enable_3m6,ex_bus_reset_n,ex_bus_wait_n,ex_bus_int_n,ex_bus_rfsh_n,ex_bus_m1_n,ex_bus_mreq_n,bus_mreq_n,ex_bus_iorq_n,bus_iorq_n,ex_bus_rd_n,bus_rd_n,ex_bus_wr_n,bus_wr_n,sccp_req,megaram_req,megaram_scc_req,\bus_addr[15] ,\bus_addr[14] ,\bus_addr[13] ,\bus_addr[12] ,\bus_addr[11] ,\bus_addr[10] ,\bus_addr[9] ,\bus_addr[8] ,\bus_addr[7] ,\bus_addr[6] ,\bus_addr[5] ,\bus_addr[4] ,\bus_addr[3] ,\bus_addr[2] ,\bus_addr[1] ,\bus_addr[0] ,\cpu_dout[7] ,\cpu_dout[6] ,\cpu_dout[5] ,\cpu_dout[4] ,\cpu_dout[3] ,\cpu_dout[2] ,\cpu_dout[1] ,\cpu_dout[0] ,problema}),
     .clk_i(clk_108m)
 );
 

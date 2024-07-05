@@ -7,7 +7,7 @@ module memory (
 	input [7:0] vdp_din,
 	input [7:0] mapper_din,
 	input [16:0] vdp_addr,
-	input [21:0] mapper_addr,
+	input [22:0] mapper_addr,
     input mapper_read,
     input mapper_write,
     input refresh,
@@ -51,7 +51,7 @@ wire sdram_start_mapper;
 wire    VrmWre;
 assign  VrmWre = (~WeVdp_n) & VideoDLClk;
 assign sdram_vdp = ( VideoDLClk == 1 ) ? 1 : 0;
-assign sdram_address = ( sdram_vdp == 1 ) ? { 6'b100000 , vdp_addr[15:0] } : mapper_addr[21:1];
+assign sdram_address = ( sdram_vdp == 1 ) ? { 6'b100000 , vdp_addr[15:0] } : mapper_addr[22:1];
 assign sdram_wdm = ( sdram_vdp == 1 ) ? { ~vdp_addr[16], vdp_addr[16] } : { ~mapper_addr[0], mapper_addr[0] };
 assign sdram_din = ( sdram_vdp == 1 ) ? { vdp_din, vdp_din } : { mapper_din, mapper_din };
 assign sdram_read_vdp = (reset_n == 1 && sdram_start_vdp == 1  && VrmWre == 1'b0) ? 1 : 0 ;
