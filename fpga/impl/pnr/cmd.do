@@ -1,11 +1,16 @@
--d D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\gwsynthesis\Z80_goauld.vg
+-d D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\gwsynthesis\Z80_goauld.vg
 -p GW2AR-18C-QFN88-8
 -pn GW2AR-LV18QN88C8/I7
--cst D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\tang9k.cst
--cfg D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\pnr\device.cfg
--sdc D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\Z80_goauld.sdc
+-cst D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tang9k.cst
+-cfg D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\pnr\device.cfg
+-sdc D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\Z80_goauld.sdc
 -bit
 -tr
 -ph
+-timing
+-ireg_not_in_iob
+-oreg_not_in_iob
+-ioreg_not_in_iob
 -cst_error
--route_maxfan 25
+-route_option 1
+-route_maxfan 23

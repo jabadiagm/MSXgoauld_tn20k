@@ -40,6 +40,8 @@ IO_LOC "ex_bus_data[0]" 19;
 IO_PORT "ex_bus_data[0]" PULL_MODE=DOWN IO_TYPE=LVCMOS33;
 IO_LOC "ex_bus_data_reverse_n" 18;
 IO_PORT "ex_bus_data_reverse_n"  IO_TYPE=LVCMOS33;
+IO_LOC "ex_bus_data_reverse" 77;
+IO_PORT "ex_bus_data_reverse"  IO_TYPE=LVCMOS33;
 IO_LOC "ex_bus_mreq_n" 52;
 IO_PORT "ex_bus_mreq_n"  IO_TYPE=LVCMOS33;
 IO_LOC "ex_bus_iorq_n" 53;

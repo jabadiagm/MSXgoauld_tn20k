@@ -1,7 +1,7 @@
-Reading netlist file: "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\gwsynthesis\Z80_goauld.vg"
-Parsing netlist file "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\gwsynthesis\Z80_goauld.vg" completed
+Reading netlist file: "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\gwsynthesis\Z80_goauld.vg"
+Parsing netlist file "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\gwsynthesis\Z80_goauld.vg" completed
 Processing netlist completed
-Reading constraint file: "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\tang9k.cst"
+Reading constraint file: "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tang9k.cst"
 Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
@@ -21,10 +21,10 @@ Bitstream generation in progress......
 Bitstream generation completed
 Running power analysis......
 [100%] Power analysis completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\pnr\Z80_goauld.power.html" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\pnr\Z80_goauld.pin.html" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\pnr\Z80_goauld.rpt.html" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\pnr\Z80_goauld.rpt.txt" completed
-Generate file "D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\pnr\Z80_goauld.tr.html" completed
-Fri Jul 05 19:22:46 2024
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\pnr\Z80_goauld.power.html" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\pnr\Z80_goauld.pin.html" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\pnr\Z80_goauld.rpt.html" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\pnr\Z80_goauld.rpt.txt" completed
+Generate file "D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\pnr\Z80_goauld.tr.html" completed
+Wed Aug 21 13:50:55 2024
 

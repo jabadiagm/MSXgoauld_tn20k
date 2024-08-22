@@ -25,6 +25,7 @@ module top(
     output reg ex_bus_wr_n,
 
     output ex_bus_data_reverse_n,
+    output ex_bus_data_reverse,
     output [7:0] ex_bus_mp,
 
     //hdmi out
@@ -130,19 +131,23 @@ end
         .dout(bus_int_n)
     );
 
-    wire [7:0] bus_data;
-    genvar i;
-    generate
-        for (i = 0; i <= 7; i++)
-        begin: bus_din
-            PINFILTER dn(
-                .clk(clk_108m),
-                .reset_n(1),
-                .din(ex_bus_data[i]),
-                .dout(bus_data[i])
-            );
-        end
-    endgenerate
+    reg [7:0] bus_data;
+//    genvar i;
+//    generate
+//        for (i = 0; i <= 7; i++)
+//        begin: bus_din
+//            PINFILTER dn(
+//                .clk(clk_108m),
+//                .reset_n(1),
+//                .din(ex_bus_data[i]),
+//                .dout(bus_data[i])
+//            );
+//        end
+//    endgenerate
+
+    always @ (posedge clk_108m) begin
+        bus_data <= ex_bus_data;
+    end
 
     //startup logic
     reg reset1_n_ff;
@@ -220,12 +225,12 @@ end
 //        end
 //    end
 
-    localparam IDLE = 2'd0;
-    localparam LATCH = 2'd1;
-    localparam [4:0] TON = 4'd5;
-    localparam [4:0] TP = 4'd2; //prefetch time
-    reg [1:0] state_demux;
-    reg [4:0] counter_demux;
+    localparam IDLE = 1'd0;
+    localparam LATCH = 1'd1;
+    localparam [3:0] TON = 4'd5;
+    localparam [3:0] TP = 4'd2; //prefetch time
+    reg state_demux;
+    reg [3:0] counter_demux;
     reg [15:0] bus_addr_demux;
     reg low_byte_demux;
     wire update_demux;
@@ -238,30 +243,30 @@ end
             low_byte_demux <= 0;
         end 
         else begin
-            counter_demux = counter_demux + 5'd1;
+            counter_demux = counter_demux + 4'd1;
             casex ({state_demux, counter_demux})
-                {IDLE, 5'bxxxxx}: begin
+                {IDLE, 4'bxxxxx}: begin
                     msel <= 2'b00;
-                    counter_demux <= 5'd0;
+                    counter_demux <= 4'd0;
                     low_byte_demux <= 0;
                     if (update_demux == 1 ) begin
                         state_demux <= LATCH;
                     end
                 end
-                {LATCH, 5'd1} : begin
+                {LATCH, 4'd1} : begin
                     bus_addr_demux <= bus_addr;
                     msel[1] <= 1;
                 end
-                {LATCH, 5'd1 + TON} : begin
+                {LATCH, 4'd1 + TON} : begin
                     msel[1] <= 0;
                 end
-                {LATCH, 5'd1 + TON + TP} : begin
+                {LATCH, 4'd1 + TON + TP} : begin
                     low_byte_demux <= 1;
                 end
-                {LATCH, 5'd1 + TON + TP + TP} : begin
+                {LATCH, 4'd1 + TON + TP + TP} : begin
                     msel[0] <= 1;
                 end
-                {LATCH, 5'd1 + TON + TP + TP + TON} : begin
+                {LATCH, 4'd1 + TON + TP + TP + TON} : begin
                     msel[0] <= 0;
                     msel[1] <= 0;
                     state_demux <= IDLE;
@@ -288,6 +293,7 @@ end
     assign ex_bus_m1_n = bus_m1_n;
     assign ex_bus_rfsh_n = bus_rfsh_n;
     assign ex_bus_data_reverse_n = ~ bus_data_reverse;
+    assign ex_bus_data_reverse = bus_data_reverse;
     //assign ex_bus_mreq_n = bus_mreq_n;
     //assign ex_bus_iorq_n = bus_iorq_n;
     //assign ex_bus_rd_n = bus_rd_n;
@@ -432,7 +438,7 @@ end
         if ( bus_reset_n == 0)
             ppi_port_a <= 8'h00;
         else begin
-            if (ppi_req == 1 && bus_wr_n == 0 && bus_addr[1:0] == 2'b00) begin
+            if (ppi_req == 1 ) begin
                 ppi_port_a <= cpu_dout;
             end
         end
@@ -447,8 +453,8 @@ end
     wire xffff;
 
     assign xffff = ( bus_addr == 16'hffff ) ? 1 : 0;
-    assign exp_slot3_req_w = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_wr_n == 0 && xffff == 1 && pri_slot_num[0] == 1 ) ? 1: 0;
-    assign exp_slot3_req_r = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && xffff == 1 && pri_slot_num[0] == 1 ) ? 1: 0;
+    assign exp_slot3_req_w = ( bus_mreq_n == 0 && bus_wr_n == 0 && xffff == 1 && pri_slot_num[0] == 1 ) ? 1: 0;
+    assign exp_slot3_req_r = ( bus_mreq_n == 0 && bus_rd_n == 0 && xffff == 1 && pri_slot_num[0] == 1 ) ? 1: 0;
 
     // slot #3
     always @ (posedge clk_108m or negedge bus_reset_n) begin
@@ -488,14 +494,14 @@ end
                                                          4'b1000;
 
     wire slot3_req;
-    assign slot3_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_rd_n == 0 || bus_wr_n == 0) && pri_slot_num[3] == 1 && bus_rfsh_n == 1) ? 1 : 0;
+    assign slot3_req = ( bus_mreq_n == 0 && (bus_rd_n == 0 || bus_wr_n == 0) && pri_slot_num[3] == 1 ) ? 1 : 0;
 
 `ifdef ENABLE_BIOS
     //bios
     wire bios_req;
     wire [7:0] bios_dout;
-    assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[0] == 1 ) ? 1 : 0;
-    //assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 ) ? 1 : 0;
+    assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[0] == 1 ) ? 1 : 0;
+    //assign bios_req = ( bus_addr[15] == 0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[0] == 1 ) ? 1 : 0;
 
     bios_msx2p bios1 (
         .address (bus_addr[14:0]),
@@ -508,8 +514,8 @@ end
     //subrom
     wire subrom_req;
     wire [7:0] subrom_dout;
-    assign subrom_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[0] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
-    //assign subrom_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[0] == 1 ) ? 1 : 0;
+    assign subrom_req = ( bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[0] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
+    //assign subrom_req = ( bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[0] == 1 ) ? 1 : 0;
 
     subrom_msx2p subrom1 (
         .address (bus_addr[13:0]),
@@ -522,8 +528,8 @@ end
     //msx logo
     wire msx_logo_req;
     wire [7:0] msx_logo_dout;
-    assign msx_logo_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[1] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
-    //assign msx_logo_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[1] == 1 ) ? 1 : 0;
+    assign msx_logo_req = ( bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[0] == 1 && page_num[1] == 1 && exp_slot3_num[1] == 1 ) ? 1 : 0;
+    //assign msx_logo_req = ( bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[2] == 1 && page_num[1] == 1 ) ? 1 : 0;
 
   `ifndef ENABLE_MEGARAM
     logo logo1 (
@@ -641,10 +647,10 @@ end
                          (bus_addr [15:14] == 2'b10 ) ? { mapper_reg2, bus_addr[13:0] } :
                                                         { mapper_reg3, bus_addr[13:0] };
 
-    assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
-    assign mapper_write = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_wr_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
-    //assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_rd_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
-    //assign mapper_write = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && bus_wr_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
+    assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
+    assign mapper_write = ( bus_mreq_n == 0 && bus_wr_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
+    //assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
+    //assign mapper_write = ( bus_mreq_n == 0 && bus_wr_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
     assign mapper_reg_write = ( (bus_iorq_n == 0 && bus_m1_n == 1 && bus_wr_n == 0) && (bus_addr [7:2] == 6'b111111) )?1:0;
 
     always @(posedge clk_108m or negedge bus_reset_n) begin
@@ -808,8 +814,8 @@ memory memory_ctrl (
      wire scc_req;
      wire scc_wrt;
 
-     assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 ) ? 1 : 0;
-     //assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && bus_rfsh_n == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[2] == 1 ) ? 1 : 0;
+     assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 ) ? 1 : 0;
+     //assign scc_req = ( page_num[2] == 1 && bus_mreq_n == 0 && (bus_wr_n == 0 || bus_rd_n == 0 ) && pri_slot_num[2] == 1 ) ? 1 : 0;
      assign scc_wrt = ( scc_req == 1 && bus_wr_n == 0 ) ? 1 : 0;
 
      megaram scc1 (
@@ -845,8 +851,8 @@ memory memory_ctrl (
 	wire [14:0] sccp_wav;
 	wire megaram_req;
 	wire megaram_scc_req;
-	assign megaram_scc_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && pri_slot_num[3] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
-	//assign megaram_scc_req = ( bus_mreq_n == 0 && bus_rfsh_n == 1 && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
+	assign megaram_scc_req = ( bus_mreq_n == 0 && pri_slot_num[3] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
+	//assign megaram_scc_req = ( bus_mreq_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
 
 	wire megaram_type_req;
 	assign megaram_type_req = (bus_reset_n && ~bus_iorq_n && bus_m1_n && bus_rd_n && ~bus_wr_n && bus_addr[7:0] == 8'h8F) ? 1 : 0;

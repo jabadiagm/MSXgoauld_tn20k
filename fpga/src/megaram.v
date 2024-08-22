@@ -114,7 +114,7 @@ assign mem_addr = OFFSET_ADDR + page_addr_w;
 
 reg cart_ena_ff;
 always @ (posedge clk) begin
-    if ( (addr[15:14] == 2'b01 || addr[15:14] == 2'b10) && ~sltsl_n && ~merq_n && iorq_n == 1) 
+    if ( (addr[15:14] == 2'b01 || addr[15:14] == 2'b10) && ~sltsl_n ) 
         cart_ena_ff <= 1;
     else
         cart_ena_ff <= 0;;
@@ -123,7 +123,7 @@ end
 //assign cart_ena = (addr[15:14] == 2'b01 || addr[15:14] == 2'b10) && ~sltsl_n && ~merq_n && iorq_n ? 1 : 0;
 assign cart_ena = cart_ena_ff;
 
-assign busreq = ff_scc_ram && ~sltsl_n && ~merq2_n && iorq_n && addr[15:11] == 5'b10011 && ~rd_n ? scc_enable : 0;
-assign scc_req_w = ~sltsl_n && ~merq2_n && iorq_n && addr[15:12] == 4'b1001 ? scc_enable : 0;
+assign busreq = ff_scc_ram && ~sltsl_n && addr[15:11] == 5'b10011 && ~rd_n ? scc_enable : 0;
+assign scc_req_w = ~sltsl_n && addr[15:12] == 4'b1001 ? scc_enable : 0;
 
 endmodule

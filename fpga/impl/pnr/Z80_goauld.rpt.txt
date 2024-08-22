@@ -5,34 +5,34 @@
 1. PnR Messages
 
   <Report Title>: PnR Report
-  <Design File>: D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\impl\gwsynthesis\Z80_goauld.vg
-  <Physical Constraints File>: D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\tang9k.cst
-  <Timing Constraints File>: D:\datos\proyectos\43_Tang_Nano_20k\84_Pruebas4_goauld\Z80_goauld.sdc
+  <Design File>: D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\impl\gwsynthesis\Z80_goauld.vg
+  <Physical Constraints File>: D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tang9k.cst
+  <Timing Constraints File>: D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\Z80_goauld.sdc
   <PnR Version>: V1.9.9 Beta-4 Education
   <Part Number>: GW2AR-LV18QN88C8/I7
   <Device>: GW2AR-18
   <Device Version>: C
-  <Created Time>:Fri Jul 05 19:22:45 2024
+  <Created Time>:Wed Aug 21 13:50:53 2024
 
 
 2. PnR Details
 
   Running placement:
     Placement Phase 0: CPU time = 0h 0m 4s, Elapsed time = 0h 0m 4s
-    Placement Phase 1: CPU time = 0h 0m 0.552s, Elapsed time = 0h 0m 0.552s
-    Placement Phase 2: CPU time = 0h 0m 11s, Elapsed time = 0h 0m 11s
-    Placement Phase 3: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
-    Total Placement: CPU time = 0h 0m 22s, Elapsed time = 0h 0m 22s
+    Placement Phase 1: CPU time = 0h 0m 0.567s, Elapsed time = 0h 0m 0.563s
+    Placement Phase 2: CPU time = 0h 0m 12s, Elapsed time = 0h 0m 12s
+    Placement Phase 3: CPU time = 0h 0m 9s, Elapsed time = 0h 0m 9s
+    Total Placement: CPU time = 0h 0m 25s, Elapsed time = 0h 0m 25s
  Running routing:
-    Routing Phase 0: CPU time = 0h 0m 0.005s, Elapsed time = 0h 0m 0.004s
-    Routing Phase 1: CPU time = 0h 0m 0.702s, Elapsed time = 0h 0m 0.702s
-    Routing Phase 2: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
+    Routing Phase 0: CPU time = 0h 0m 0.005s, Elapsed time = 0h 0m 0.006s
+    Routing Phase 1: CPU time = 0h 0m 0.766s, Elapsed time = 0h 0m 0.762s
+    Routing Phase 2: CPU time = 0h 0m 39s, Elapsed time = 0h 0m 39s
     Routing Phase 3: CPU time = 0h 0m 0s, Elapsed time = 0h 0m 0s
-    Total Routing: CPU time = 0h 0m 7s, Elapsed time = 0h 0m 7s
+    Total Routing: CPU time = 0h 0m 40s, Elapsed time = 0h 0m 40s
  Generate output files:
-    CPU time = 0h 0m 5s, Elapsed time = 0h 0m 5s
+    CPU time = 0h 0m 6s, Elapsed time = 0h 0m 6s
 
- Total Time and Memory Usage: CPU time = 0h 0m 35s, Elapsed time = 0h 0m 35s, Peak memory usage = 321MB
+ Total Time and Memory Usage: CPU time = 0h 1m 11s, Elapsed time = 0h 1m 11s, Peak memory usage = 415MB
 
 
 3. Resource Usage Summary
@@ -40,19 +40,19 @@
   ----------------------------------------------------------
   Resources                   | Usage
   ----------------------------------------------------------
-  Logic                       | 10093/20736  49%
-    --LUT,ALU,ROM16           | 9733(8702 LUT, 1031 ALU, 0 ROM16)
+  Logic                       | 10013/20736  49%
+    --LUT,ALU,ROM16           | 9653(8623 LUT, 1030 ALU, 0 ROM16)
     --SSRAM(RAM16)            | 60
-  Register                    | 4716/15915  30%
+  Register                    | 4699/15915  30%
     --Logic Register as Latch | 18/15552  <1%
-    --Logic Register as FF    | 4665/15552  30%
+    --Logic Register as FF    | 4681/15552  31%
     --I/O Register as Latch   | 0/363  0%
-    --I/O Register as FF      | 33/363  10%
-  CLS                         | 7075/10368  69%
-  I/O Port                    | 40
-  I/O Buf                     | 35
+    --I/O Register as FF      | 0/363  0%
+  CLS                         | 7042/10368  68%
+  I/O Port                    | 41
+  I/O Buf                     | 36
     --Input Buf               | 6
-    --Output Buf              | 21
+    --Output Buf              | 22
     --Inout Buf               | 8
   IOLOGIC                     | 5%
     --OSER10                  | 3
@@ -81,7 +81,7 @@
   I/O Bank  | Usage       
   -----------------------
   bank 0   | 1/8(12%)    
-  bank 1   | 5/9(55%)    
+  bank 1   | 6/9(66%)    
   bank 2   | 0/4(0%)     
   bank 3   | 10/17(58%)  
   bank 4   | 8/8(100%)   
@@ -98,7 +98,7 @@
   -------------------------------
   PRIMARY       | 3/8(38%)
   LW            | 8/8(100%)
-  GCLK_PIN      | 1/5(20%)
+  GCLK_PIN      | 2/5(40%)
   PLL           | 2/2(100%)
   CLKDIV        | 0/8(0%)
   DLLDLY        | 0/8(0%)
@@ -110,10 +110,10 @@
   -------------------------------------------
   Signal         | Global Clock   | Location
   -------------------------------------------
-  ex_clk_27m_d   | PRIMARY        |  TR TL BR BL
+  ex_clk_27m_d   | PRIMARY        |  TR BR BL
   clk_108m       | PRIMARY        |  TR TL BR BL
   O_sdram_clk_d  | PRIMARY        |  TR
-  n163_6         | LW             |  -
+  n164_6         | LW             |  -
   bus_reset_n    | LW             |  -
   Reset_s        | LW             |  -
   VideoDLClk     | LW             |  -
@@ -146,6 +146,7 @@ ex_bus_iorq_n          |           | 53/3          | Y          | out   | IOR38[
 ex_bus_rd_n            |           | 71/1          | Y          | out   | IOT44[A] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
 ex_bus_wr_n            |           | 72/1          | Y          | out   | IOT40[B] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
 ex_bus_data_reverse_n  |           | 18/6          | Y          | out   | IOL49[B] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 3.3       
+ex_bus_data_reverse    |           | 77/1          | Y          | out   | IOT30[A] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3       
 ex_bus_mp[0]           |           | 55/3          | Y          | out   | IOR36[B] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 3.3       
 ex_bus_mp[1]           |           | 48/3          | Y          | out   | IOR49[B] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 3.3       
 ex_bus_mp[2]           |           | 51/3          | Y          | out   | IOR45[A] | LVCMOS33   | 8     | UP        | NA        | NA         | OFF        | NA         | OFF             | NA            | 3.3       
@@ -184,7 +185,7 @@ Loc./Bank| Signal                 | Dir.  | Site     | IO Type  | Drive | Pull M
 81/0     | -                      | in    | IOT17[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.2  
 80/0     | -                      | in    | IOT27[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.2  
 79/0     | -                      | in    | IOT27[B] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 1.2  
-77/1     | -                      | in    | IOT30[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
+77/1     | ex_bus_data_reverse    | out   | IOT30[A] | LVCMOS33 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3  
 76/1     | ex_bus_mp[7]           | out   | IOT30[B] | LVCMOS33 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3  
 75/1     | -                      | in    | IOT34[A] | LVCMOS18 | NA    | UP        | ON        | NONE       | NA         | NA         | NA              | NA            | 3.3  
 74/1     | ex_msel[1]             | out   | IOT34[B] | LVCMOS33 | 8     | UP        | NA        | NA         | OFF        | NA         | NA              | NA            | 3.3  

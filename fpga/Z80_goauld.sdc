@@ -68,9 +68,12 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/C
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/?*?/AD*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/D*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/SET}]
-    set_false_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}]
-    set_false_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}]
-    set_false_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}]
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -setup -end 5
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -setup -end 5
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -setup -end 5
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -hold -end 5
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -hold -end 5
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -hold -end 5
     set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -setup -end 10
     set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -setup -end 10
     set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -hold -end 10
@@ -78,7 +81,7 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/C
 
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/?*?/?*}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/u_mem/?*?/?*}]
-
+set_false_path -from [get_clocks {clock_27m}] -to [get_pins {vdp4/hdmi_ntsc/true_hdmi_output.packet_picker/audio_sample_word_transfer?*?/D}]
 
 
 
