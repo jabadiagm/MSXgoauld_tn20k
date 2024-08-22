@@ -31,7 +31,7 @@ Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 
 ![Slot map](/mapa_slots.png)
 
-Warning: not yet fully working on all tangs!
+Warning: not yet fully working on all MSX!
 
 Tips:
 * Get integrated circuits from trusted sources
