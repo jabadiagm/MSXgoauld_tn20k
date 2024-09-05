@@ -20,6 +20,7 @@ Although Fourth Revision is a prototype, it works with both MSX Hotbit (with 512
 | R1 | Resistor (0806) | 10K |
 
 \* Choose D1 or D2 to use if you want voltage protection over HDMI. You can also choose not to use them by placing a jumper, but make sure to power MSX before connecting Goa'uld to an HDMI monitor.
+
 \*\* These are also optional if you want to use Tang Nano 20k internal voltage regulator. If so, make sure to close J3 and J4 Jumpers.
 
 ## Jumper Setup
