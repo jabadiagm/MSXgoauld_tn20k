@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Mis_huellas")(type "KiCad")(uri "${KIPRJMOD}/librerias/Mis_huellas.pretty")(options "")(descr ""))
+  (lib (name "simple80-rev2")(type "KiCad")(uri "${KIPRJMOD}/simple80-rev2.pretty")(options "")(descr ""))
+  (lib (name "goauld-rev3")(type "KiCad")(uri "${KIPRJMOD}/goauld-rev3.pretty")(options "")(descr ""))
+)
