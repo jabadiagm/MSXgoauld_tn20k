@@ -7,7 +7,7 @@ Although Fourth Revision is a prototype, it works with both MSX Hotbit (with 512
 ## BOM
 
 | Reference | Chip | Value |
-|:-----:|:-----:| Value |
+|:-----:|:-----:|:-----:|
 | U1~U2 | 74HCT373 (TSSOP-20) | - |
 | U3~U4 | 74LVT245 (TSSOP-20) | - |
 | U5 | 74LVC245 (TSSOP-20) | - |
