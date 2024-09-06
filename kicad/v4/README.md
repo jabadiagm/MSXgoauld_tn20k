@@ -15,9 +15,9 @@ Although Fourth Revision is a prototype, it works with both MSX Hotbit (with 512
 | U7 * | AMS1117-3.3 (SOT-223) | - |
 | D1* | 1N5817 (THT) | - |
 | D2* | DSS32 (SOD123FL) | - |
-| C1 | 16V SMD Capacitor | 100uF |
-| C2~C3 ** | 16V SMD Capacitor | 22uF |
-| R1 | Resistor (0806) | 10K |
+| C1 | 16V SMD Capacitor | $\mathsf{100\ \mu F}$ |
+| C2~C3 ** | 16V SMD Capacitor | $\mathsf{22\ \mu F}$ |
+| R1 | Resistor (0603) | $\mathsf{10\ k\Omega}$ |
 
 \* Choose D1 or D2 to use if you want voltage protection over HDMI. You can also choose not to use them by placing a jumper, but make sure to power MSX before connecting Goa'uld to an HDMI monitor.
 
