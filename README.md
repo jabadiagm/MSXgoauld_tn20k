@@ -23,8 +23,8 @@ Logic acts on bus control signals so that internal devices inside fpga take prio
 Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 
 ![](/kicad/v2/v2_real.jpg)
-![](/kicad/v2/V2_FRONT.png)
-![](/kicad/v2/V2_BACK.png)
+
+## Revision 4 Board
 
 Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 ![](/kicad/v4/image/IMG_20240824_114309792.jpg)
