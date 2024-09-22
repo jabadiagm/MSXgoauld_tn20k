@@ -18,7 +18,7 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/u0/?*?/D
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/u0/?*?/CE}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/CE}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/u_sdram/?*?/D}] -setup -end 10
-set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -setup -end 10
+//set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/?*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {ppi_port*?/CE}] -setup -end 10
@@ -33,7 +33,7 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/u0/?*?/D
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/u0/?*?/CE}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/CE}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/u_sdram/?*?/D}] -hold -end 10
-set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -hold -end 10
+//set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/?*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {ppi_port*?/CE}] -hold -end 10
@@ -68,16 +68,16 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/C
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/?*?/AD*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/D*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/SET}]
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -setup -end 5
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -setup -end 5
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -setup -end 5
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -hold -end 5
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -hold -end 5
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -hold -end 5
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -setup -end 10
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -setup -end 10
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -hold -end 10
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -setup -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -setup -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -setup -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -hold -end 2
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -hold -end 2
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -hold -end 2
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -setup -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -setup -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -hold -end 2
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -hold -end 2
 
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/?*?/?*}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/u_mem/?*?/?*}]

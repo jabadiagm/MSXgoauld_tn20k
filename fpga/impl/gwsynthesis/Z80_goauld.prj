@@ -65,15 +65,17 @@
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\sdram.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\v9958_top.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\top.v" type="verilog"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\T80s.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\g80a.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\t80.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\t80_alu.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\t80_mcode.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\t80_pack.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\G80A\t80_reg.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\OCM_3.9\sound\scc\megaram.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\OCM_3.9\sound\scc\scc_wave.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\PSG_YM2149\YM2149.vhdl" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\T80A\t80.vhd" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\T80A\t80_alu.vhd" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\T80A\t80_mcode.vhd" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\T80A\t80_pack.vhd" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\T80A\t80_reg.vhd" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\T80A\t80a.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\denoise\denoise.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin_clkdiv2\gowin_clkdiv2.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\ram.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vdp.vhd" type="vhdl"/>

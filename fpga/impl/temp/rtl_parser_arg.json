@@ -247,6 +247,41 @@
   },
   {
    "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/T80s.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/g80a.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/t80.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/t80_alu.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/t80_mcode.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/t80_pack.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/t80_reg.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
    "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/OCM_3.9/sound/scc/megaram.vhd",
    "Type" : "vhdl"
   },
@@ -262,32 +297,7 @@
   },
   {
    "Library" : "work",
-   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/T80A/t80.vhd",
-   "Type" : "vhdl"
-  },
-  {
-   "Library" : "work",
-   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/T80A/t80_alu.vhd",
-   "Type" : "vhdl"
-  },
-  {
-   "Library" : "work",
-   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/T80A/t80_mcode.vhd",
-   "Type" : "vhdl"
-  },
-  {
-   "Library" : "work",
-   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/T80A/t80_pack.vhd",
-   "Type" : "vhdl"
-  },
-  {
-   "Library" : "work",
-   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/T80A/t80_reg.vhd",
-   "Type" : "vhdl"
-  },
-  {
-   "Library" : "work",
-   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/T80A/t80a.vhd",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/denoise/denoise.vhd",
    "Type" : "vhdl"
   },
   {
