@@ -31,7 +31,7 @@ Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 
 ## Slot map
 
-![Slot map](/mapa_slots.png)
+![Slot map](/mapa_slots3.png)
 
 Warning: not yet fully working on all MSX!
 
