@@ -302,6 +302,11 @@
   },
   {
    "Library" : "work",
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/monostable/monostable.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
    "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/gowin_clkdiv2/gowin_clkdiv2.vhd",
    "Type" : "vhdl"
   },

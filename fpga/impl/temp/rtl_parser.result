@@ -441,7 +441,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 424,
+    "InstLine" : 426,
     "InstName" : "cpu1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/G80A/g80a.vhd",
     "ModuleLine" : 69,
@@ -485,7 +485,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 535,
+    "InstLine" : 544,
     "InstName" : "bios1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/bios_msx2p.v",
     "ModuleLine" : 1,
@@ -493,7 +493,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 549,
+    "InstLine" : 558,
     "InstName" : "subrom1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/subrom_msx2p.v",
     "ModuleLine" : 1,
@@ -501,7 +501,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 572,
+    "InstLine" : 581,
     "InstName" : "logo1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/logo_fm.v",
     "ModuleLine" : 1,
@@ -509,7 +509,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 589,
+    "InstLine" : 598,
     "InstName" : "rtc1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/rtc.v",
     "ModuleLine" : 53,
@@ -527,7 +527,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 615,
+    "InstLine" : 624,
     "InstName" : "vdp4",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/tn_vdp_v3_v9958/src/v9958_top.v",
     "ModuleLine" : 3,
@@ -983,7 +983,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 736,
+    "InstLine" : 751,
     "InstName" : "memory_ctrl",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/memory.v",
     "ModuleLine" : 1,
@@ -1027,7 +1027,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 792,
+    "InstLine" : 807,
     "InstName" : "psg1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/PSG_YM2149/YM2149.vhdl",
     "ModuleLine" : 62,
@@ -1035,7 +1035,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 826,
+    "InstLine" : 841,
     "InstName" : "opll",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/jtopl/jt2413.v",
     "ModuleLine" : 22,
@@ -1373,7 +1373,7 @@
    },
    {
     "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
-    "InstLine" : 929,
+    "InstLine" : 945,
     "InstName" : "megaram1",
     "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/megaram.v",
     "ModuleLine" : 1,
@@ -1416,6 +1416,14 @@
       ]
      }
     ]
+   },
+   {
+    "InstFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/top.v",
+    "InstLine" : 1019,
+    "InstName" : "mono",
+    "ModuleFile" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/monostable/monostable.vhd",
+    "ModuleLine" : 7,
+    "ModuleName" : "monostable"
    }
   ]
  },

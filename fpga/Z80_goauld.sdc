@@ -20,9 +20,11 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/CE}]
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/u_sdram/?*?/D}] -setup -end 10
 //set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/D}] -setup -end 10
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/CE}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/?*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {ppi_port*?/CE}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_27m}] -to [get_pins {cpu1/DI_Reg*/D}] -setup -end 10
+set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {cpu1/DI_Reg*/D}] -setup -end 10
 //set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/DI_Reg*/SET}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/CE}] -setup -end 10
 
@@ -35,9 +37,11 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/CE}]
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/u_sdram/?*?/D}] -hold -end 10
 //set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/D}] -hold -end 10
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/CE}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/?*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {ppi_port*?/CE}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_27m}] -to [get_pins {cpu1/DI_Reg*/D}] -hold -end 10
+set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {cpu1/DI_Reg*/D}] -hold -end 10
 //set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/DI_Reg_4_s0/SET}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/CE}] -hold -end 10
 
@@ -82,7 +86,8 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/C
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/?*?/?*}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/u_mem/?*?/?*}]
 set_false_path -from [get_clocks {clock_27m}] -to [get_pins {vdp4/hdmi_ntsc/true_hdmi_output.packet_picker/audio_sample_word_transfer?*?/D}]
-
+set_false_path -from [get_clocks {clock_108m}] -to [get_pins {config_?*/RESET}]
+set_false_path -from [get_clocks {clock_108m}] -to [get_pins {config_?*/CE}]
 
 
 

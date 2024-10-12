@@ -119,7 +119,7 @@ end
     PINFILTER dn3(
         .clk(clk_108m),
         .reset_n(1),
-        .din(ex_bus_reset_n),
+        .din(ex_bus_reset_n & ~config_reset),
         .dout(bus_reset_n)
     );
 
@@ -379,11 +379,13 @@ end
     localparam WAIT_ISO = 2'd2;
     reg [1:0] state_iso;
     reg [2:0] counter_iso;
+    wire io_active;
 
     assign ex_bus_rd_n = ( bus_rd_n | ex_bus_rd_n_ff | bus_disable);
     assign ex_bus_wr_n = ( bus_wr_n | ex_bus_wr_n_ff | bus_disable);
     assign ex_bus_iorq_n = ( bus_iorq_n | bus_iorq_disable );
     assign ex_bus_mreq_n = ( bus_mreq_n | bus_mreq_disable );
+    assign io_active = ( state_iso != IDLE_ISO ) ? 1 : 0;
 
     always @ ( posedge clk_108m ) begin
         if (~bus_reset_n) begin
@@ -474,8 +476,15 @@ end
     wire exp_slot3_req_r;
     wire exp_slot3_req_w;
     wire xffff;
+    reg xffh;
+    reg xffl;
+    always @ (posedge clk_108m) begin
+        xffh <= bus_addr[15:8] == 8'hff;
+        xffl <= bus_addr[7:0] == 8'hff;
+    end
+    //assign xffff = ( bus_addr == 16'hffff ) ? 1 : 0;
+    assign xffff = xffh & xffl;
 
-    assign xffff = ( bus_addr == 16'hffff ) ? 1 : 0;
     assign exp_slot3_req_w = ( bus_mreq_n == 0 && bus_wr_n == 0 && xffff == 1 && pri_slot_num[0] == 1 ) ? 1: 0;
     assign exp_slot3_req_r = ( bus_mreq_n == 0 && bus_rd_n == 0 && xffff == 1 && pri_slot_num[0] == 1 ) ? 1: 0;
 
@@ -638,7 +647,7 @@ end
 
         .maxspr_n    (1),
     `ifdef ENABLE_SCAN_LINES
-        .scanlin_n   (0),
+        .scanlin_n   (~config_enable_scanlines),
     `else
         .scanlin_n   (1),
     `endif
@@ -663,6 +672,10 @@ end
     //mapper
     wire mapper_read;
     wire mapper_write;
+    wire mapper_read0;
+    wire mapper_write0;
+    wire mapper_read;
+    wire mapper_write;
     wire [7:0] mapper_dout;
     wire [21:0] mapper_addr;
     reg [7:0] mapper_reg0;
@@ -676,10 +689,12 @@ end
                          (bus_addr [15:14] == 2'b10 ) ? { mapper_reg2, bus_addr[13:0] } :
                                                         { mapper_reg3, bus_addr[13:0] };
 
-    assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
-    assign mapper_write = ( bus_mreq_n == 0 && bus_wr_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
-    //assign mapper_read = ( s1 == 0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
-    //assign mapper_write = ( bus_mreq_n == 0 && bus_wr_n == 0 && pri_slot_num[2] == 1 ) ? 1 : 0;
+    assign mapper_read0 = ( bus_rfsh_n == 1 && config_enable_mapper0 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot == config_mapper_slot && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
+    assign mapper_write0 = ( config_enable_mapper0 && bus_mreq_n == 0 && bus_wr_n == 0 && pri_slot == config_mapper_slot && exp_slot3_num[3] == 1 && xffff == 0 ) ? 1 : 0;
+    assign mapper_read123 = ( bus_rfsh_n == 1 && config_enable_mapper123 && bus_mreq_n == 0 && bus_rd_n == 0 && pri_slot == config_mapper_slot ) ? 1 : 0;
+    assign mapper_write123 = ( config_enable_mapper123 && bus_mreq_n == 0 && bus_wr_n == 0 && pri_slot == config_mapper_slot ) ? 1 : 0;
+    assign mapper_read = mapper_read0 | mapper_read123;
+    assign mapper_write = mapper_write0 | mapper_write123;
     assign mapper_reg_write = ( (bus_iorq_n == 0 && bus_m1_n == 1 && bus_wr_n == 0) && (bus_addr [7:2] == 6'b111111) )?1:0;
 
     always @(posedge clk_108m or negedge bus_reset_n) begin
@@ -881,7 +896,8 @@ memory memory_ctrl (
 	wire megaram_req;
 	wire megaram_scc_req;
 	//assign megaram_scc_req = ( bus_mreq_n == 0 && pri_slot_num[3] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
-	assign megaram_scc_req = ( bus_mreq_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
+	//assign megaram_scc_req = ( io_active == 1 && config_enable_megaram == 1 && bus_mreq_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
+    assign megaram_scc_req = ( config_enable_megaram == 1 && bus_mreq_n == 0 && pri_slot_num[0] == 1 && exp_slot3_num[2] == 1 && (bus_wr_n == 0 || bus_rd_n == 0 ) ) ? 1 : 0;
 
 	wire megaram_type_req;
 	assign megaram_type_req = (bus_reset_n && ~bus_iorq_n && bus_m1_n && bus_rd_n && ~bus_wr_n && bus_addr[7:0] == 8'h8F) ? 1 : 0;
@@ -977,5 +993,46 @@ memory memory_ctrl (
 
 `endif
 
+
+    //config
+    reg [7:0] config_ff = 8'h0f;
+    reg [1:0] config_mapper_slot = 2'b00;
+    reg config_enable_mapper0;
+    reg config_enable_mapper123;
+    reg config_enable_megaram;
+    reg config_enable_bios;
+    reg config_reset_ff;
+    wire config_enable_scanlines;
+    wire config_req;
+    wire config_reset;
+
+    always @ (posedge clk_108m) begin
+        config_reset_ff <= 0;
+        if (config_req == 1 ) begin
+            config_ff <= cpu_dout[6:0];
+            if ( cpu_dout[7] == 1) begin
+                config_reset_ff <= 1;
+            end
+        end
+    end
+
+    monostable mono (
+        .pulse_in(config_reset_ff),
+        .clock(clk_27m),
+        .pulse_out(config_reset)
+    );
+
+    assign config_req = (bus_addr[7:0] == 8'h41 && bus_iorq_n == 0 && bus_m1_n == 1 && bus_wr_n == 0)? 1:0;
+    assign config_enable_scanlines = config_ff[3];
+
+    always_latch begin
+        if (~bus_reset_n) begin
+            config_mapper_slot <= config_ff[5:4];
+            config_enable_mapper0 <= (config_ff[0] == 1 && config_ff[5:4] == 2'b00);
+            config_enable_mapper123 <= (config_ff[0] == 1 && config_ff[5:4] != 2'b00);
+            config_enable_megaram <= config_ff[1];
+            config_enable_bios <= config_ff[2];
+        end
+    end
 
 endmodule
