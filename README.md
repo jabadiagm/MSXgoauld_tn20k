@@ -18,6 +18,10 @@ Logic acts on bus control signals so that internal devices inside fpga take prio
 
 ![Esquema](/esquema.png)
 
+> [!WARNING]
+> Current revisions 1, 2, 4 are known to have a major flaw. Please, do not build this boards. See [Errata](#rev4-errata).
+> 
+
 ## Revision 2 Board
 
 Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
@@ -25,12 +29,6 @@ Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 ![](/kicad/v2/v2_real.jpg)
 
 ## Revision 4 Board
-
-## Revision 4 Board
-
-> [!WARNING]
-> Revision 4 is known to have a major flaw. Please, do not build this board. See [Errata](#rev4-errata).
-> 
 
 Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 ![](/kicad/v4/image/IMG_20240824_114309792.jpg)
