@@ -6,7 +6,7 @@ Although Fourth Revision is a prototype, it works with both MSX Hotbit (with 512
 
 ## BOM
 
-Check our [Interactive BOM](ibom.html) to have better details.
+Check our [Interactive BOM](https://html-preview.github.io/?url=https://raw.githubusercontent.com/jabadiagm/MSXgoauld_tn20k/main/kicad/v4/ibom.html) to have better details.
 
 | Reference | Chip | Value |
 |:-----:|:-----:|:-----:|
