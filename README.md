@@ -26,8 +26,18 @@ Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
 
 ## Revision 4 Board
 
+## Revision 4 Board
+
+> [!WARNING]
+> Revision 4 is known to have a major flaw. Please, do not build this board. See [Errata](#rev4-errata).
+> 
+
 Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 ![](/kicad/v4/image/IMG_20240824_114309792.jpg)
+
+### Rev4 Errata
+
+* VCC for U5 75LVC245 is 5V which is out of specs according to the IC datasheet. See [MSXgoauld_tn20k #15](https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15).
 
 ## Slot map
 
