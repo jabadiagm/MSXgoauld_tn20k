@@ -10,7 +10,7 @@ module logo_fm(
     reg [7:0] q_r;
 
 initial begin
-    $readmemh("16k_msx2p_fm_logo.hex", mem_r);
+    $readmemh("16k_msx2p_fm_logo_menu.hex", mem_r);
 end
 
     always @(posedge clock) begin

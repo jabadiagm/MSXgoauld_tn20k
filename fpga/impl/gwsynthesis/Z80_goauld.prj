@@ -76,6 +76,7 @@
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\OCM_3.9\sound\scc\scc_wave.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\PSG_YM2149\YM2149.vhdl" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\denoise\denoise.vhd" type="vhdl"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin_clkdiv2\gowin_clkdiv2.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\ram.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vdp.vhd" type="vhdl"/>
@@ -97,7 +98,6 @@
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vdp_vga.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vdp_wait_control.vhd" type="vhdl"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vencode.vhd" type="vhdl"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd" type="vhdl"/>
     </FileList>
     <OptionList>
         <Option type="disable_insert_pad" value="0"/>

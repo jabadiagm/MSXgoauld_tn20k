@@ -134,6 +134,9 @@ Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_t
 Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\denoise\denoise.vhd'
 Analyzing entity 'denoise'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\denoise\denoise.vhd":5)
 Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\denoise\denoise.vhd":15)
+Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd'
+Analyzing entity 'monostable'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd":7)
+Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd":18)
 Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin_clkdiv2\gowin_clkdiv2.vhd'
 Analyzing entity 'gowin_clkdiv2'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin_clkdiv2\gowin_clkdiv2.vhd":13)
 Analyzing architecture 'behavioral'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin_clkdiv2\gowin_clkdiv2.vhd":21)
@@ -203,9 +206,6 @@ Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_t
 Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vencode.vhd'
 Analyzing entity 'vencode'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vencode.vhd":37)
 Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\vdp\vencode.vhd":57)
-Analyzing VHDL file 'D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd'
-Analyzing entity 'monostable'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd":7)
-Analyzing architecture 'rtl'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\monostable\monostable.vhd":18)
 Compiling module 'top'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\top.v":7)
 Compiling module 'CLK_108P'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin\clk_108p.v":10)
 WARN  (EX3670) : Actual bit length 32 differs from formal bit length 1 for port 'reset'("D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\top.v":62)
