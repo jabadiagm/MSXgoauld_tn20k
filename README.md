@@ -19,7 +19,7 @@ Logic acts on bus control signals so that internal devices inside fpga take prio
 ![Esquema](/esquema.png)
 
 > [!WARNING]
-> Current revisions 1, 2, 4 are known to have a major flaw. Please, do not build this boards. See [Errata](#rev4-errata).
+> Current revisions 1, 2, 4 are known to have a major flaw. Please, do not build these boards. See [Errata](#pcbs-errata).
 > 
 
 ## Revision 2 Board
