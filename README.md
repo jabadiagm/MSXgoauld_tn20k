@@ -13,7 +13,7 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 * OPLL through hdmi
 * MEGARAM-SCC through hdmi
 
-## How it works:
+## How it works
 Logic acts on bus control signals so that internal devices inside fpga take priority over external devices. 
 
 ![Esquema](/pics/esquema.png)
@@ -53,12 +53,12 @@ Config menu is showed pressing g during MSX logo.
 
 ![Config](/pics/config.png)
 
-1 Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
-2 Enable Megaram: On by default. Same as mapper
-3 Enable Scanlines: On by default. Disable to get a clean hdmi picture
-4 Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
-5 Save & Exit: store new config and continue, changes in mapper/megaram settings will be effective after pressing reset
-6 Save & Reset: store new config and make software reset, changes will be immediate
+1. Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
+2. Enable Megaram: On by default. Same as mapper
+3. Enable Scanlines: On by default. Disable to get a clean hdmi picture
+4. Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
+5. Save & Exit: store new config and continue, changes in mapper/megaram settings will be effective after pressing reset
+6. Save & Reset: store new config and make software reset, changes will be immediate
 
 ## Known issues:
 * Reset from config menu is not compatible with some hardware. Use physical reset button when possible
