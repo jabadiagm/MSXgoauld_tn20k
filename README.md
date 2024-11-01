@@ -45,7 +45,7 @@ Mapper slot can be moved to slots 1, 2, or 3 using config menu.
 
 ## Update from previous hardware
 * Replace U1, U2 -> 74HC373, U5 -> 74HC245
-* Solder a resistor array to data bus lines, pulled up to 5V
+* Solder a 10K resistor array to data bus lines, pulled up to 5V
 ![Array](/pics/array.jpg)
 
 ## Configuration
@@ -60,7 +60,7 @@ Config menu is showed pressing g during MSX logo.
 5. Save & Exit: store new config and continue, changes in mapper/megaram settings will be effective after pressing reset
 6. Save & Reset: store new config and make software reset, changes will be immediate
 
-## Known issues:
+## Known issues
 * Reset from config menu is not compatible with some hardware. Use physical reset button when possible
 * Multimente: shows garbage characters. Move internal mapper to slots 1, 2 or 3
 * Tape games fail: move internal mapper to slots 1, 2 or 3
