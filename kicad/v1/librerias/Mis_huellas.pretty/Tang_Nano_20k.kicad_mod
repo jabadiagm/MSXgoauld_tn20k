@@ -83,7 +83,7 @@
   (pad "38" thru_hole oval (at 20.32 5.08) (size 2.4 1.6) (drill 0.8) (layers *.Cu *.Mask) (tstamp 3e0da036-95fa-4334-b959-f7c62c29f3aa))
   (pad "39" thru_hole oval (at 20.32 2.54) (size 2.4 1.6) (drill 0.8) (layers *.Cu *.Mask) (tstamp 71912ae5-8d92-4e60-bfe0-3f949fe2ae69))
   (pad "40" thru_hole oval (at 20.32 0) (size 2.4 1.6) (drill 0.8) (layers *.Cu *.Mask) (tstamp 43946d61-15cb-46ac-8c0e-40539f370fcd))
-  (model "${KIPRJMOD}/librerias/3D/Tang_Nano_20K_Simple.step"
+  (model "D:/datos/KiCad/00_librerias/3D/Tang_Nano_20K_Simple.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
