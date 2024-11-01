@@ -1,7 +1,7 @@
 # MSXgoauld_tn20k
 MSX Goa'uld board with Tang Nano 20k
 
-![Pantallazo](/pantallazo.jpg)
+![Pantallazo](/pics/V1_4.jpg)
 
 MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 processor. FPGA in board contains: 
 * Z80
@@ -16,10 +16,10 @@ MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 proc
 ## How it works:
 Logic acts on bus control signals so that internal devices inside fpga take priority over external devices. 
 
-![Esquema](/esquema.png)
+![Esquema](/pics/esquema.png)
 
 > [!WARNING]
-> Current revisions 1, 2, 4 are known to have a major flaw. Please, do not build these boards. See [Errata](#pcbs-errata).
+> Current revisions 2, 4 are known to have a major flaw. Please, do not build these boards. See [Errata](#pcbs-errata).
 > 
 
 ## Revision 2 Board
@@ -39,15 +39,15 @@ Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 
 ## Slot map
 
-![Slot map](/mapa_slots3.png)
+![Slot map](/pics/mapa_slots3.png)
 
-Warning: not yet fully working on all MSX!
+> [!WARNING]
+> Not yet fully working on all MSX!
+>
 
 Tips:
 * Get integrated circuits from trusted sources
 * Use turned pins in header to avoid damages in Z80 socket
-![turned header](/torneados.jpg)
+![turned header](/pics/torneados.jpg)
 * Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge & Z80 socket contacts clean
-* Diode avoids hdmi plug from powering the MSX, but causes a voltage drop. If tang doesn't boot, bridge the diode and remember to remove hdmi cable when not using
-![diode](/diodo.jpg)
 * When soldering headers, start with the inner one (Z80)
