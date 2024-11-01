@@ -41,11 +41,36 @@ Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 
 ![Slot map](/pics/mapa_slots3.png)
 
+Mapper slot can be moved to slots 1, 2, or 3 using config menu.
+
+## Update from previous hardware
+* Replace U1, U2 -> 74HC373, U5 -> 74HC245
+* Solder a resistor array to data bus lines, pulled up to 5V
+![Array](/pics/array.jpg)
+
+## Configuration
+Config menu is showed pressing g during MSX logo.
+
+![Config](/pics/config.png)
+
+1 Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
+2 Enable Megaram: On by default. Same as mapper
+3 Enable Scanlines: On by default. Disable to get a clean hdmi picture
+4 Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
+5 Save & Exit: store new config and continue, changes in mapper/megaram settings will be effective after pressing reset
+6 Save & Reset: store new config and make software reset, changes will be immediate
+
+## Known issues:
+* Reset from config menu is not compatible with some hardware. Use physical reset button when possible
+* Multimente: shows garbage characters. Move internal mapper to slots 1, 2 or 3
+* Tape games fail: move internal mapper to slots 1, 2 or 3
+* Big roms (>256 KB) fail: disable internal megaram
+
 > [!WARNING]
 > Not yet fully working on all MSX!
 >
 
-Tips:
+### Tips
 * Get integrated circuits from trusted sources
 * Use turned pins in header to avoid damages in Z80 socket
 ![turned header](/pics/torneados.jpg)
