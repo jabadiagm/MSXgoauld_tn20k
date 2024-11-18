@@ -41,7 +41,7 @@ Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 
 ![Slot map](/pics/mapa_slots3.png)
 
-Mapper slot can be moved to slots 1, 2, or 3 using config menu.
+Mapper, MegaRAM slots can be moved to slots 1, 2, or 3 using config menu.
 
 ## Update from previous hardware
 * Replace U1, U2 -> 74HC373, U5 -> 74HC245
@@ -49,16 +49,22 @@ Mapper slot can be moved to slots 1, 2, or 3 using config menu.
 ![Array](/pics/array.jpg)
 
 ## Configuration
-Config menu is showed pressing g during MSX logo.
+Config menu is showed pressing g during MSX logo. New improved menu is created by [nataliapc](https://github.com/nataliapc/msx_goauld_settings_menu)
 
-![Config](/pics/config.png)
+![Config](/pics/config2.png)
 
-1. Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
-2. Enable Megaram: On by default. Same as mapper
-3. Enable Scanlines: On by default. Disable to get a clean hdmi picture
-4. Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
-5. Save & Exit: store new config and continue, changes in mapper/megaram settings will be effective after pressing reset
-6. Save & Reset: store new config and make software reset, changes will be immediate
+* Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
+* Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
+* Enable MegaRam: On by default. Same as mapper
+* MegaRam Slot: 0 by default. Change to 1-3 to get megaram in a not expanded slot (best compatibility). Physical slot will be disabled
+* Enable Scanlines: On by default. Disable to get a clean hdmi picture
+* Save & Exit: store new config and continue, changes in mapper/megaram settings will be effective after pressing reset
+* Save & Reset: store new config and make software reset, changes will be immediate
+
+## Slots dance
+Goa'uld has four internal slots available. As with other modules, internal slots take priority over physical ones. This means that when a device is using internal slot n, then physical slot n is disabled  and any cartridge in that slot will not be detected. 
+By default, BIOS, mapper, and MegaRAM occupy internal slot 0, leaving physical slots 1 to 3 available for cartridges. However, this default layout can cause compatibility issues with some software, such as tape games and large ROMs. 
+To resolve these issues, you can move the mapper or MegaRAM from expanded slot 0 to one of the non-expanded internal slots (1, 2, or 3). This adjustment can solve many compatibility problems.
 
 ## Known issues
 * Reset from config menu is not compatible with some hardware. Use physical reset button when possible

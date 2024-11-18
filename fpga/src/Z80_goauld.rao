@@ -2,56 +2,14 @@
 <GAO_CONFIG>
     <Version>3.0</Version>
     <Mode>Standard</Mode>
-    <AoCore index="0" sample_clock="clk_108m" trig_type="0" storage_depth="1024" window_num="1" capture_amount="1024" implementation="0" trigger_pos="512" module_name="top" force_trigger_by_falling_edge="false">
+    <AoCore index="0" sample_clock="ex_clk_27m" trig_type="0" storage_depth="512" window_num="1" capture_amount="512" implementation="0" trigger_pos="100" module_name="top" force_trigger_by_falling_edge="false">
         <SignalList>
             <Signal>ex_clk_27m</Signal>
             <Signal>ex_bus_clk_3m6</Signal>
             <Signal>clk_enable_3m6</Signal>
-            <Signal>ex_bus_reset_n</Signal>
-            <Signal>ex_bus_wait_n</Signal>
-            <Signal>ex_bus_int_n</Signal>
-            <Signal>ex_bus_rfsh_n</Signal>
-            <Signal>ex_bus_m1_n</Signal>
-            <Signal>ex_bus_mreq_n</Signal>
-            <Signal>bus_mreq_n</Signal>
-            <Signal>ex_bus_iorq_n</Signal>
-            <Signal>bus_iorq_n</Signal>
-            <Signal>ex_bus_rd_n</Signal>
-            <Signal>bus_rd_n</Signal>
-            <Signal>ex_bus_wr_n</Signal>
-            <Signal>bus_wr_n</Signal>
-            <Signal>sccp_req</Signal>
-            <Signal>megaram_req</Signal>
-            <Signal>megaram_scc_req</Signal>
-            <Bus name="bus_addr[15:0]">
-                <Signal>bus_addr[15]</Signal>
-                <Signal>bus_addr[14]</Signal>
-                <Signal>bus_addr[13]</Signal>
-                <Signal>bus_addr[12]</Signal>
-                <Signal>bus_addr[11]</Signal>
-                <Signal>bus_addr[10]</Signal>
-                <Signal>bus_addr[9]</Signal>
-                <Signal>bus_addr[8]</Signal>
-                <Signal>bus_addr[7]</Signal>
-                <Signal>bus_addr[6]</Signal>
-                <Signal>bus_addr[5]</Signal>
-                <Signal>bus_addr[4]</Signal>
-                <Signal>bus_addr[3]</Signal>
-                <Signal>bus_addr[2]</Signal>
-                <Signal>bus_addr[1]</Signal>
-                <Signal>bus_addr[0]</Signal>
-            </Bus>
-            <Bus name="cpu_dout[7:0]">
-                <Signal>cpu_dout[7]</Signal>
-                <Signal>cpu_dout[6]</Signal>
-                <Signal>cpu_dout[5]</Signal>
-                <Signal>cpu_dout[4]</Signal>
-                <Signal>cpu_dout[3]</Signal>
-                <Signal>cpu_dout[2]</Signal>
-                <Signal>cpu_dout[1]</Signal>
-                <Signal>cpu_dout[0]</Signal>
-            </Bus>
-            <Signal>problema</Signal>
+            <Signal>config_enable_megaram</Signal>
+            <Signal>config_enable_megaram0</Signal>
+            <Signal>config_enable_megaram123</Signal>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -136,11 +94,7 @@
                     <Signal>bus_rd_n</Signal>
                 </SignalList>
             </Trigger>
-            <Trigger index="8">
-                <SignalList>
-                    <Signal>problema</Signal>
-                </SignalList>
-            </Trigger>
+            <Trigger index="8"/>
             <Trigger index="9"/>
             <Trigger index="10"/>
             <Trigger index="11"/>
@@ -158,7 +112,7 @@
             <MatchUnit index="5" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="10011001" value1="00000000" trigger="5"/>
             <MatchUnit index="6" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="10011001" value1="00000000" trigger="6"/>
             <MatchUnit index="7" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="0" value1="0" trigger="7"/>
-            <MatchUnit index="8" enabled="1" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="8"/>
+            <MatchUnit index="8" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="1" value1="0" trigger="8"/>
             <MatchUnit index="9" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="10" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
             <MatchUnit index="11" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
@@ -168,8 +122,8 @@
             <MatchUnit index="15" enabled="0" match_type="0" counter_enable="0" counter_width="2" counter="2" countinuous="0" func="0" value0="" value1=""/>
         </MatchUnits>
         <Expressions type="Static">
-            <Expression>M8</Expression>
+            <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>1000011100101101</GAO_ID>
+    <GAO_ID>0001000110000110</GAO_ID>
 </GAO_CONFIG>

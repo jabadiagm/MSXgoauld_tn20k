@@ -154,6 +154,10 @@
    "Type" : "verilog"
   },
   {
+   "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/keyboard_bra.v",
+   "Type" : "verilog"
+  },
+  {
    "Path" : "D:/datos/proyectos/43_Tang_Nano_20k/95_MSXgoauld_tn20k/src/logo.v",
    "Type" : "verilog"
   },

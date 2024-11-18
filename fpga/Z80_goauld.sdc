@@ -20,7 +20,7 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/CE}]
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/u_sdram/?*?/D}] -setup -end 10
 //set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/D}] -setup -end 10
-set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/CE}] -setup -end 10
+//set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/CE}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/?*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {ppi_port*?/CE}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_27m}] -to [get_pins {cpu1/DI_Reg*/D}] -setup -end 10
@@ -37,7 +37,7 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/CE}]
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/u_sdram/?*?/D}] -hold -end 10
 //set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bus_addr_demux*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/D}] -hold -end 10
-set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/CE}] -hold -end 10
+//set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/enable*?/CE}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/vram/?*?/D}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {ppi_port*?/CE}] -hold -end 10
 set_multicycle_path -from [get_clocks {clock_27m}] -to [get_pins {cpu1/DI_Reg*/D}] -hold -end 10
@@ -65,31 +65,66 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {exp_slot?*?/C
 //ENABLE_SOUND
     create_clock -name clock_env_reset -period 277.778 -waveform {0 138.889} [get_nets {psg1/env_reset}] -add
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {psg1/?*?/?*}]
-//    set_false_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/?*?/?*}]
-//    set_false_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/wavemem/?*?/?*}]
-//    set_false_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/?*?/?*}]
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/?*?/?*}] -setup -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/wavemem/?*?/?*}] -setup -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/?*?/?*}] -setup -end 10
+    set_false_path -from [get_clocks {clock_reset}] -to [get_pins {scc1/SccCh/ff?*?/D}]
+    set_false_path -from [get_clocks {clock_reset}] -to [get_pins {scc1/SccCh/ff?*?/CE}]
+    set_false_path -from [get_clocks {clock_reset}] -to [get_pins {scc1/SccCh/reg?*?/CE}]
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/?*?/?*}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/SccCh/wavemem/?*?/?*}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc1/?*?/?*}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc2/SccCh/?*?/?*}] -setup -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc2/SccCh/wavemem/?*?/?*}] -setup -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc2/?*?/?*}] -setup -end 10
+    set_false_path -from [get_clocks {clock_reset}] -to [get_pins {scc2/SccCh/ff?*?/D}]
+    set_false_path -from [get_clocks {clock_reset}] -to [get_pins {scc2/SccCh/ff?*?/CE}]
+    set_false_path -from [get_clocks {clock_reset}] -to [get_pins {scc2/SccCh/reg?*?/CE}]
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc2/SccCh/?*?/?*}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc2/SccCh/wavemem/?*?/?*}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {scc2/?*?/?*}] -hold -end 10
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/CE}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/?*?/AD*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/D*}]
     set_false_path -from [get_clocks {clock_108m}] -to [get_pins {opll/?*?/?*?/SET}]
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -setup -end 3
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -setup -end 3
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -setup -end 3
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -hold -end 2
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -hold -end 2
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -hold -end 2
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -setup -end 3
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -setup -end 3
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -hold -end 2
-    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -hold -end 2
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -setup -end 4
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -setup -end 4
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -setup -end 4
+    set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {megaram1/mega1/SccCh/ff?*?/D}] -setup -end 10
+    set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {megaram1/mega1/SccCh/ff?*?/CE}] -setup -end 10
+//    set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {megaram1/mega1/SccCh/reg?*?/CE}] -setup -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -setup -end 4
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -setup -end 4
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_memreg?*?/CE}] -setup -end 4
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/?*?/?*}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/SccCh/wavemem/?*?/?*}] -hold -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/mega1/?*?/?*}] -hold -end 3
+    set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {megaram1/mega1/SccCh/ff?*?/D}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {megaram1/mega1/SccCh/ff?*?/CE}] -hold -end 10
+//    set_multicycle_path -from [get_clocks {clock_reset}] -to [get_pins {megaram1/mega1/SccCh/reg?*?/CE}] -hold -end 10
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_scc_ram?*?/CE}] -hold -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_ram_ena?*?/CE}] -hold -end 3
+    set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {megaram1/ff_memreg?*?/CE}] -hold -end 3
+
 
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/?*?/?*}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/u_mem/?*?/?*}]
 set_false_path -from [get_clocks {clock_27m}] -to [get_pins {vdp4/hdmi_ntsc/true_hdmi_output.packet_picker/audio_sample_word_transfer?*?/D}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {config_?*/RESET}]
-set_false_path -from [get_clocks {clock_108m}] -to [get_pins {config_?*/CE}]
+set_false_path -from [get_clocks {clock_108m}] -to [get_pins {config1_?*/CE}]
 
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {config0_ff*?/CE}] -setup -end 10
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {config0_ff*?/CE}] -hold -end 10
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {config1_ff*?/CE}] -setup -end 10
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {config1_ff*?/CE}] -hold -end 10
+//set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {config2_ff*?/CE}] -setup -end 5
+//set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {config2_ff*?/CE}] -hold -end 5
 
+set_false_path -from [get_clocks {clock_108m}] -to [get_pins {ff_megaram_type?*?/CE}]
+set_false_path -from [get_clocks {clock_108m}] -to [get_pins {ff_scc_enable?*?/CE}]
+
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bios1/mem*?/CE}] -setup -end 10
+set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {bios1/mem*?/CE}] -hold -end 10
 
 
 report_timing -setup -max_paths 200 -max_common_paths 1
