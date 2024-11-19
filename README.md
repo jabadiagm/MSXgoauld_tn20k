@@ -52,6 +52,7 @@ Mapper, MegaRAM can be relocated to slots 1, 2, or 3 using config menu.
 Goa'uld features a 2MB Super Mega RAM SCC+ by [lfantoniosi](https://github.com/lfantoniosi/WonderTANG). Most classical rom's will work with sofarun's default settings. Be sure to use sofarun 8.1 at least.
 Use utility [GSMRAM.COM](/fpga/src/sdcc/disk) to load roms in the case sofarun doesn't work.
 It is possible to disable internal MegaRAM and use an external MegaRAM mapper. In this case, an SCC remains in Slot 0-2 to use with sofarun, using these settings:
+
 ![ext_scc](/pics/ext_scc.jpg)
 
 ## Configuration
