@@ -2,6 +2,7 @@
 MSX Goa'uld board with Tang Nano 20k
 
 ![Pantallazo](/pics/V1_4.jpg)
+![goauld_smd](/pics/V1_4_smd.jpg)
 
 MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 processor. FPGA in board contains: 
 * Z80
@@ -87,6 +88,7 @@ To resolve these issues, you can move the mapper or MegaRAM from expanded slot 0
 
 ### Tips
 * Get integrated circuits from trusted sources
+* Use heatsink when possible
 * Use turned pins in header to avoid damages in Z80 socket
 ![turned header](/pics/torneados.jpg)
 * Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge & Z80 socket contacts clean
