@@ -19,9 +19,7 @@ Logic acts on bus control signals so that internal devices inside fpga take prio
 
 ![Esquema](/pics/esquema.png)
 
-> [!WARNING]
-> Current revisions 2, 4 are known to have a major flaw. Please, do not build these boards. See [Errata](#pcbs-errata).
-> 
+Mind Revision 2, 4 and 4.1 uses 74LVC245 in U5. Although their technical information tells they require 3.3V to operate, they are also 5V tolerant. Please, don't open pull requests telling this is a major flaw since the boards were tested several times. Check https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15 for more information.
 
 ## Revision 2 Board
 
