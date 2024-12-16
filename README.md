@@ -19,7 +19,7 @@ Logic acts on bus control signals so that internal devices inside fpga take prio
 
 ![Esquema](/pics/esquema.png)
 
-Mind Revision 2, 4 and 4.1 uses 74LVC245 in U5. Although their technical information tells they require 3.3V to operate, they are also 5V tolerant. Please, don't open pull requests telling this is a major flaw since the boards were tested several times. Check https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15 for more information.
+Mind Revision 2, 4 and 4.1 uses 74LVC245 in U5. Although their technical information tells they require 3.3V to operate, they are also 5V tolerant. This has been tested and considered safe. Check https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15 for more information. Revisions 2, 4 are outdated and kept for reference only. 
 
 ## Revision 2 Board
 
