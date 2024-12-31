@@ -51,7 +51,7 @@ SCC is located in Slot 0-2 to use with sofarun, using these settings:
 ## Configuration
 Config menu is showed pressing g during MSX logo. New improved menu is created by [nataliapc](https://github.com/nataliapc/msx_goauld_settings_menu)
 
-![Config](/pics/config2.png)
+![Config](/pics/config3.png)
 
 * Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
 * Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
