@@ -7,9 +7,44 @@
             <Signal>ex_clk_27m</Signal>
             <Signal>ex_bus_clk_3m6</Signal>
             <Signal>clk_enable_3m6</Signal>
-            <Signal>config_enable_megaram</Signal>
-            <Signal>config_enable_megaram0</Signal>
-            <Signal>config_enable_megaram123</Signal>
+            <Bus name="ex_bus_data[7:0]">
+                <Signal>ex_bus_data[7]</Signal>
+                <Signal>ex_bus_data[6]</Signal>
+                <Signal>ex_bus_data[5]</Signal>
+                <Signal>ex_bus_data[4]</Signal>
+                <Signal>ex_bus_data[3]</Signal>
+                <Signal>ex_bus_data[2]</Signal>
+                <Signal>ex_bus_data[1]</Signal>
+                <Signal>ex_bus_data[0]</Signal>
+            </Bus>
+            <Signal>ex_bus_wait_n</Signal>
+            <Signal>ex_bus_int_n</Signal>
+            <Signal>ex_bus_reset_n</Signal>
+            <Signal>ex_bus_m1_n</Signal>
+            <Signal>ex_bus_rfsh_n</Signal>
+            <Signal>ex_bus_mreq_n</Signal>
+            <Signal>ex_bus_iorq_n</Signal>
+            <Signal>ex_bus_rd_n</Signal>
+            <Signal>ex_bus_wr_n</Signal>
+            <Signal>ex_bus_data_reverse_n</Signal>
+            <Bus name="bus_addr[15:0]">
+                <Signal>bus_addr[15]</Signal>
+                <Signal>bus_addr[14]</Signal>
+                <Signal>bus_addr[13]</Signal>
+                <Signal>bus_addr[12]</Signal>
+                <Signal>bus_addr[11]</Signal>
+                <Signal>bus_addr[10]</Signal>
+                <Signal>bus_addr[9]</Signal>
+                <Signal>bus_addr[8]</Signal>
+                <Signal>bus_addr[7]</Signal>
+                <Signal>bus_addr[6]</Signal>
+                <Signal>bus_addr[5]</Signal>
+                <Signal>bus_addr[4]</Signal>
+                <Signal>bus_addr[3]</Signal>
+                <Signal>bus_addr[2]</Signal>
+                <Signal>bus_addr[1]</Signal>
+                <Signal>bus_addr[0]</Signal>
+            </Bus>
         </SignalList>
         <Triggers>
             <Trigger index="0">
@@ -125,5 +160,5 @@
             <Expression>M0</Expression>
         </Expressions>
     </AoCore>
-    <GAO_ID>0001000110000110</GAO_ID>
+    <GAO_ID>0011011101000111</GAO_ID>
 </GAO_CONFIG>

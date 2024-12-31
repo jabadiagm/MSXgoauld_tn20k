@@ -42,14 +42,13 @@
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\bios_msx2p.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\gowin\clk_108p.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\impulse.v" type="verilog"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\keyboard_bra.v" type="verilog"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\logo.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\logo_fm.v" type="verilog"/>
-        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\megaram.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\memory.v" type="verilog"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\msx2p_debug.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\pinfilter.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\rtc.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\subrom_msx2p.v" type="verilog"/>
+        <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\src\uart_tx.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\clockdiv.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\gowin\clk_135.v" type="verilog"/>
         <File path="D:\datos\proyectos\43_Tang_Nano_20k\95_MSXgoauld_tn20k\tn_vdp_v3_v9958\src\hdmi\audio_clock_regeneration_packet.sv" type="verilog"/>
