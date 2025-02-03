@@ -26,7 +26,7 @@ There are two lines of boards, 1.4 (by Palver, DIP & SMD) and 4.1 (by Chandler, 
 
 Mind Revision 4.1 uses 74LVC245 in U5. Although their technical information tells they require 3.3V to operate, they are also 5V tolerant. This has been tested and considered safe. Check https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15 for more information. 
 
-### BOM for the 1.4 DIP board:
+BOM for the 1.4 DIP board:
 
 ```
 Qty| Name                        | Ref
@@ -62,7 +62,7 @@ SCC is located in Slot 0-2 to use with sofarun, using these settings:
 ## Configuration
 Config menu is showed pressing g during MSX logo. New improved menu is created by [nataliapc](https://github.com/nataliapc/msx_goauld_settings_menu)
 
-![Config](/pics/config3.png)
+![Config](/pics/config4.png)
 
 * Enable Mapper: On by default. Disable when having compatibility issues or to use a different mapper
 * Mapper Slot: 0 by default. Change to 1-3 to get mapper in a not expanded slot (best compatibility). Physical slot will be disabled
