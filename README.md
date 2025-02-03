@@ -1,8 +1,9 @@
 # MSXgoauld_tn20k
 MSX Goa'uld board with Tang Nano 20k
 
-![Pantallazo](/pics/V1_4.jpg)
-![goauld_smd](/pics/V1_4_smd.jpg)
+![V1.4_DIP](/pics/V1_4.jpg)
+![V1.4_SMD](/pics/V1_4_smd.jpg)
+![V4.1_SMD](/pics/V4_1.jpg)
 
 MSX2+ engine in Z80 socket. It turns one MSX into an MSX2+ by replacing Z80 processor. FPGA in board contains: 
 * Z80
