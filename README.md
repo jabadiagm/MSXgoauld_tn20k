@@ -19,18 +19,28 @@ Logic acts on bus control signals so that internal devices inside fpga take prio
 
 ![Esquema](/pics/esquema.png)
 
-Mind Revision 2, 4 and 4.1 uses 74LVC245 in U5. Although their technical information tells they require 3.3V to operate, they are also 5V tolerant. This has been tested and considered safe. Check https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15 for more information. Revisions 2, 4 are outdated and kept for reference only. 
 
-## Revision 2 Board
+## Boards
 
-Revision 2 uses SOIC-20 for 74HCT373 and 74LVC245 ICs, which are smaller:
+There are two lines of boards, 1.4 (by Palver, DIP & SMD) and 4.1 (by Chandler, SMD). Main difference is the orientation of the hdmi connector, to the same side of Z80's pin 1 (4.1) or the opposite (1.4). Revisions 2, 3, 4 are outdated and kept for reference only. 
 
-![](/kicad/v2/v2_real.jpg)
+Mind Revision 4.1 uses 74LVC245 in U5. Although their technical information tells they require 3.3V to operate, they are also 5V tolerant. This has been tested and considered safe. Check https://github.com/jabadiagm/MSXgoauld_tn20k/issues/15 for more information. 
 
-## Revision 4 Board
+### BOM for the 1.4 DIP board:
 
-Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
-![](/kicad/v4/image/IMG_20240824_114309792.jpg)
+Qty| Name                        | Ref
+--------------------------------------------------
+ 2 | Latch                       | SN74HC373N
+ 2 | Bus transceiver             | SN74LVC245AN
+ 1 | Bus transceiver             | CD74HC245E
+ 6 | Capacitor 100 nF            | Aliexpress
+ 1 | Schottky Diode              | 1N5817
+ 1 | Resistor network 8x10K      | 4609X-101-103LF
+ 2 | Female header 20p 2.54      | Aliexpress
+ 1 | Male header 40p 2.54 turned | Aliexpress
+ 5 | Socket DIP 20               | ICVT-20P
+ 1 | Tang Nano 20K               | Aliexpress
+ 
 
 ## Slot map
 
@@ -38,7 +48,7 @@ Revision 4 uses TSSOP-20 ICs, to get an even smaller footprint:
 
 Mapper can be relocated to slots 1, 2, or 3 using config menu.
 
-## Update from previous hardware
+## Update from previous hardware (V1, V2, V3, V4)
 * Replace U1, U2 -> 74HC373, U5 -> 74HC245
 * Solder a 10K resistor array to data bus lines, pulled up to 5V
 ![Array](/pics/array.jpg)
@@ -77,6 +87,7 @@ To resolve these issues, you can move the mapper from expanded slot 0 to one of 
 >
 
 ### Tips
+* Try a proven board first to check if your msx is compatible
 * Get integrated circuits from trusted sources
 * Use a heatsink when possible
 * Use turned pins in header to avoid damages in Z80 socket
