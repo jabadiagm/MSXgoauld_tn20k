@@ -28,6 +28,7 @@ Mind Revision 4.1 uses 74LVC245 in U5. Although their technical information tell
 
 ### BOM for the 1.4 DIP board:
 
+```
 Qty| Name                        | Ref
 --------------------------------------------------
  2 | Latch                       | SN74HC373N
@@ -40,7 +41,7 @@ Qty| Name                        | Ref
  1 | Male header 40p 2.54 turned | Aliexpress
  5 | Socket DIP 20               | ICVT-20P
  1 | Tang Nano 20K               | Aliexpress
- 
+ ```
 
 ## Slot map
 
