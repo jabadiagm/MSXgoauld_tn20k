@@ -88,6 +88,14 @@ To resolve these issues, you can move the mapper from expanded slot 0 to one of 
 > Not yet fully working on all MSX!
 >
 
+## HDMI wiring
+Use a flat cable with detachable connectors, like [this](https://a.aliexpress.com/_Ex8dto0) or [this](https://s.click.aliexpress.com/e/_oEFYFU9)
+
+![hdmi](/pics/hdmi3.jpg)
+
+Find some examples [here](https://makerworld.com/es/models/1246988-hdmi-cover-using-printer-port-for-msx-goauld) and [here](https://www.thingiverse.com/thing:6990854)
+
+
 ### Tips
 * Try a proven board first to check if your msx is compatible
 * Get integrated circuits from trusted sources
