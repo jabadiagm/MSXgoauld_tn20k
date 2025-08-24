@@ -95,6 +95,7 @@ Use a flat cable with detachable connectors, like [this](https://a.aliexpress.co
 
 Find some examples [here](https://makerworld.com/es/models/1246988-hdmi-cover-using-printer-port-for-msx-goauld) and [here](https://www.thingiverse.com/thing:6990854)
 
+Toshiba HX-10 has proven to be a nice choice for Goa'uld board. There are some mods to get hdmi connector and even a reset button on the side panel. An example [here](https://www.thingiverse.com/thing:6932728)
 
 ### Tips
 * Try a proven board first to check if your msx is compatible
@@ -104,3 +105,4 @@ Find some examples [here](https://makerworld.com/es/models/1246988-hdmi-cover-us
 ![turned header](/pics/torneados.jpg)
 * Board is sensitive to dirty electrical contacts, way more than Z80. Keep cartridge & Z80 socket contacts clean
 * When soldering headers, start with the inner one (Z80)
+* When using an extension wire, plug tang to 5V
