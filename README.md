@@ -1,4 +1,9 @@
 # MSXgoauld_tn20k
+
+> [WARNING]
+> This repository is outdated and kept for reference only. Last version is [here] (https://github.com/jabadiagm/MSXgoauldSD_tn20k)
+>
+
 MSX Goa'uld board with Tang Nano 20k
 
 ![V1.4_DIP](/pics/V1_4.jpg)
