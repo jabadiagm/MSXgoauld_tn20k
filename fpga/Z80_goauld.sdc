@@ -4,12 +4,12 @@
 //GOWIN Version: 1.9.9 Beta-4
 //Created Time: 2023-10-11 15:41:18
 create_clock -name clock_reset -period 277.778 -waveform {0 138.889} [get_nets {bus_reset_n}] -add
-create_clock -name clock_audio -period 277.778 -waveform {0 138.889} [get_nets {vdp4/clk_audio}] -add
+create_clock -name clock_audio -period 20833.333 -waveform {0 10416.667} [get_nets {vdp4/clk_audio}] -add
 create_clock -name clock_VideoDLClk -period 37.037 -waveform {0 18.518} [get_nets {VideoDLClk}] -add
 //create_clock -name clock_3m6 -period 277.778 -waveform {0 138.889} [get_nets {bus_clk_3m6}] -add
 create_clock -name clock_27m -period 37.037 -waveform {0 18.518} [get_ports {ex_clk_27m}] -add
 create_generated_clock -name clock_108m -source [get_ports {ex_clk_27m}] -master_clock clock_27m -multiply_by 4 [get_nets {clk_108m}] -add
-set_clock_groups -asynchronous -group [get_clocks {clock_108m   }] -group [get_clocks {clock_reset }] -group [get_clocks {clock_27m clock_VideoDLClk}] -group [get_clocks {clock_env_reset }] 
+set_clock_groups -asynchronous -group [get_clocks {clock_108m   }] -group [get_clocks {clock_reset }] -group [get_clocks {clock_27m clock_VideoDLClk}] -group [get_clocks {clock_env_reset }] -group [get_clocks {clock_audio}] 
 
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/?*?/D}] -setup -end 10
 set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {cpu1/u0/Regs/?*?/?*}] -setup -end 10
@@ -72,7 +72,6 @@ set_multicycle_path -from [get_clocks {clock_108m}] -to [get_pins {memory_ctrl/v
 
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/?*?/?*}]
 set_false_path -from [get_clocks {clock_108m}] -to [get_pins {rtc1/u_mem/?*?/?*}]
-set_false_path -from [get_clocks {clock_27m}] -to [get_pins {vdp4/hdmi_ntsc/true_hdmi_output.packet_picker/audio_sample_word_transfer?*?/D}]
 
 
 //ENABLE_CONFIG

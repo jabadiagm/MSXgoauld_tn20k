@@ -303,7 +303,13 @@ ENTITY VDP IS
         PAL_MODE            : OUT   STD_LOGIC;
         SPMAXSPR            : IN    STD_LOGIC;
         CX                  : OUT   STD_LOGIC_VECTOR( 10 DOWNTO 0);
-        CY                  : OUT   STD_LOGIC_VECTOR( 10 DOWNTO 0)
+        CY                  : OUT   STD_LOGIC_VECTOR( 10 DOWNTO 0);
+        -- 480i → 240p DirectVideo (R#9 IL / 212-line)
+        INTERLACE           : OUT   STD_LOGIC;
+        Y212                : OUT   STD_LOGIC;
+        HIGHRES             : OUT   STD_LOGIC;
+        PIC_WIN             : OUT   STD_LOGIC;
+        BORDER_Y            : OUT   STD_LOGIC
         -- DEBUG OUTPUT
     --  DEBUG_OUTPUT        : OUT   STD_LOGIC_VECTOR( 15 DOWNTO 0 ) -- ★
     );
@@ -1023,6 +1029,11 @@ BEGIN
 
     CX          <=  H_CNT;
     CY          <=  V_CNT;
+    INTERLACE   <=  REG_R9_INTERLACE_MODE;
+    Y212        <=  REG_R9_Y_DOTS;
+    HIGHRES     <=  VDPMODEISHIGHRES;
+    PIC_WIN     <=  PREWINDOW_Y;
+    BORDER_Y    <=  BWINDOW_Y;
     PAL_MODE    <=  VDPR9PALMODE;
 
     PRAMADR     <=  IRAMADR;

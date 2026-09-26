@@ -1,4 +1,9 @@
 `define GW_IDE
+`include "dv_adjust.vh"
+
+// DirectVideo 1536x240p @ 28.8 MHz (27 * 16/15).
+// 27 MHz -> rPLL 144 MHz TMDS -> CLKDIV/5 = 28.8 MHz pixel
+// 1820x264 total integer-locks the VDP field. 16/3 of 256 (8/3 of 512).
 
 module v9958_top(
     input   clk,
@@ -41,6 +46,8 @@ module v9958_top(
     output            tmds_clk_n,
     output     [2:0]  tmds_data_p,
     output     [2:0]  tmds_data_n,
+    output            hsync_dbg,
+    output            vsync_dbg,
 
     output WeVdp_n,
     output [16:0] VdpAdr,
@@ -100,15 +107,19 @@ module v9958_top(
 
     wire clk_bufg;
 
-    wire clk_135_w;
-    wire clk_135_lock_w;
+    // 27 MHz -> 144 MHz TMDS, CLKDIV/5 -> 28.8 MHz pixel
+    wire clk_tmds;
+    wire clk_tmds_w;
+    wire clk_tmds_lock_w;
+    wire clk_pixel;
+    wire clk_pixel_w;
 
     wire clk_sdram_w;
     wire clk_sdramp_w;
     wire clk_sdram_lock_w;
 
-    logic [9:0] cy;
-    logic [9:0] cx;
+    logic [10:0] cy;
+    logic [10:0] cx;
 
     wire clk_w;
     BUFG clk_bufg_inst(
@@ -135,20 +146,64 @@ module v9958_top(
     .I(s1_n)
     );
 
-    CLK_135 clk_135_inst(
-        .clkout(clk_135), //output clkout
-        .lock(clk_135_lock_w), //output lock
-        .reset(~rst_n), //input reset
-        .clkin(clk) //input clkin
+    // Inline rPLL: 27 * 16 / 3 = 144 MHz TMDS (5x 28.8 MHz).
+    wire clk_tmds_clkoutp;
+    wire clk_tmds_clkoutd;
+    wire clk_tmds_clkoutd3;
+    rPLL clk_tmds_pll (
+        .CLKOUT(clk_tmds),
+        .LOCK(clk_tmds_lock_w),
+        .CLKOUTP(clk_tmds_clkoutp),
+        .CLKOUTD(clk_tmds_clkoutd),
+        .CLKOUTD3(clk_tmds_clkoutd3),
+        .RESET(~rst_n),
+        .RESET_P(1'b0),
+        .CLKIN(clk),
+        .CLKFB(1'b0),
+        .FBDSEL(6'b000000),
+        .IDSEL(6'b000000),
+        .ODSEL(6'b000000),
+        .PSDA(4'b0000),
+        .DUTYDA(4'b0000),
+        .FDLY(4'b1111)
     );
+    defparam clk_tmds_pll.FCLKIN = "27";
+    defparam clk_tmds_pll.DYN_IDIV_SEL = "false";
+    defparam clk_tmds_pll.IDIV_SEL = 2;
+    defparam clk_tmds_pll.DYN_FBDIV_SEL = "false";
+    defparam clk_tmds_pll.FBDIV_SEL = 15;
+    defparam clk_tmds_pll.DYN_ODIV_SEL = "false";
+    defparam clk_tmds_pll.ODIV_SEL = 4;
+    defparam clk_tmds_pll.PSDA_SEL = "0100";
+    defparam clk_tmds_pll.DYN_DA_EN = "false";
+    defparam clk_tmds_pll.DUTYDA_SEL = "1000";
+    defparam clk_tmds_pll.CLKOUT_FT_DIR = 1'b1;
+    defparam clk_tmds_pll.CLKOUTP_FT_DIR = 1'b1;
+    defparam clk_tmds_pll.CLKOUT_DLY_STEP = 0;
+    defparam clk_tmds_pll.CLKOUTP_DLY_STEP = 0;
+    defparam clk_tmds_pll.CLKFB_SEL = "internal";
+    defparam clk_tmds_pll.CLKOUT_BYPASS = "false";
+    defparam clk_tmds_pll.CLKOUTP_BYPASS = "false";
+    defparam clk_tmds_pll.CLKOUTD_BYPASS = "false";
+    defparam clk_tmds_pll.DYN_SDIV_SEL = 2;
+    defparam clk_tmds_pll.CLKOUTD_SRC = "CLKOUT";
+    defparam clk_tmds_pll.CLKOUTD3_SRC = "CLKOUT";
+    defparam clk_tmds_pll.DEVICE = "GW2AR-18C";
 
-    BUFG clk_135_bufg_inst(
-    .O(clk_135_w),
-    .I(clk_135)
+    CLKDIV clkdiv5_inst (
+        .CLKOUT(clk_pixel),
+        .HCLKIN(clk_tmds),
+        .RESETN(clk_tmds_lock_w),
+        .CALIB(1'b0)
     );
+    defparam clkdiv5_inst.DIV_MODE = "5";
+    defparam clkdiv5_inst.GSREN = "false";
+
+    assign clk_tmds_w  = clk_tmds;
+    assign clk_pixel_w = clk_pixel;
 
     wire rst_n_w;
-    assign rst_n_w = rst_n & clk_135_lock_w; 
+    assign rst_n_w = rst_n & clk_tmds_lock_w; 
 
 //    CLK_108P clk_sdramp_inst (
 //        .clkout(clk_sdram), //output clkout
@@ -292,6 +347,11 @@ module v9958_top(
     wire vdp_hdmi_reset;
     wire [10:0] vdp_cx;
     wire [10:0] vdp_cy;
+    wire vdp_interlace;
+    wire vdp_y212;
+    wire vdp_highres;
+    wire vdp_pic_win;
+    wire vdp_border_y;
     VDP u_v9958 (
 		.CLK21M				( clk_w         					),
 		.RESET				( reset_w                           ),
@@ -319,7 +379,7 @@ module v9958_top(
 		.PVIDEODHCLK		( VideoDHClk						),
 		.PVIDEODLCLK		( VideoDLClk						),
 		.BLANK_o			( blank_o							),
-		.DISPRESO			( 1'b1      				        ),  // VGA 31Khz
+		.DISPRESO			( 1'b0      				        ),  // 15 kHz / true 240p
 		.NTSC_PAL_TYPE		( 1'b1      						),
 		.FORCED_V_MODE		( 1'b0      						),
 		.LEGACY_VGA			( 1'b0      						),
@@ -330,7 +390,12 @@ module v9958_top(
         //.PAL_MODE           (                                 ),
         .SPMAXSPR           ( ~maxspr_n                         ),  
         .CX                 ( vdp_cx                            ),
-        .CY                 ( vdp_cy                            )
+        .CY                 ( vdp_cy                            ),
+        .INTERLACE          ( vdp_interlace                     ),
+        .Y212               ( vdp_y212                          ),
+        .HIGHRES            ( vdp_highres                       ),
+        .PIC_WIN            ( vdp_pic_win                       ),
+        .BORDER_Y           ( vdp_border_y                      )
 	);
 
 	//--------------------------------------------------------------
@@ -342,9 +407,32 @@ module v9958_top(
     wire [7:0] dvi_g;
     wire [7:0] dvi_b;
 
-    assign dvi_r = (scanlin && cy[0]) ? { 1'b0, VideoR,   1'b0 } : {VideoR,   2'b0 };
-    assign dvi_g = (scanlin && cy[0]) ? { 1'b0, VideoG,   1'b0 } : {VideoG,   2'b0 };
-    assign dvi_b = (scanlin && cy[0]) ? { 1'b0, VideoB,   1'b0 } : {VideoB,   2'b0 };
+    wire [5:0] video_r_s, video_g_s, video_b_s;
+
+    // DV_PIC_Y letterbox; DV_H_SHIFT content pan (not HDMI H porch).
+    wire [9:0] y_off = (`DV_PIC_Y < 0) ? 10'd0 : `DV_PIC_Y;
+
+    vdp_hdmi_240p #(.H_OFF(`DV_H_SHIFT)) u_hdmi_scale (
+        .clk_vdp   (clk_w),
+        .clk_pixel (clk_pixel_w),
+        .reset     (reset_w),
+        .video_r   (VideoR),
+        .video_g   (VideoG),
+        .video_b   (VideoB),
+        .vdp_cx    (vdp_cx),
+        .highres   (vdp_highres),
+        .border_y  (vdp_border_y),
+        .y_off     (y_off),
+        .hdmi_cx   (cx),
+        .hdmi_cy   (cy[9:0]),
+        .out_r     (video_r_s),
+        .out_g     (video_g_s),
+        .out_b     (video_b_s)
+    );
+
+    assign dvi_r = {video_r_s, 2'b0};
+    assign dvi_g = {video_g_s, 2'b0};
+    assign dvi_b = {video_b_s, 2'b0};
 
 
 ///////////
@@ -384,133 +472,121 @@ module v9958_top(
     assign cpuclk = cpuclk_ena_n ? 1'bz :  cpuclk_w;
 //////////
 
-    reg ff_video_reset;
+    localparam [10:0] H_TOTAL  = `DV_H_TOTAL;
+    localparam [10:0] H_ACTIVE = `DV_H_ACTIVE;
+    localparam [9:0]  V_TOTAL  = `DV_V_TOTAL;
+    localparam [9:0]  V_ACTIVE = `DV_V_ACTIVE;
 
-    localparam NTSC_Y = 525-45;
-    localparam PAL_Y  = 625-60;
-    logic [9:0] cy_ntsc;
-    logic [9:0] cx_ntsc;
-    logic [9:0] cy_pal;
-    logic [9:0] cx_pal;
-
-    always_ff@(posedge clk_w) 
-    begin
-        
-        ff_video_reset <= vdp_hdmi_reset;
-
-        if (vdp_cx == 11'd0 && vdp_cy == 11'd0) begin
-            if ((pal_mode == 1'b0 && (cx_ntsc != 10'd0 || cy_ntsc != NTSC_Y)) ||
-                (pal_mode == 1'b1 && (cx_pal != 10'd0 || cy_pal != PAL_Y)))
-                ff_video_reset <= 1'b1;
+    reg [7:0] rst_cnt;
+    reg       hdmi_reset;
+    always @(posedge clk_pixel_w or negedge clk_tmds_lock_w) begin
+        if (!clk_tmds_lock_w) begin
+            rst_cnt    <= 8'd0;
+            hdmi_reset <= 1'b1;
+        end else if (rst_cnt != 8'hff) begin
+            rst_cnt    <= rst_cnt + 8'd1;
+            hdmi_reset <= 1'b1;
+        end else if (reset_w) begin
+            hdmi_reset <= 1'b1;
+        end else begin
+            hdmi_reset <= 1'b0;
         end
     end
 
-    wire video_reset;
-    assign video_reset = ff_video_reset;
+    // Phase-lock HDMI cy to VDP analog-visible start (BWINDOW_Y),
+    // which includes R#7 top/bottom border. DV_PIC_Y still applies.
+    reg border_y_d;
+    always @(posedge clk_w) border_y_d <= vdp_border_y;
+    wire vis_rise = vdp_border_y & ~border_y_d;
 
-    wire hdmi_reset;
-    assign hdmi_reset = video_reset | reset_w ;
+    reg pic_tog;
+    always @(posedge clk_w or posedge reset_w) begin
+        if (reset_w) pic_tog <= 1'b0;
+        else if (vis_rise) pic_tog <= ~pic_tog;
+    end
+    reg [2:0] pic_tog_s;
+    always @(posedge clk_pixel_w) pic_tog_s <= {pic_tog_s[1:0], pic_tog};
+    wire pic_pulse = pic_tog_s[2] ^ pic_tog_s[1];
 
-    localparam CLKFRQ = 27000;
-    localparam AUDIO_RATE=44100;
+    reg pic_pend;
+    always @(posedge clk_pixel_w) begin
+        if (hdmi_reset) pic_pend <= 1'b0;
+        else if (pic_pulse) pic_pend <= 1'b1;
+        else if (cx == H_TOTAL - 1'b1) pic_pend <= 1'b0;
+    end
+    wire cy_load = pic_pend && (cx == H_TOTAL - 1'b1);
+
+    always @(posedge clk_pixel_w) begin
+        if (hdmi_reset) begin
+            cx <= 11'd0;
+            cy <= 11'd0;
+        end else if (cx == H_TOTAL - 1'b1) begin
+            cx <= 11'd0;
+            if (cy_load)
+                cy <= {1'b0, y_off};
+            else
+                cy <= (cy == V_TOTAL - 1'b1) ? 11'd0 : cy + 1'b1;
+        end else begin
+            cx <= cx + 1'b1;
+        end
+    end
+
+    localparam AUDIO_RATE = 48000;
     localparam AUDIO_BIT_WIDTH = 16;
-    localparam NUM_CHANNELS = 3;
+    localparam PIXEL_CLOCK = 28800000;
 
-    wire clk_audio;
-    CLOCK_DIV #(
-        .CLK_SRC(27),
-        .CLK_DIV(0.044100),
-        .PRECISION_BITS(16)
-    ) audioclkd (
-        .clk_src(clk_w),
-        .clk_div(clk_audio)
-    );
-    BUFG clk_audio_bufg_inst(
-    .O(clk_audio_w),
-    .I(clk_audio)
-    );
-
+    reg       clk_audio;
+    reg [8:0] aclk_cnt;
+    always @(posedge clk_pixel_w) begin
+        if (aclk_cnt < PIXEL_CLOCK / AUDIO_RATE / 2 - 1)
+            aclk_cnt <= aclk_cnt + 9'd1;
+        else begin
+            aclk_cnt  <= 9'd0;
+            clk_audio <= ~clk_audio;
+        end
+    end
 
     wire [15:0] sample_w;
     assign sample_w = audio_sample;
 
-    reg [15:0] audio_sample_word [1:0], audio_sample_word0 [1:0];
-    always @(posedge clk_w) begin       // crossing clock domain
-        audio_sample_word0[0] <= sample_w;
-        audio_sample_word[0] <= audio_sample_word0[0];
-        audio_sample_word0[1] <= sample_w;
-        audio_sample_word[1] <= audio_sample_word0[1];
+    reg [15:0] audio_l, audio_r;
+    always @(posedge clk_pixel_w) begin
+        audio_l <= sample_w;
+        audio_r <= sample_w;
     end
-    wire [15:0] audio_sample_word_w [1:0];
-    assign audio_sample_word_w = audio_sample_word;
 
-    logic [9:0] tmds_ntsc [NUM_CHANNELS-1:0];
-    hdmi #( .VIDEO_ID_CODE(2), 
-            .DVI_OUTPUT(0), 
-            .VIDEO_REFRESH_RATE(59.94),
-            .IT_CONTENT(1),
-            .AUDIO_RATE(AUDIO_RATE), 
-            .AUDIO_BIT_WIDTH(AUDIO_BIT_WIDTH),
-            .VENDOR_NAME({"Unknown", 8'd0}), // Must be 8 bytes null-padded 7-bit ASCII
-            .PRODUCT_DESCRIPTION({"FPGA", 96'd0}), // Must be 16 bytes null-padded 7-bit ASCII
-            .SOURCE_DEVICE_INFORMATION(8'h00), // See README.md or CTA-861-G for the list of valid codes
-            .START_X(0),
-            .START_Y(NTSC_Y), //(525-49),
-            .NUM_CHANNELS(NUM_CHANNELS)
-            )
+    wire [2:0] tmds;
+    wire       tmds_clock;
 
-    hdmi_ntsc ( .clk_pixel_x5(clk_135_w), 
-          .clk_pixel(clk_w), 
-          .clk_audio(clk_audio_w),
-          .rgb({dvi_r, dvi_g, dvi_b}), 
-          .reset( hdmi_reset ),
-          .audio_sample_word(audio_sample_word_w),
-          .cx(cx_ntsc), 
-          .cy(cy_ntsc),
-          .tmds_internal(tmds_ntsc)
-        );
+    hdmi #(
+        .AUDIO_RATE(AUDIO_RATE),
+        .AUDIO_BIT_WIDTH(AUDIO_BIT_WIDTH),
+        .VENDOR_NAME({"MSXnano", 8'd0}),
+        .PRODUCT_DESCRIPTION({"MSXnano", 72'd0}),
+        .PIXEL_REPETITION(4'b0101)
+    ) hdmi_240p (
+        .clk_pixel_x5(clk_tmds_w),
+        .clk_pixel(clk_pixel_w),
+        .clk_audio(clk_audio),
+        .audio_l(audio_l),
+        .audio_r(audio_r),
+        .tmds(tmds),
+        .tmds_clock(tmds_clock),
+        .stmode(2'd0),
+        .screen(2'd0),
+        .total_lines(9'd264),
+        .reset(hdmi_reset),
+        .vdp_vs_n(VideoVS_n),
+        .cy_load(cy_load),
+        .cy_load_val(y_off),
+        .rgb({dvi_r, dvi_g, dvi_b}),
+        .hsync_dbg(hsync_dbg),
+        .vsync_dbg(vsync_dbg)
+    );
 
-    logic [9:0] tmds_pal [NUM_CHANNELS-1:0];
-    hdmi #( .VIDEO_ID_CODE(17), 
-            .DVI_OUTPUT(0), 
-            .VIDEO_REFRESH_RATE(50),
-            .IT_CONTENT(0),
-            .AUDIO_RATE(AUDIO_RATE), 
-            .AUDIO_BIT_WIDTH(AUDIO_BIT_WIDTH),
-            .VENDOR_NAME({"Unknown", 8'd0}), // Must be 8 bytes null-padded 7-bit ASCII
-            .PRODUCT_DESCRIPTION({"FPGA", 96'd0}), // Must be 16 bytes null-padded 7-bit ASCII
-            .SOURCE_DEVICE_INFORMATION(8'h00), // See README.md or CTA-861-G for the list of valid codes
-            .START_X(0), //(0),
-            .START_Y(PAL_Y), //(147),
-            .NUM_CHANNELS(NUM_CHANNELS)
-            )
-
-    hdmi_pal ( .clk_pixel_x5(clk_135_w), 
-          .clk_pixel(clk_w), 
-          .clk_audio(clk_audio_w),
-          .rgb({dvi_r, dvi_g, dvi_b}), 
-          .reset( hdmi_reset ),
-          .audio_sample_word(audio_sample_word_w),
-          .cx(cx_pal), 
-          .cy(cy_pal),
-          .tmds_internal(tmds_pal)
-        );
-
-    assign cx = pal_mode ? cx_pal :cx_ntsc;
-    assign cy = pal_mode ? cy_pal :cy_ntsc;
-
-    logic[2:0] tmds;
-    logic [9:0] tmds_internal [NUM_CHANNELS-1:0];
-
-    assign tmds_internal = pal_mode ? tmds_pal : tmds_ntsc;
-    
-    serializer #(.NUM_CHANNELS(NUM_CHANNELS), .VIDEO_RATE(0)) serializer(.clk_pixel(clk_w), .clk_pixel_x5(clk_135_w), .reset(reset_w),
-    .tmds_internal(tmds_internal), .tmds(tmds) ); 
-
-    // Gowin LVDS output buffer
     ELVDS_OBUF tmds_bufds [3:0] (
-        .I({clk_w, tmds}),
-        .O({tmds_clk_p, tmds_data_p}),
+        .I ({tmds_clock, tmds}),
+        .O ({tmds_clk_p, tmds_data_p}),
         .OB({tmds_clk_n, tmds_data_n})
     );
 

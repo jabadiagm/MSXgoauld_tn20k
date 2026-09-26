@@ -10,7 +10,10 @@ module source_product_description_info_frame
 )
 (
     output logic [23:0] header,
-    output logic [55:0] sub [3:0]
+    output logic [55:0] sub0,
+    output logic [55:0] sub1,
+    output logic [55:0] sub2,
+    output logic [55:0] sub3
 );
 
 localparam bit [4:0] LENGTH = 5'd25;
@@ -55,10 +58,10 @@ generate
     begin: pb_reserved
         assign packet_bytes[i] = 8'd0;
     end
-    for (i = 0; i < 4; i++)
-    begin: pb_to_sub
-        assign sub[i] = {packet_bytes[6 + i*7], packet_bytes[5 + i*7], packet_bytes[4 + i*7], packet_bytes[3 + i*7], packet_bytes[2 + i*7], packet_bytes[1 + i*7], packet_bytes[0 + i*7]};
-    end
 endgenerate
+assign sub0 = {packet_bytes[6],  packet_bytes[5],  packet_bytes[4],  packet_bytes[3],  packet_bytes[2],  packet_bytes[1],  packet_bytes[0]};
+assign sub1 = {packet_bytes[13], packet_bytes[12], packet_bytes[11], packet_bytes[10], packet_bytes[9],  packet_bytes[8],  packet_bytes[7]};
+assign sub2 = {packet_bytes[20], packet_bytes[19], packet_bytes[18], packet_bytes[17], packet_bytes[16], packet_bytes[15], packet_bytes[14]};
+assign sub3 = {packet_bytes[27], packet_bytes[26], packet_bytes[25], packet_bytes[24], packet_bytes[23], packet_bytes[22], packet_bytes[21]};
 
 endmodule
