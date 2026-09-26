@@ -1,8 +1,10 @@
-# MSXgoauld_tn20k
+# MSXgoauld_tn20k with DirectVideo
 
 > [!WARNING]
 > This repository is outdated and kept for reference only. Last version is here: https://github.com/jabadiagm/MSXgoauldSD_tn20k
 >
+
+For DirectVideo details, check [this reference](dv.md)
 
 MSX Goa'uld board with Tang Nano 20k
 
