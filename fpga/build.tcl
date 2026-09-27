@@ -38,15 +38,15 @@ add_file jtopl/jtopll_reg_ch.v
 add_file src/bios_msx2p.v                                                       
 add_file src/gowin/clk_108p.v                                                   
 add_file src/impulse.v                                                          
-add_file src/logo.v                                                             
 add_file src/logo_fm.v                                                          
-add_file src/megaram.v                                                          
 add_file src/memory.v                                                           
+add_file src/msx2p_debug.v                                                      
 add_file src/pinfilter.v                                                        
 add_file src/rtc.v                                                              
 add_file src/subrom_msx2p.v                                                     
+add_file src/uart_tx.v                                                          
 add_file tn_vdp_v3_v9958/src/clockdiv.v                                         
-add_file tn_vdp_v3_v9958/src/gowin/clk_135.v                                    
+add_file tn_vdp_v3_v9958/src/vdp_hdmi_240p.v                                
 add_file tn_vdp_v3_v9958/src/hdmi/audio_clock_regeneration_packet.sv            
 add_file tn_vdp_v3_v9958/src/hdmi/audio_info_frame.sv                           
 add_file tn_vdp_v3_v9958/src/hdmi/audio_sample_packet.sv                        
@@ -63,13 +63,16 @@ add_file tn_vdp_v3_v9958/src/v9958_top.v
 add_file top.v                                                                  
 add_file OCM_3.9/sound/scc/megaram.vhd                                          
 add_file OCM_3.9/sound/scc/scc_wave.vhd                                         
+add_file G80A/T80s.vhd                                                          
+add_file G80A/g80a.vhd                                                          
+add_file G80A/t80.vhd                                                           
+add_file G80A/t80_alu.vhd                                                       
+add_file G80A/t80_mcode.vhd                                                     
+add_file G80A/t80_pack.vhd                                                      
+add_file G80A/t80_reg.vhd                                                       
 add_file PSG_YM2149/YM2149.vhdl                                                 
-add_file T80A/t80.vhd                                                           
-add_file T80A/t80_alu.vhd                                                       
-add_file T80A/t80_mcode.vhd                                                     
-add_file T80A/t80_pack.vhd                                                      
-add_file T80A/t80_reg.vhd                                                       
-add_file T80A/t80a.vhd                                                          
+add_file denoise/denoise.vhd                                                    
+add_file monostable/monostable.vhd                                              
 add_file src/gowin_clkdiv2/gowin_clkdiv2.vhd                                    
 add_file tn_vdp_v3_v9958/src/ram.vhd                                            
 add_file tn_vdp_v3_v9958/src/vdp/vdp.vhd                                        
@@ -95,6 +98,6 @@ add_file tang9k.cst
 add_file Z80_goauld.sdc                                                         
 # add_file src/Z80_goauld.rao                                                     
 
-set_option -use_sspi_as_gpio 1 -top_module top -verilog_std sysv2017 -include_path src
+set_option -use_sspi_as_gpio 1 -top_module top -verilog_std sysv2017 -include_path "src;tn_vdp_v3_v9958/src"
 run syn
 run pnr

@@ -1,5 +1,5 @@
 GW_SH_PATH?=/home/chandler/gowin-ide/IDE/bin/gw_sh
-LIBFONT_CONFIG?=lib/libfontconfig.so.1
+LIBFONT_CONFIG?=/home/chandler/Documentos/HUB75/PXMatrix_TN9k/lib/libfontconfig.so.1
 
 .phony: all clean
 

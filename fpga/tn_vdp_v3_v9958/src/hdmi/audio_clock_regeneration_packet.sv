@@ -10,13 +10,15 @@ module audio_clock_regeneration_packet
 (
     input logic clk_pixel,
     input logic clk_audio,
-    output logic clk_audio_counter_wrap = 0,
+    output logic clk_audio_counter_wrap,
     output logic [23:0] header,
-    output logic [55:0] sub [3:0]
+    output logic [55:0] sub0,
+    output logic [55:0] sub1,
+    output logic [55:0] sub2,
+    output logic [55:0] sub3
 );
 
 // See Section 7.2.3, values derived from "Other" row in Tables 7-1, 7-2, 7-3.
-//localparam bit [19:0] N = AUDIO_RATE % 125 == 0 ? 20'(16 * AUDIO_RATE / 125) : AUDIO_RATE % 225 == 0 ? 20'(196 * AUDIO_RATE / 225) : 20'(AUDIO_RATE * 16 / 125);
 localparam bit [19:0] N = AUDIO_RATE % 125 == 0 ? 20'(16 * AUDIO_RATE / 125) : AUDIO_RATE % 225 == 0 ? 20'(32 * AUDIO_RATE / 225) : 20'(AUDIO_RATE * 16 / 125);
 
 localparam int CLK_AUDIO_COUNTER_WIDTH = $clog2(N / 128);
@@ -55,20 +57,16 @@ begin
         cycle_time_stamp_counter <= cycle_time_stamp_counter + CYCLE_TIME_STAMP_COUNTER_WIDTH'(1);
 end
 
-// "An HDMI Sink shall ignore bytes HB1 and HB2 of the Audio Clock Regeneration Packet header."
-`ifdef MODEL_TECH
+// HB1/HB2 ignored by the sink. Use 0, not X: Gowin treats X as undriven
+// and will sweep this packet (and HDMI audio with it).
 assign header = {8'd0, 8'd0, 8'd1};
-`else
-assign header = {8'dX, 8'dX, 8'd1};
-`endif
 
 // "The four Subpackets each contain the same Audio Clock regeneration Subpacket."
-genvar i;
-generate
-    for (i = 0; i < 4; i++)
-    begin: same_packet
-        assign sub[i] = {N[7:0], N[15:8], {4'd0, N[19:16]}, cycle_time_stamp[7:0], cycle_time_stamp[15:8], {4'd0, cycle_time_stamp[19:16]}, 8'd0};
-    end
-endgenerate
+// Packed sub0-3: Gowin drops unpacked array ports (no HDMI audio samples).
+wire [55:0] sub_body = {N[7:0], N[15:8], {4'd0, N[19:16]}, cycle_time_stamp[7:0], cycle_time_stamp[15:8], {4'd0, cycle_time_stamp[19:16]}, 8'd0};
+assign sub0 = sub_body;
+assign sub1 = sub_body;
+assign sub2 = sub_body;
+assign sub3 = sub_body;
 
 endmodule
